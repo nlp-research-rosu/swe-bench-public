@@ -1,0 +1,1963 @@
+{
+  "schema_version": 1,
+  "batch": "regression004",
+  "count": 103,
+  "instances": [
+    {
+      "instance_id": "scikit-learn__scikit-learn-14053",
+      "source_run_id": "verified037-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified037",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "5/5",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "5/5",
+      "baseline_patch": "results/verified037-codex-wsl-ubuntu-260615221107/scikit-learn__scikit-learn-14053/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified037-codex-wsl-ubuntu-260615221107/scikit-learn__scikit-learn-14053/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-14087",
+      "source_run_id": "verified037-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified037",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "3/3",
+      "baseline_official_ptp": "172/172",
+      "fvk_official_ftp": "3/3",
+      "fvk_official_ptp": "172/172",
+      "baseline_patch": "results/verified037-codex-wsl-ubuntu-260615221107/scikit-learn__scikit-learn-14087/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified037-codex-wsl-ubuntu-260615221107/scikit-learn__scikit-learn-14087/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-14141",
+      "source_run_id": "verified037-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified037",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "2/2",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "2/2",
+      "baseline_patch": "results/verified037-codex-wsl-ubuntu-260615221107/scikit-learn__scikit-learn-14141/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified037-codex-wsl-ubuntu-260615221107/scikit-learn__scikit-learn-14141/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-14496",
+      "source_run_id": "verified037-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified037",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "39/39",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "39/39",
+      "baseline_patch": "results/verified037-codex-wsl-ubuntu-260615221107/scikit-learn__scikit-learn-14496/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified037-codex-wsl-ubuntu-260615221107/scikit-learn__scikit-learn-14496/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-14629",
+      "source_run_id": "verified037-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified037",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "26/26",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "26/26",
+      "baseline_patch": "results/verified037-codex-wsl-ubuntu-260615221107/scikit-learn__scikit-learn-14629/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified037-codex-wsl-ubuntu-260615221107/scikit-learn__scikit-learn-14629/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-14710",
+      "source_run_id": "verified037-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified037",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "63/63",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "63/63",
+      "baseline_patch": "results/verified037-codex-wsl-ubuntu-260615221107/scikit-learn__scikit-learn-14710/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified037-codex-wsl-ubuntu-260615221107/scikit-learn__scikit-learn-14710/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-14894",
+      "source_run_id": "verified038-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified038",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "85/85",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "85/85",
+      "baseline_patch": "results/verified038-codex-wsl-ubuntu-260615221107/scikit-learn__scikit-learn-14894/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified038-codex-wsl-ubuntu-260615221107/scikit-learn__scikit-learn-14894/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-14983",
+      "source_run_id": "verified038-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified038",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "105/105",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "105/105",
+      "baseline_patch": "results/verified038-codex-wsl-ubuntu-260615221107/scikit-learn__scikit-learn-14983/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified038-codex-wsl-ubuntu-260615221107/scikit-learn__scikit-learn-14983/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-15100",
+      "source_run_id": "verified038-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified038",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "93/93",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "93/93",
+      "baseline_patch": "results/verified038-codex-wsl-ubuntu-260615221107/scikit-learn__scikit-learn-15100/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified038-codex-wsl-ubuntu-260615221107/scikit-learn__scikit-learn-15100/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-25102",
+      "source_run_id": "verified038-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified038",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "59/59",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "59/59",
+      "baseline_patch": "results/verified038-codex-wsl-ubuntu-260615221107/scikit-learn__scikit-learn-25102/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified038-codex-wsl-ubuntu-260615221107/scikit-learn__scikit-learn-25102/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-25232",
+      "source_run_id": "verified038-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified038",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "214/214",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "214/214",
+      "baseline_patch": "results/verified038-codex-wsl-ubuntu-260615221107/scikit-learn__scikit-learn-25232/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified038-codex-wsl-ubuntu-260615221107/scikit-learn__scikit-learn-25232/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-25747",
+      "source_run_id": "verified038-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified038",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "14/14",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "14/14",
+      "baseline_patch": "results/verified038-codex-wsl-ubuntu-260615221107/scikit-learn__scikit-learn-25747/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified038-codex-wsl-ubuntu-260615221107/scikit-learn__scikit-learn-25747/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-25931",
+      "source_run_id": "verified038-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified038",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "21/21",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "21/21",
+      "baseline_patch": "results/verified038-codex-wsl-ubuntu-260615221107/scikit-learn__scikit-learn-25931/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified038-codex-wsl-ubuntu-260615221107/scikit-learn__scikit-learn-25931/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-25973",
+      "source_run_id": "verified038-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified038",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "72/72",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "72/72",
+      "baseline_patch": "results/verified038-codex-wsl-ubuntu-260615221107/scikit-learn__scikit-learn-25973/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified038-codex-wsl-ubuntu-260615221107/scikit-learn__scikit-learn-25973/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-26194",
+      "source_run_id": "verified038-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified038",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "186/186",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "186/186",
+      "baseline_patch": "results/verified038-codex-wsl-ubuntu-260615221107/scikit-learn__scikit-learn-26194/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified038-codex-wsl-ubuntu-260615221107/scikit-learn__scikit-learn-26194/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-26323",
+      "source_run_id": "verified038-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified038",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "188/188",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "188/188",
+      "baseline_patch": "results/verified038-codex-wsl-ubuntu-260615221107/scikit-learn__scikit-learn-26323/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified038-codex-wsl-ubuntu-260615221107/scikit-learn__scikit-learn-26323/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-9288",
+      "source_run_id": "verified039-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified039",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "123/123",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "123/123",
+      "baseline_patch": "results/verified039-codex-wsl-ubuntu-260615221107/scikit-learn__scikit-learn-9288/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified039-codex-wsl-ubuntu-260615221107/scikit-learn__scikit-learn-9288/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-10323",
+      "source_run_id": "verified039-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified039",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "40/40",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "40/40",
+      "baseline_patch": "results/verified039-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-10323/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified039-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-10323/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-10435",
+      "source_run_id": "verified039-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified039",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "74/74",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "74/74",
+      "baseline_patch": "results/verified039-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-10435/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified039-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-10435/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-10449",
+      "source_run_id": "verified039-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified039",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "30/30",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "30/30",
+      "baseline_patch": "results/verified039-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-10449/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified039-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-10449/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-10673",
+      "source_run_id": "verified039-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified039",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "9/9",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "9/9",
+      "baseline_patch": "results/verified039-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-10673/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified039-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-10673/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-11445",
+      "source_run_id": "verified039-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified039",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "8/8",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "8/8",
+      "baseline_patch": "results/verified039-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-11445/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified039-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-11445/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-7440",
+      "source_run_id": "verified039-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified039",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "12/12",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "12/12",
+      "baseline_patch": "results/verified039-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-7440/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified039-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-7440/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-7454",
+      "source_run_id": "verified040-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified040",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "27/27",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "27/27",
+      "baseline_patch": "results/verified040-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-7454/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified040-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-7454/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-7757",
+      "source_run_id": "verified040-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified040",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "33/33",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "33/33",
+      "baseline_patch": "results/verified040-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-7757/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified040-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-7757/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-7889",
+      "source_run_id": "verified040-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified040",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "5/5",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "5/5",
+      "baseline_patch": "results/verified040-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-7889/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified040-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-7889/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-7910",
+      "source_run_id": "verified040-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified040",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "16/16",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "16/16",
+      "baseline_patch": "results/verified040-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-7910/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified040-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-7910/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-8035",
+      "source_run_id": "verified040-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified040",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "2/2",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "2/2",
+      "baseline_patch": "results/verified040-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-8035/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified040-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-8035/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-8120",
+      "source_run_id": "verified041-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified041",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "44/44",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "44/44",
+      "baseline_patch": "results/verified041-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-8120/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified041-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-8120/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-8269",
+      "source_run_id": "verified041-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified041",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "5/5",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "5/5",
+      "baseline_patch": "results/verified041-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-8269/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified041-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-8269/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-8459",
+      "source_run_id": "verified041-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified041",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "17/17",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "17/17",
+      "baseline_patch": "results/verified041-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-8459/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified041-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-8459/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-8475",
+      "source_run_id": "verified041-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified041",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "17/17",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "17/17",
+      "baseline_patch": "results/verified041-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-8475/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified041-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-8475/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-8551",
+      "source_run_id": "verified041-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified041",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "32/32",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "32/32",
+      "baseline_patch": "results/verified041-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-8551/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified041-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-8551/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-8593",
+      "source_run_id": "verified041-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified041",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "1/1",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "1/1",
+      "baseline_patch": "results/verified041-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-8593/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified041-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-8593/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-8595",
+      "source_run_id": "verified041-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified041",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "0/0",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "0/0",
+      "baseline_patch": "results/verified041-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-8595/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified041-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-8595/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-8621",
+      "source_run_id": "verified041-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified041",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "31/31",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "31/31",
+      "baseline_patch": "results/verified041-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-8621/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified041-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-8621/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-8638",
+      "source_run_id": "verified042-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified042",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "34/34",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "34/34",
+      "baseline_patch": "results/verified042-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-8638/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified042-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-8638/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-8721",
+      "source_run_id": "verified042-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified042",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "3/3",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "3/3",
+      "baseline_patch": "results/verified042-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-8721/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified042-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-8721/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-9229",
+      "source_run_id": "verified042-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified042",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "13/13",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "13/13",
+      "baseline_patch": "results/verified042-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-9229/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified042-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-9229/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-9230",
+      "source_run_id": "verified042-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified042",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "44/44",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "44/44",
+      "baseline_patch": "results/verified042-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-9230/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified042-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-9230/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-9258",
+      "source_run_id": "verified042-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified042",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "45/45",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "45/45",
+      "baseline_patch": "results/verified042-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-9258/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified042-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-9258/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-9320",
+      "source_run_id": "verified042-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified042",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "9/9",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "9/9",
+      "baseline_patch": "results/verified042-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-9320/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified042-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-9320/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-9367",
+      "source_run_id": "verified042-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified042",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "25/25",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "25/25",
+      "baseline_patch": "results/verified042-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-9367/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified042-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-9367/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-9591",
+      "source_run_id": "verified042-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified042",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "44/44",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "44/44",
+      "baseline_patch": "results/verified042-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-9591/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified042-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-9591/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-9602",
+      "source_run_id": "verified043-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified043",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "45/45",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "45/45",
+      "baseline_patch": "results/verified043-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-9602/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified043-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-9602/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-9658",
+      "source_run_id": "verified043-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified043",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "24/24",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "24/24",
+      "baseline_patch": "results/verified043-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-9658/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified043-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-9658/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-9673",
+      "source_run_id": "verified043-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified043",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "24/24",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "24/24",
+      "baseline_patch": "results/verified043-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-9673/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified043-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-9673/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-9698",
+      "source_run_id": "verified043-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified043",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "45/45",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "45/45",
+      "baseline_patch": "results/verified043-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-9698/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified043-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-9698/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-9711",
+      "source_run_id": "verified043-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified043",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "0/0",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "0/0",
+      "baseline_patch": "results/verified043-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-9711/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified043-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-9711/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-11618",
+      "source_run_id": "verified043-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified043",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "4/4",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "4/4",
+      "baseline_patch": "results/verified043-codex-wsl-ubuntu-260615221107/sympy__sympy-11618/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified043-codex-wsl-ubuntu-260615221107/sympy__sympy-11618/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-12096",
+      "source_run_id": "verified043-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified043",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "43/43",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "43/43",
+      "baseline_patch": "results/verified043-codex-wsl-ubuntu-260615221107/sympy__sympy-12096/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified043-codex-wsl-ubuntu-260615221107/sympy__sympy-12096/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-12481",
+      "source_run_id": "verified043-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified043",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "7/7",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "7/7",
+      "baseline_patch": "results/verified043-codex-wsl-ubuntu-260615221107/sympy__sympy-12481/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified043-codex-wsl-ubuntu-260615221107/sympy__sympy-12481/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-12489",
+      "source_run_id": "verified043-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified043",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "8/8",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "8/8",
+      "baseline_patch": "results/verified043-codex-wsl-ubuntu-260615221107/sympy__sympy-12489/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified043-codex-wsl-ubuntu-260615221107/sympy__sympy-12489/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-13031",
+      "source_run_id": "verified044-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified044",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "9/9",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "9/9",
+      "baseline_patch": "results/verified044-codex-wsl-ubuntu-260615221107/sympy__sympy-13031/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified044-codex-wsl-ubuntu-260615221107/sympy__sympy-13031/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-13372",
+      "source_run_id": "verified044-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified044",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "44/44",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "44/44",
+      "baseline_patch": "results/verified044-codex-wsl-ubuntu-260615221107/sympy__sympy-13372/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified044-codex-wsl-ubuntu-260615221107/sympy__sympy-13372/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-13480",
+      "source_run_id": "verified044-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified044",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "43/43",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "43/43",
+      "baseline_patch": "results/verified044-codex-wsl-ubuntu-260615221107/sympy__sympy-13480/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified044-codex-wsl-ubuntu-260615221107/sympy__sympy-13480/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-13551",
+      "source_run_id": "verified044-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified044",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "17/17",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "17/17",
+      "baseline_patch": "results/verified044-codex-wsl-ubuntu-260615221107/sympy__sympy-13551/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified044-codex-wsl-ubuntu-260615221107/sympy__sympy-13551/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-13647",
+      "source_run_id": "verified044-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified044",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "76/76",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "76/76",
+      "baseline_patch": "results/verified044-codex-wsl-ubuntu-260615221107/sympy__sympy-13647/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified044-codex-wsl-ubuntu-260615221107/sympy__sympy-13647/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-13757",
+      "source_run_id": "verified044-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified044",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "166/166",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "166/166",
+      "baseline_patch": "results/verified044-codex-wsl-ubuntu-260615221107/sympy__sympy-13757/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified044-codex-wsl-ubuntu-260615221107/sympy__sympy-13757/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-13877",
+      "source_run_id": "verified045-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified045",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "110/110",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "110/110",
+      "baseline_patch": "results/verified045-codex-wsl-ubuntu-260615221107/sympy__sympy-13877/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified045-codex-wsl-ubuntu-260615221107/sympy__sympy-13877/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-14531",
+      "source_run_id": "verified045-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified045",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "84/84",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "84/84",
+      "baseline_patch": "results/verified045-codex-wsl-ubuntu-260615221107/sympy__sympy-14531/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified045-codex-wsl-ubuntu-260615221107/sympy__sympy-14531/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-14711",
+      "source_run_id": "verified045-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified045",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "2/2",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "2/2",
+      "baseline_patch": "results/verified045-codex-wsl-ubuntu-260615221107/sympy__sympy-14711/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified045-codex-wsl-ubuntu-260615221107/sympy__sympy-14711/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-14976",
+      "source_run_id": "verified045-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified045",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "13/13",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "13/13",
+      "baseline_patch": "results/verified045-codex-wsl-ubuntu-260615221107/sympy__sympy-14976/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified045-codex-wsl-ubuntu-260615221107/sympy__sympy-14976/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-15017",
+      "source_run_id": "verified045-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified045",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "14/14",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "14/14",
+      "baseline_patch": "results/verified045-codex-wsl-ubuntu-260615221107/sympy__sympy-15017/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified045-codex-wsl-ubuntu-260615221107/sympy__sympy-15017/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-15345",
+      "source_run_id": "verified045-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified045",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "8/8",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "8/8",
+      "baseline_patch": "results/verified045-codex-wsl-ubuntu-260615221107/sympy__sympy-15345/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified045-codex-wsl-ubuntu-260615221107/sympy__sympy-15345/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-15349",
+      "source_run_id": "verified045-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified045",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "3/3",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "3/3",
+      "baseline_patch": "results/verified045-codex-wsl-ubuntu-260615221107/sympy__sympy-15349/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified045-codex-wsl-ubuntu-260615221107/sympy__sympy-15349/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-15599",
+      "source_run_id": "verified046-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified046",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "80/80",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "80/80",
+      "baseline_patch": "results/verified046-codex-wsl-ubuntu-260615221107/sympy__sympy-15599/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified046-codex-wsl-ubuntu-260615221107/sympy__sympy-15599/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-15809",
+      "source_run_id": "verified046-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified046",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "10/10",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "10/10",
+      "baseline_patch": "results/verified046-codex-wsl-ubuntu-260615221107/sympy__sympy-15809/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified046-codex-wsl-ubuntu-260615221107/sympy__sympy-15809/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-15976",
+      "source_run_id": "verified046-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified046",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "37/37",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "37/37",
+      "baseline_patch": "results/verified046-codex-wsl-ubuntu-260615221107/sympy__sympy-15976/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified046-codex-wsl-ubuntu-260615221107/sympy__sympy-15976/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-16450",
+      "source_run_id": "verified046-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified046",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "38/38",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "38/38",
+      "baseline_patch": "results/verified046-codex-wsl-ubuntu-260615221107/sympy__sympy-16450/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified046-codex-wsl-ubuntu-260615221107/sympy__sympy-16450/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-16766",
+      "source_run_id": "verified046-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified046",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "7/7",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "7/7",
+      "baseline_patch": "results/verified046-codex-wsl-ubuntu-260615221107/sympy__sympy-16766/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified046-codex-wsl-ubuntu-260615221107/sympy__sympy-16766/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-16792",
+      "source_run_id": "verified046-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified046",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "54/54",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "54/54",
+      "baseline_patch": "results/verified046-codex-wsl-ubuntu-260615221107/sympy__sympy-16792/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified046-codex-wsl-ubuntu-260615221107/sympy__sympy-16792/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-16886",
+      "source_run_id": "verified046-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified046",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "42/42",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "42/42",
+      "baseline_patch": "results/verified046-codex-wsl-ubuntu-260615221107/sympy__sympy-16886/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified046-codex-wsl-ubuntu-260615221107/sympy__sympy-16886/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-17139",
+      "source_run_id": "verified046-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified046",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "67/67",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "67/67",
+      "baseline_patch": "results/verified046-codex-wsl-ubuntu-260615221107/sympy__sympy-17139/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified046-codex-wsl-ubuntu-260615221107/sympy__sympy-17139/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-17318",
+      "source_run_id": "verified047-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified047",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "10/10",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "10/10",
+      "baseline_patch": "results/verified047-codex-wsl-ubuntu-260615221107/sympy__sympy-17318/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified047-codex-wsl-ubuntu-260615221107/sympy__sympy-17318/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-17655",
+      "source_run_id": "verified047-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified047",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "9/9",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "9/9",
+      "baseline_patch": "results/verified047-codex-wsl-ubuntu-260615221107/sympy__sympy-17655/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified047-codex-wsl-ubuntu-260615221107/sympy__sympy-17655/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-18189",
+      "source_run_id": "verified047-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified047",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "41/41",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "41/41",
+      "baseline_patch": "results/verified047-codex-wsl-ubuntu-260615221107/sympy__sympy-18189/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified047-codex-wsl-ubuntu-260615221107/sympy__sympy-18189/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-18211",
+      "source_run_id": "verified047-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified047",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "54/54",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "54/54",
+      "baseline_patch": "results/verified047-codex-wsl-ubuntu-260615221107/sympy__sympy-18211/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified047-codex-wsl-ubuntu-260615221107/sympy__sympy-18211/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-19040",
+      "source_run_id": "verified047-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified047",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "148/148",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "148/148",
+      "baseline_patch": "results/verified047-codex-wsl-ubuntu-260615221107/sympy__sympy-19040/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified047-codex-wsl-ubuntu-260615221107/sympy__sympy-19040/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-19346",
+      "source_run_id": "verified047-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified047",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "40/40",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "40/40",
+      "baseline_patch": "results/verified047-codex-wsl-ubuntu-260615221107/sympy__sympy-19346/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified047-codex-wsl-ubuntu-260615221107/sympy__sympy-19346/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-19637",
+      "source_run_id": "verified048-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified048",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "40/40",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "40/40",
+      "baseline_patch": "results/verified048-codex-wsl-ubuntu-260615221107/sympy__sympy-19637/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified048-codex-wsl-ubuntu-260615221107/sympy__sympy-19637/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-19783",
+      "source_run_id": "verified048-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified048",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "9/9",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "9/9",
+      "baseline_patch": "results/verified048-codex-wsl-ubuntu-260615221107/sympy__sympy-19783/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified048-codex-wsl-ubuntu-260615221107/sympy__sympy-19783/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-19954",
+      "source_run_id": "verified048-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified048",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "56/56",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "56/56",
+      "baseline_patch": "results/verified048-codex-wsl-ubuntu-260615221107/sympy__sympy-19954/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified048-codex-wsl-ubuntu-260615221107/sympy__sympy-19954/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-20154",
+      "source_run_id": "verified048-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified048",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "40/40",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "40/40",
+      "baseline_patch": "results/verified048-codex-wsl-ubuntu-260615221107/sympy__sympy-20154/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified048-codex-wsl-ubuntu-260615221107/sympy__sympy-20154/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-20590",
+      "source_run_id": "verified048-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified048",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "21/21",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "21/21",
+      "baseline_patch": "results/verified048-codex-wsl-ubuntu-260615221107/sympy__sympy-20590/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified048-codex-wsl-ubuntu-260615221107/sympy__sympy-20590/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-20801",
+      "source_run_id": "verified048-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified048",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "96/96",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "96/96",
+      "baseline_patch": "results/verified048-codex-wsl-ubuntu-260615221107/sympy__sympy-20801/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified048-codex-wsl-ubuntu-260615221107/sympy__sympy-20801/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-21379",
+      "source_run_id": "verified049-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified049",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "91/91",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "91/91",
+      "baseline_patch": "results/verified049-codex-wsl-ubuntu-260615221107/sympy__sympy-21379/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified049-codex-wsl-ubuntu-260615221107/sympy__sympy-21379/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-21612",
+      "source_run_id": "verified049-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified049",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "98/98",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "98/98",
+      "baseline_patch": "results/verified049-codex-wsl-ubuntu-260615221107/sympy__sympy-21612/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified049-codex-wsl-ubuntu-260615221107/sympy__sympy-21612/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-21847",
+      "source_run_id": "verified049-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified049",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "9/9",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "9/9",
+      "baseline_patch": "results/verified049-codex-wsl-ubuntu-260615221107/sympy__sympy-21847/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified049-codex-wsl-ubuntu-260615221107/sympy__sympy-21847/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-22456",
+      "source_run_id": "verified049-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified049",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "29/29",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "29/29",
+      "baseline_patch": "results/verified049-codex-wsl-ubuntu-260615221107/sympy__sympy-22456/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified049-codex-wsl-ubuntu-260615221107/sympy__sympy-22456/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-22714",
+      "source_run_id": "verified049-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified049",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "11/11",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "11/11",
+      "baseline_patch": "results/verified049-codex-wsl-ubuntu-260615221107/sympy__sympy-22714/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified049-codex-wsl-ubuntu-260615221107/sympy__sympy-22714/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-22914",
+      "source_run_id": "verified049-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified049",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "17/17",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "17/17",
+      "baseline_patch": "results/verified049-codex-wsl-ubuntu-260615221107/sympy__sympy-22914/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified049-codex-wsl-ubuntu-260615221107/sympy__sympy-22914/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-23262",
+      "source_run_id": "verified049-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified049",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "61/61",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "61/61",
+      "baseline_patch": "results/verified049-codex-wsl-ubuntu-260615221107/sympy__sympy-23262/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified049-codex-wsl-ubuntu-260615221107/sympy__sympy-23262/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-23413",
+      "source_run_id": "verified050-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified050",
+      "baseline_official_resolved": false,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "0/1",
+      "baseline_official_ptp": "2/2",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "2/2",
+      "baseline_patch": "results/verified050-codex-wsl-ubuntu-260615221107/sympy__sympy-23413/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified050-codex-wsl-ubuntu-260615221107/sympy__sympy-23413/solutions/solution_fvk.patch",
+      "category": "fvk_only",
+      "arms_to_run": [
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-23534",
+      "source_run_id": "verified050-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified050",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "11/11",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "11/11",
+      "baseline_patch": "results/verified050-codex-wsl-ubuntu-260615221107/sympy__sympy-23534/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified050-codex-wsl-ubuntu-260615221107/sympy__sympy-23534/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-23824",
+      "source_run_id": "verified050-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified050",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "2/2",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "2/2",
+      "baseline_patch": "results/verified050-codex-wsl-ubuntu-260615221107/sympy__sympy-23824/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified050-codex-wsl-ubuntu-260615221107/sympy__sympy-23824/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-23950",
+      "source_run_id": "verified050-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified050",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "4/4",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "4/4",
+      "baseline_patch": "results/verified050-codex-wsl-ubuntu-260615221107/sympy__sympy-23950/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified050-codex-wsl-ubuntu-260615221107/sympy__sympy-23950/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-24066",
+      "source_run_id": "verified050-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified050",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "30/30",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "30/30",
+      "baseline_patch": "results/verified050-codex-wsl-ubuntu-260615221107/sympy__sympy-24066/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified050-codex-wsl-ubuntu-260615221107/sympy__sympy-24066/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-24213",
+      "source_run_id": "verified050-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified050",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "31/31",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "31/31",
+      "baseline_patch": "results/verified050-codex-wsl-ubuntu-260615221107/sympy__sympy-24213/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified050-codex-wsl-ubuntu-260615221107/sympy__sympy-24213/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-24443",
+      "source_run_id": "verified050-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified050",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "1/1",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "1/1",
+      "baseline_patch": "results/verified050-codex-wsl-ubuntu-260615221107/sympy__sympy-24443/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified050-codex-wsl-ubuntu-260615221107/sympy__sympy-24443/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-24539",
+      "source_run_id": "verified050-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified050",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "62/62",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "62/62",
+      "baseline_patch": "results/verified050-codex-wsl-ubuntu-260615221107/sympy__sympy-24539/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified050-codex-wsl-ubuntu-260615221107/sympy__sympy-24539/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-24562",
+      "source_run_id": "verified050-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified050",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "105/105",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "105/105",
+      "baseline_patch": "results/verified050-codex-wsl-ubuntu-260615221107/sympy__sympy-24562/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified050-codex-wsl-ubuntu-260615221107/sympy__sympy-24562/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    },
+    {
+      "instance_id": "sympy__sympy-24661",
+      "source_run_id": "verified050-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified050",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "27/27",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "27/27",
+      "baseline_patch": "results/verified050-codex-wsl-ubuntu-260615221107/sympy__sympy-24661/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified050-codex-wsl-ubuntu-260615221107/sympy__sympy-24661/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression004"
+    }
+  ]
+}

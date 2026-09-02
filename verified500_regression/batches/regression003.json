@@ -1,0 +1,1962 @@
+{
+  "schema_version": 1,
+  "batch": "regression003",
+  "count": 103,
+  "instances": [
+    {
+      "instance_id": "django__django-16642",
+      "source_run_id": "verified024-codex-archlinux-20260616T060351Z",
+      "verified_batch": "verified024",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "21/21",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "21/21",
+      "baseline_patch": "results/verified024-codex-archlinux-20260616T060351Z/django__django-16642/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified024-codex-archlinux-20260616T060351Z/django__django-16642/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "django__django-16661",
+      "source_run_id": "verified024-codex-archlinux-20260616T060351Z",
+      "verified_batch": "verified024",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "36/36",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "36/36",
+      "baseline_patch": "results/verified024-codex-archlinux-20260616T060351Z/django__django-16661/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified024-codex-archlinux-20260616T060351Z/django__django-16661/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "django__django-16662",
+      "source_run_id": "verified024-codex-archlinux-20260616T060351Z",
+      "verified_batch": "verified024",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "51/51",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "51/51",
+      "baseline_patch": "results/verified024-codex-archlinux-20260616T060351Z/django__django-16662/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified024-codex-archlinux-20260616T060351Z/django__django-16662/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "django__django-16801",
+      "source_run_id": "verified025-codex-archlinux-20260616T064857Z",
+      "verified_batch": "verified025",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "17/17",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "17/17",
+      "baseline_patch": "results/verified025-codex-archlinux-20260616T064857Z/django__django-16801/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified025-codex-archlinux-20260616T064857Z/django__django-16801/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "django__django-16819",
+      "source_run_id": "verified025-codex-archlinux-20260616T064857Z",
+      "verified_batch": "verified025",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "38/38",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "38/38",
+      "baseline_patch": "results/verified025-codex-archlinux-20260616T064857Z/django__django-16819/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified025-codex-archlinux-20260616T064857Z/django__django-16819/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "django__django-16877",
+      "source_run_id": "verified025-codex-archlinux-20260616T064857Z",
+      "verified_batch": "verified025",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "4/4",
+      "baseline_official_ptp": "0/0",
+      "fvk_official_ftp": "4/4",
+      "fvk_official_ptp": "0/0",
+      "baseline_patch": "results/verified025-codex-archlinux-20260616T064857Z/django__django-16877/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified025-codex-archlinux-20260616T064857Z/django__django-16877/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "django__django-16899",
+      "source_run_id": "verified025-codex-archlinux-20260616T064857Z",
+      "verified_batch": "verified025",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "54/54",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "54/54",
+      "baseline_patch": "results/verified025-codex-archlinux-20260616T064857Z/django__django-16899/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified025-codex-archlinux-20260616T064857Z/django__django-16899/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "django__django-16901",
+      "source_run_id": "verified025-codex-archlinux-20260616T064857Z",
+      "verified_batch": "verified025",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "6/6",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "6/6",
+      "baseline_patch": "results/verified025-codex-archlinux-20260616T064857Z/django__django-16901/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified025-codex-archlinux-20260616T064857Z/django__django-16901/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "django__django-16938",
+      "source_run_id": "verified025-codex-archlinux-20260616T064857Z",
+      "verified_batch": "verified025",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "23/23",
+      "baseline_official_ptp": "65/65",
+      "fvk_official_ftp": "23/23",
+      "fvk_official_ptp": "65/65",
+      "baseline_patch": "results/verified025-codex-archlinux-20260616T064857Z/django__django-16938/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified025-codex-archlinux-20260616T064857Z/django__django-16938/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "django__django-16950",
+      "source_run_id": "verified025-codex-archlinux-20260616T064857Z",
+      "verified_batch": "verified025",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "3/3",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "3/3",
+      "baseline_patch": "results/verified025-codex-archlinux-20260616T064857Z/django__django-16950/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified025-codex-archlinux-20260616T064857Z/django__django-16950/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "django__django-17029",
+      "source_run_id": "verified025-codex-archlinux-20260616T064857Z",
+      "verified_batch": "verified025",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "43/43",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "43/43",
+      "baseline_patch": "results/verified025-codex-archlinux-20260616T064857Z/django__django-17029/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified025-codex-archlinux-20260616T064857Z/django__django-17029/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "django__django-17084",
+      "source_run_id": "verified025-codex-archlinux-20260616T064857Z",
+      "verified_batch": "verified025",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "107/107",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "107/107",
+      "baseline_patch": "results/verified025-codex-archlinux-20260616T064857Z/django__django-17084/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified025-codex-archlinux-20260616T064857Z/django__django-17084/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "django__django-17087",
+      "source_run_id": "verified026-codex-archlinux-20260616T074401Z",
+      "verified_batch": "verified026",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "53/53",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "53/53",
+      "baseline_patch": "results/verified026-codex-archlinux-20260616T074401Z/django__django-17087/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified026-codex-archlinux-20260616T074401Z/django__django-17087/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "django__django-7530",
+      "source_run_id": "verified026-codex-archlinux-20260616T074401Z",
+      "verified_batch": "verified026",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "59/59",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "59/59",
+      "baseline_patch": "results/verified026-codex-archlinux-20260616T074401Z/django__django-7530/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified026-codex-archlinux-20260616T074401Z/django__django-7530/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "django__django-9296",
+      "source_run_id": "verified026-codex-archlinux-20260616T074401Z",
+      "verified_batch": "verified026",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "20/20",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "20/20",
+      "baseline_patch": "results/verified026-codex-archlinux-20260616T074401Z/django__django-9296/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified026-codex-archlinux-20260616T074401Z/django__django-9296/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-13989",
+      "source_run_id": "verified026-codex-archlinux-20260616T074401Z",
+      "verified_batch": "verified026",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "411/411",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "411/411",
+      "baseline_patch": "results/verified026-codex-archlinux-20260616T074401Z/matplotlib__matplotlib-13989/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified026-codex-archlinux-20260616T074401Z/matplotlib__matplotlib-13989/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-14623",
+      "source_run_id": "verified026-codex-archlinux-20260616T074401Z",
+      "verified_batch": "verified026",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "400/400",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "400/400",
+      "baseline_patch": "results/verified026-codex-archlinux-20260616T074401Z/matplotlib__matplotlib-14623/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified026-codex-archlinux-20260616T074401Z/matplotlib__matplotlib-14623/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-20488",
+      "source_run_id": "verified026-codex-archlinux-20260616T074401Z",
+      "verified_batch": "verified026",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "111/111",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "111/111",
+      "baseline_patch": "results/verified026-codex-archlinux-20260616T074401Z/matplotlib__matplotlib-20488/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified026-codex-archlinux-20260616T074401Z/matplotlib__matplotlib-20488/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-20859",
+      "source_run_id": "verified026-codex-archlinux-20260616T074401Z",
+      "verified_batch": "verified026",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "88/88",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "88/88",
+      "baseline_patch": "results/verified026-codex-archlinux-20260616T074401Z/matplotlib__matplotlib-20859/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified026-codex-archlinux-20260616T074401Z/matplotlib__matplotlib-20859/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-21568",
+      "source_run_id": "verified026-codex-archlinux-20260616T074401Z",
+      "verified_batch": "verified026",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "4/4",
+      "baseline_official_ptp": "73/73",
+      "fvk_official_ftp": "4/4",
+      "fvk_official_ptp": "73/73",
+      "baseline_patch": "results/verified026-codex-archlinux-20260616T074401Z/matplotlib__matplotlib-21568/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified026-codex-archlinux-20260616T074401Z/matplotlib__matplotlib-21568/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-22719",
+      "source_run_id": "verified027-codex-archlinux-20260616T084044Z",
+      "verified_batch": "verified027",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "68/68",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "68/68",
+      "baseline_patch": "results/verified027-codex-archlinux-20260616T084044Z/matplotlib__matplotlib-22719/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified027-codex-archlinux-20260616T084044Z/matplotlib__matplotlib-22719/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-22865",
+      "source_run_id": "verified027-codex-archlinux-20260616T084044Z",
+      "verified_batch": "verified027",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "3/3",
+      "baseline_official_ptp": "57/57",
+      "fvk_official_ftp": "3/3",
+      "fvk_official_ptp": "57/57",
+      "baseline_patch": "results/verified027-codex-archlinux-20260616T084044Z/matplotlib__matplotlib-22865/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified027-codex-archlinux-20260616T084044Z/matplotlib__matplotlib-22865/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-22871",
+      "source_run_id": "verified027-codex-archlinux-20260616T084044Z",
+      "verified_batch": "verified027",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "88/88",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "88/88",
+      "baseline_patch": "results/verified027-codex-archlinux-20260616T084044Z/matplotlib__matplotlib-22871/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified027-codex-archlinux-20260616T084044Z/matplotlib__matplotlib-22871/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-23314",
+      "source_run_id": "verified027-codex-archlinux-20260616T084044Z",
+      "verified_batch": "verified027",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "862/862",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "862/862",
+      "baseline_patch": "results/verified027-codex-archlinux-20260616T084044Z/matplotlib__matplotlib-23314/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified027-codex-archlinux-20260616T084044Z/matplotlib__matplotlib-23314/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-23412",
+      "source_run_id": "verified027-codex-archlinux-20260616T084044Z",
+      "verified_batch": "verified027",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "46/46",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "46/46",
+      "baseline_patch": "results/verified027-codex-archlinux-20260616T084044Z/matplotlib__matplotlib-23412/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified027-codex-archlinux-20260616T084044Z/matplotlib__matplotlib-23412/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-23476",
+      "source_run_id": "verified027-codex-archlinux-20260616T084044Z",
+      "verified_batch": "verified027",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "104/104",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "104/104",
+      "baseline_patch": "results/verified027-codex-archlinux-20260616T084044Z/matplotlib__matplotlib-23476/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified027-codex-archlinux-20260616T084044Z/matplotlib__matplotlib-23476/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-24026",
+      "source_run_id": "verified027-codex-archlinux-20260616T084044Z",
+      "verified_batch": "verified027",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "764/764",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "764/764",
+      "baseline_patch": "results/verified027-codex-archlinux-20260616T084044Z/matplotlib__matplotlib-24026/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified027-codex-archlinux-20260616T084044Z/matplotlib__matplotlib-24026/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-24149",
+      "source_run_id": "verified027-codex-archlinux-20260616T084044Z",
+      "verified_batch": "verified027",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "767/767",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "767/767",
+      "baseline_patch": "results/verified027-codex-archlinux-20260616T084044Z/matplotlib__matplotlib-24149/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified027-codex-archlinux-20260616T084044Z/matplotlib__matplotlib-24149/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-24177",
+      "source_run_id": "verified027-codex-archlinux-20260616T084044Z",
+      "verified_batch": "verified027",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "768/768",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "768/768",
+      "baseline_patch": "results/verified027-codex-archlinux-20260616T084044Z/matplotlib__matplotlib-24177/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified027-codex-archlinux-20260616T084044Z/matplotlib__matplotlib-24177/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-24570",
+      "source_run_id": "verified028-codex-archlinux-20260616T095431Z",
+      "verified_batch": "verified028",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "267/267",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "267/267",
+      "baseline_patch": "results/verified028-codex-archlinux-20260616T095431Z/matplotlib__matplotlib-24570/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified028-codex-archlinux-20260616T095431Z/matplotlib__matplotlib-24570/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-24627",
+      "source_run_id": "verified028-codex-archlinux-20260616T095431Z",
+      "verified_batch": "verified028",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "776/776",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "776/776",
+      "baseline_patch": "results/verified028-codex-archlinux-20260616T095431Z/matplotlib__matplotlib-24627/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified028-codex-archlinux-20260616T095431Z/matplotlib__matplotlib-24627/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-24637",
+      "source_run_id": "verified028-codex-archlinux-20260616T095431Z",
+      "verified_batch": "verified028",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "29/29",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "29/29",
+      "baseline_patch": "results/verified028-codex-archlinux-20260616T095431Z/matplotlib__matplotlib-24637/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified028-codex-archlinux-20260616T095431Z/matplotlib__matplotlib-24637/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-24970",
+      "source_run_id": "verified028-codex-archlinux-20260616T095431Z",
+      "verified_batch": "verified028",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "253/253",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "253/253",
+      "baseline_patch": "results/verified028-codex-archlinux-20260616T095431Z/matplotlib__matplotlib-24970/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified028-codex-archlinux-20260616T095431Z/matplotlib__matplotlib-24970/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-25122",
+      "source_run_id": "verified028-codex-archlinux-20260616T095431Z",
+      "verified_batch": "verified028",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "12/12",
+      "baseline_official_ptp": "2476/2476",
+      "fvk_official_ftp": "12/12",
+      "fvk_official_ptp": "2476/2476",
+      "baseline_patch": "results/verified028-codex-archlinux-20260616T095431Z/matplotlib__matplotlib-25122/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified028-codex-archlinux-20260616T095431Z/matplotlib__matplotlib-25122/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-25287",
+      "source_run_id": "verified028-codex-archlinux-20260616T095431Z",
+      "verified_batch": "verified028",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "786/786",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "786/786",
+      "baseline_patch": "results/verified028-codex-archlinux-20260616T095431Z/matplotlib__matplotlib-25287/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified028-codex-archlinux-20260616T095431Z/matplotlib__matplotlib-25287/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-25311",
+      "source_run_id": "verified028-codex-archlinux-20260616T095431Z",
+      "verified_batch": "verified028",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "181/181",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "181/181",
+      "baseline_patch": "results/verified028-codex-archlinux-20260616T095431Z/matplotlib__matplotlib-25311/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified028-codex-archlinux-20260616T095431Z/matplotlib__matplotlib-25311/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-25332",
+      "source_run_id": "verified028-codex-archlinux-20260616T095431Z",
+      "verified_batch": "verified028",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "181/181",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "181/181",
+      "baseline_patch": "results/verified028-codex-archlinux-20260616T095431Z/matplotlib__matplotlib-25332/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified028-codex-archlinux-20260616T095431Z/matplotlib__matplotlib-25332/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-25775",
+      "source_run_id": "verified029-codex-archlinux-20260616T111534Z",
+      "verified_batch": "verified029",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "7/7",
+      "baseline_official_ptp": "89/89",
+      "fvk_official_ftp": "7/7",
+      "fvk_official_ptp": "89/89",
+      "baseline_patch": "results/verified029-codex-archlinux-20260616T111534Z/matplotlib__matplotlib-25775/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified029-codex-archlinux-20260616T111534Z/matplotlib__matplotlib-25775/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-25960",
+      "source_run_id": "verified029-codex-archlinux-20260616T111534Z",
+      "verified_batch": "verified029",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "137/137",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "137/137",
+      "baseline_patch": "results/verified029-codex-archlinux-20260616T111534Z/matplotlib__matplotlib-25960/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified029-codex-archlinux-20260616T111534Z/matplotlib__matplotlib-25960/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-26113",
+      "source_run_id": "verified029-codex-archlinux-20260616T111534Z",
+      "verified_batch": "verified029",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "812/812",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "812/812",
+      "baseline_patch": "results/verified029-codex-archlinux-20260616T111534Z/matplotlib__matplotlib-26113/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified029-codex-archlinux-20260616T111534Z/matplotlib__matplotlib-26113/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-26208",
+      "source_run_id": "verified029-codex-archlinux-20260616T111534Z",
+      "verified_batch": "verified029",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "813/813",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "813/813",
+      "baseline_patch": "results/verified029-codex-archlinux-20260616T111534Z/matplotlib__matplotlib-26208/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified029-codex-archlinux-20260616T111534Z/matplotlib__matplotlib-26208/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-26291",
+      "source_run_id": "verified029-codex-archlinux-20260616T111534Z",
+      "verified_batch": "verified029",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "49/49",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "49/49",
+      "baseline_patch": "results/verified029-codex-archlinux-20260616T111534Z/matplotlib__matplotlib-26291/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified029-codex-archlinux-20260616T111534Z/matplotlib__matplotlib-26291/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-26342",
+      "source_run_id": "verified029-codex-archlinux-20260616T111534Z",
+      "verified_batch": "verified029",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "81/81",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "81/81",
+      "baseline_patch": "results/verified029-codex-archlinux-20260616T111534Z/matplotlib__matplotlib-26342/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified029-codex-archlinux-20260616T111534Z/matplotlib__matplotlib-26342/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-26466",
+      "source_run_id": "verified029-codex-archlinux-20260616T111534Z",
+      "verified_batch": "verified029",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "100/100",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "100/100",
+      "baseline_patch": "results/verified029-codex-archlinux-20260616T111534Z/matplotlib__matplotlib-26466/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified029-codex-archlinux-20260616T111534Z/matplotlib__matplotlib-26466/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "pallets__flask-5014",
+      "source_run_id": "verified029-codex-archlinux-20260616T111534Z",
+      "verified_batch": "verified029",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "59/59",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "59/59",
+      "baseline_patch": "results/verified029-codex-archlinux-20260616T111534Z/pallets__flask-5014/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified029-codex-archlinux-20260616T111534Z/pallets__flask-5014/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "psf__requests-2931",
+      "source_run_id": "verified030-codex-archlinux-20260616T123754Z",
+      "verified_batch": "verified030",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "84/84",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "84/84",
+      "baseline_patch": "results/verified030-codex-archlinux-20260616T123754Z/psf__requests-2931/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified030-codex-archlinux-20260616T123754Z/psf__requests-2931/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "psf__requests-5414",
+      "source_run_id": "verified030-codex-archlinux-20260616T123754Z",
+      "verified_batch": "verified030",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "130/130",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "130/130",
+      "baseline_patch": "results/verified030-codex-archlinux-20260616T123754Z/psf__requests-5414/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified030-codex-archlinux-20260616T123754Z/psf__requests-5414/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "psf__requests-6028",
+      "source_run_id": "verified030-codex-archlinux-20260616T123754Z",
+      "verified_batch": "verified030",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "185/185",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "185/185",
+      "baseline_patch": "results/verified030-codex-archlinux-20260616T123754Z/psf__requests-6028/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified030-codex-archlinux-20260616T123754Z/psf__requests-6028/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "pydata__xarray-2905",
+      "source_run_id": "verified030-codex-archlinux-20260616T123754Z",
+      "verified_batch": "verified030",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "364/364",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "364/364",
+      "baseline_patch": "results/verified030-codex-archlinux-20260616T123754Z/pydata__xarray-2905/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified030-codex-archlinux-20260616T123754Z/pydata__xarray-2905/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "pydata__xarray-3095",
+      "source_run_id": "verified030-codex-archlinux-20260616T123754Z",
+      "verified_batch": "verified030",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "253/253",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "253/253",
+      "baseline_patch": "results/verified030-codex-archlinux-20260616T123754Z/pydata__xarray-3095/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified030-codex-archlinux-20260616T123754Z/pydata__xarray-3095/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "pydata__xarray-3151",
+      "source_run_id": "verified031-codex-archlinux-20260616T140808Z",
+      "verified_batch": "verified031",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "66/66",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "66/66",
+      "baseline_patch": "results/verified031-codex-archlinux-20260616T140808Z/pydata__xarray-3151/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified031-codex-archlinux-20260616T140808Z/pydata__xarray-3151/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "pydata__xarray-3305",
+      "source_run_id": "verified031-codex-archlinux-20260616T140808Z",
+      "verified_batch": "verified031",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "653/653",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "653/653",
+      "baseline_patch": "results/verified031-codex-archlinux-20260616T140808Z/pydata__xarray-3305/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified031-codex-archlinux-20260616T140808Z/pydata__xarray-3305/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "pydata__xarray-3677",
+      "source_run_id": "verified031-codex-archlinux-20260616T140808Z",
+      "verified_batch": "verified031",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "21/21",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "21/21",
+      "baseline_patch": "results/verified031-codex-archlinux-20260616T140808Z/pydata__xarray-3677/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified031-codex-archlinux-20260616T140808Z/pydata__xarray-3677/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "pydata__xarray-3993",
+      "source_run_id": "verified031-codex-archlinux-20260616T140808Z",
+      "verified_batch": "verified031",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "2398/2398",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "2398/2398",
+      "baseline_patch": "results/verified031-codex-archlinux-20260616T140808Z/pydata__xarray-3993/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified031-codex-archlinux-20260616T140808Z/pydata__xarray-3993/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "pydata__xarray-4075",
+      "source_run_id": "verified031-codex-archlinux-20260616T140808Z",
+      "verified_batch": "verified031",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "958/958",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "958/958",
+      "baseline_patch": "results/verified031-codex-archlinux-20260616T140808Z/pydata__xarray-4075/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified031-codex-archlinux-20260616T140808Z/pydata__xarray-4075/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "pydata__xarray-4094",
+      "source_run_id": "verified031-codex-archlinux-20260616T140808Z",
+      "verified_batch": "verified031",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "862/862",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "862/862",
+      "baseline_patch": "results/verified031-codex-archlinux-20260616T140808Z/pydata__xarray-4094/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified031-codex-archlinux-20260616T140808Z/pydata__xarray-4094/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "pydata__xarray-4356",
+      "source_run_id": "verified031-codex-archlinux-20260616T140808Z",
+      "verified_batch": "verified031",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "8/8",
+      "baseline_official_ptp": "604/604",
+      "fvk_official_ftp": "8/8",
+      "fvk_official_ptp": "604/604",
+      "baseline_patch": "results/verified031-codex-archlinux-20260616T140808Z/pydata__xarray-4356/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified031-codex-archlinux-20260616T140808Z/pydata__xarray-4356/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "pydata__xarray-4629",
+      "source_run_id": "verified031-codex-archlinux-20260616T140808Z",
+      "verified_batch": "verified031",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "32/32",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "32/32",
+      "baseline_patch": "results/verified031-codex-archlinux-20260616T140808Z/pydata__xarray-4629/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified031-codex-archlinux-20260616T140808Z/pydata__xarray-4629/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "pydata__xarray-4687",
+      "source_run_id": "verified031-codex-archlinux-20260616T140808Z",
+      "verified_batch": "verified031",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "1717/1717",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "1717/1717",
+      "baseline_patch": "results/verified031-codex-archlinux-20260616T140808Z/pydata__xarray-4687/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified031-codex-archlinux-20260616T140808Z/pydata__xarray-4687/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "pydata__xarray-4695",
+      "source_run_id": "verified031-codex-archlinux-20260616T140808Z",
+      "verified_batch": "verified031",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "875/875",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "875/875",
+      "baseline_patch": "results/verified031-codex-archlinux-20260616T140808Z/pydata__xarray-4695/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified031-codex-archlinux-20260616T140808Z/pydata__xarray-4695/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "pydata__xarray-4966",
+      "source_run_id": "verified032-codex-archlinux-20260616T145521Z",
+      "verified_batch": "verified032",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "4/4",
+      "baseline_official_ptp": "21/21",
+      "fvk_official_ftp": "4/4",
+      "fvk_official_ptp": "21/21",
+      "baseline_patch": "results/verified032-codex-archlinux-20260616T145521Z/pydata__xarray-4966/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified032-codex-archlinux-20260616T145521Z/pydata__xarray-4966/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "pydata__xarray-6461",
+      "source_run_id": "verified032-codex-archlinux-20260616T145521Z",
+      "verified_batch": "verified032",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "247/247",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "247/247",
+      "baseline_patch": "results/verified032-codex-archlinux-20260616T145521Z/pydata__xarray-6461/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified032-codex-archlinux-20260616T145521Z/pydata__xarray-6461/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "pydata__xarray-6599",
+      "source_run_id": "verified032-codex-archlinux-20260616T145521Z",
+      "verified_batch": "verified032",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "264/264",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "264/264",
+      "baseline_patch": "results/verified032-codex-archlinux-20260616T145521Z/pydata__xarray-6599/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified032-codex-archlinux-20260616T145521Z/pydata__xarray-6599/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "pydata__xarray-6721",
+      "source_run_id": "verified032-codex-archlinux-20260616T145521Z",
+      "verified_batch": "verified032",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "1405/1405",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "1405/1405",
+      "baseline_patch": "results/verified032-codex-archlinux-20260616T145521Z/pydata__xarray-6721/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified032-codex-archlinux-20260616T145521Z/pydata__xarray-6721/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "pydata__xarray-6744",
+      "source_run_id": "verified032-codex-archlinux-20260616T145521Z",
+      "verified_batch": "verified032",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "3/3",
+      "baseline_official_ptp": "1815/1815",
+      "fvk_official_ftp": "3/3",
+      "fvk_official_ptp": "1815/1815",
+      "baseline_patch": "results/verified032-codex-archlinux-20260616T145521Z/pydata__xarray-6744/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified032-codex-archlinux-20260616T145521Z/pydata__xarray-6744/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "pydata__xarray-7233",
+      "source_run_id": "verified032-codex-archlinux-20260616T145521Z",
+      "verified_batch": "verified032",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "189/189",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "189/189",
+      "baseline_patch": "results/verified032-codex-archlinux-20260616T145521Z/pydata__xarray-7233/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified032-codex-archlinux-20260616T145521Z/pydata__xarray-7233/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "pydata__xarray-7393",
+      "source_run_id": "verified032-codex-archlinux-20260616T145521Z",
+      "verified_batch": "verified032",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "71/71",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "71/71",
+      "baseline_patch": "results/verified032-codex-archlinux-20260616T145521Z/pydata__xarray-7393/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified032-codex-archlinux-20260616T145521Z/pydata__xarray-7393/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "pylint-dev__pylint-6386",
+      "source_run_id": "verified033-codex-archlinux-20260616T154504Z",
+      "verified_batch": "verified033",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "7/7",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "7/7",
+      "baseline_patch": "results/verified033-codex-archlinux-20260616T154504Z/pylint-dev__pylint-6386/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified033-codex-archlinux-20260616T154504Z/pylint-dev__pylint-6386/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "pylint-dev__pylint-6903",
+      "source_run_id": "verified033-codex-archlinux-20260616T154504Z",
+      "verified_batch": "verified033",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "8/8",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "8/8",
+      "baseline_patch": "results/verified033-codex-archlinux-20260616T154504Z/pylint-dev__pylint-6903/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified033-codex-archlinux-20260616T154504Z/pylint-dev__pylint-6903/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "pylint-dev__pylint-7080",
+      "source_run_id": "verified033-codex-archlinux-20260616T154504Z",
+      "verified_batch": "verified033",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "120/120",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "120/120",
+      "baseline_patch": "results/verified033-codex-archlinux-20260616T154504Z/pylint-dev__pylint-7080/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified033-codex-archlinux-20260616T154504Z/pylint-dev__pylint-7080/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "pylint-dev__pylint-7277",
+      "source_run_id": "verified033-codex-archlinux-20260616T154504Z",
+      "verified_batch": "verified033",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "122/122",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "122/122",
+      "baseline_patch": "results/verified033-codex-archlinux-20260616T154504Z/pylint-dev__pylint-7277/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified033-codex-archlinux-20260616T154504Z/pylint-dev__pylint-7277/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "pylint-dev__pylint-8898",
+      "source_run_id": "verified033-codex-archlinux-20260616T154504Z",
+      "verified_batch": "verified033",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "18/18",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "18/18",
+      "baseline_patch": "results/verified033-codex-archlinux-20260616T154504Z/pylint-dev__pylint-8898/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified033-codex-archlinux-20260616T154504Z/pylint-dev__pylint-8898/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "pytest-dev__pytest-10051",
+      "source_run_id": "verified034-codex-archlinux-20260616T163816Z",
+      "verified_batch": "verified034",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "15/15",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "15/15",
+      "baseline_patch": "results/verified034-codex-archlinux-20260616T163816Z/pytest-dev__pytest-10051/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified034-codex-archlinux-20260616T163816Z/pytest-dev__pytest-10051/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "pytest-dev__pytest-10081",
+      "source_run_id": "verified034-codex-archlinux-20260616T163816Z",
+      "verified_batch": "verified034",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "63/63",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "63/63",
+      "baseline_patch": "results/verified034-codex-archlinux-20260616T163816Z/pytest-dev__pytest-10081/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified034-codex-archlinux-20260616T163816Z/pytest-dev__pytest-10081/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "pytest-dev__pytest-5262",
+      "source_run_id": "verified034-codex-archlinux-20260616T163816Z",
+      "verified_batch": "verified034",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "108/108",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "108/108",
+      "baseline_patch": "results/verified034-codex-archlinux-20260616T163816Z/pytest-dev__pytest-5262/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified034-codex-archlinux-20260616T163816Z/pytest-dev__pytest-5262/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "pytest-dev__pytest-5631",
+      "source_run_id": "verified034-codex-archlinux-20260616T163816Z",
+      "verified_batch": "verified034",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "15/15",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "15/15",
+      "baseline_patch": "results/verified034-codex-archlinux-20260616T163816Z/pytest-dev__pytest-5631/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified034-codex-archlinux-20260616T163816Z/pytest-dev__pytest-5631/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "pytest-dev__pytest-5787",
+      "source_run_id": "verified034-codex-archlinux-20260616T163816Z",
+      "verified_batch": "verified034",
+      "baseline_official_resolved": false,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "122/123",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "123/123",
+      "baseline_patch": "results/verified034-codex-archlinux-20260616T163816Z/pytest-dev__pytest-5787/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified034-codex-archlinux-20260616T163816Z/pytest-dev__pytest-5787/solutions/solution_fvk.patch",
+      "category": "fvk_only",
+      "arms_to_run": [
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "pytest-dev__pytest-5809",
+      "source_run_id": "verified034-codex-archlinux-20260616T163816Z",
+      "verified_batch": "verified034",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "3/3",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "3/3",
+      "baseline_patch": "results/verified034-codex-archlinux-20260616T163816Z/pytest-dev__pytest-5809/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified034-codex-archlinux-20260616T163816Z/pytest-dev__pytest-5809/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "pytest-dev__pytest-6197",
+      "source_run_id": "verified034-codex-archlinux-20260616T163816Z",
+      "verified_batch": "verified034",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "145/145",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "145/145",
+      "baseline_patch": "results/verified034-codex-archlinux-20260616T163816Z/pytest-dev__pytest-6197/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified034-codex-archlinux-20260616T163816Z/pytest-dev__pytest-6197/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "pytest-dev__pytest-6202",
+      "source_run_id": "verified034-codex-archlinux-20260616T163816Z",
+      "verified_batch": "verified034",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "72/72",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "72/72",
+      "baseline_patch": "results/verified034-codex-archlinux-20260616T163816Z/pytest-dev__pytest-6202/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified034-codex-archlinux-20260616T163816Z/pytest-dev__pytest-6202/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "pytest-dev__pytest-7236",
+      "source_run_id": "verified035-codex-archlinux-20260616T172110Z",
+      "verified_batch": "verified035",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "51/51",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "51/51",
+      "baseline_patch": "results/verified035-codex-archlinux-20260616T172110Z/pytest-dev__pytest-7236/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified035-codex-archlinux-20260616T172110Z/pytest-dev__pytest-7236/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "pytest-dev__pytest-7324",
+      "source_run_id": "verified035-codex-archlinux-20260616T172110Z",
+      "verified_batch": "verified035",
+      "baseline_official_resolved": false,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/3",
+      "baseline_official_ptp": "58/58",
+      "fvk_official_ftp": "3/3",
+      "fvk_official_ptp": "58/58",
+      "baseline_patch": "results/verified035-codex-archlinux-20260616T172110Z/pytest-dev__pytest-7324/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified035-codex-archlinux-20260616T172110Z/pytest-dev__pytest-7324/solutions/solution_fvk.patch",
+      "category": "fvk_only",
+      "arms_to_run": [
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "pytest-dev__pytest-7432",
+      "source_run_id": "verified035-codex-archlinux-20260616T172110Z",
+      "verified_batch": "verified035",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "77/77",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "77/77",
+      "baseline_patch": "results/verified035-codex-archlinux-20260616T172110Z/pytest-dev__pytest-7432/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified035-codex-archlinux-20260616T172110Z/pytest-dev__pytest-7432/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "pytest-dev__pytest-7490",
+      "source_run_id": "verified035-codex-archlinux-20260616T172110Z",
+      "verified_batch": "verified035",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "78/78",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "78/78",
+      "baseline_patch": "results/verified035-codex-archlinux-20260616T172110Z/pytest-dev__pytest-7490/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified035-codex-archlinux-20260616T172110Z/pytest-dev__pytest-7490/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "pytest-dev__pytest-7521",
+      "source_run_id": "verified035-codex-archlinux-20260616T172110Z",
+      "verified_batch": "verified035",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "125/125",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "125/125",
+      "baseline_patch": "results/verified035-codex-archlinux-20260616T172110Z/pytest-dev__pytest-7521/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified035-codex-archlinux-20260616T172110Z/pytest-dev__pytest-7521/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "pytest-dev__pytest-7571",
+      "source_run_id": "verified035-codex-archlinux-20260616T172110Z",
+      "verified_batch": "verified035",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "14/14",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "14/14",
+      "baseline_patch": "results/verified035-codex-archlinux-20260616T172110Z/pytest-dev__pytest-7571/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified035-codex-archlinux-20260616T172110Z/pytest-dev__pytest-7571/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "pytest-dev__pytest-7982",
+      "source_run_id": "verified035-codex-archlinux-20260616T172110Z",
+      "verified_batch": "verified035",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "78/78",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "78/78",
+      "baseline_patch": "results/verified035-codex-archlinux-20260616T172110Z/pytest-dev__pytest-7982/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified035-codex-archlinux-20260616T172110Z/pytest-dev__pytest-7982/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "pytest-dev__pytest-8399",
+      "source_run_id": "verified035-codex-archlinux-20260616T172110Z",
+      "verified_batch": "verified035",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "59/59",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "59/59",
+      "baseline_patch": "results/verified035-codex-archlinux-20260616T172110Z/pytest-dev__pytest-8399/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified035-codex-archlinux-20260616T172110Z/pytest-dev__pytest-8399/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-10297",
+      "source_run_id": "verified035-codex-archlinux-20260616T172110Z",
+      "verified_batch": "verified035",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "28/28",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "28/28",
+      "baseline_patch": "results/verified035-codex-archlinux-20260616T172110Z/scikit-learn__scikit-learn-10297/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified035-codex-archlinux-20260616T172110Z/scikit-learn__scikit-learn-10297/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-10844",
+      "source_run_id": "verified036-codex-wsl-ubuntu-260615212520",
+      "verified_batch": "verified036",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "16/16",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "16/16",
+      "baseline_patch": "results/verified036-codex-wsl-ubuntu-260615212520/scikit-learn__scikit-learn-10844/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified036-codex-wsl-ubuntu-260615212520/scikit-learn__scikit-learn-10844/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-10908",
+      "source_run_id": "verified036-codex-wsl-ubuntu-260615212520",
+      "verified_batch": "verified036",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "47/47",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "47/47",
+      "baseline_patch": "results/verified036-codex-wsl-ubuntu-260615212520/scikit-learn__scikit-learn-10908/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified036-codex-wsl-ubuntu-260615212520/scikit-learn__scikit-learn-10908/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-11310",
+      "source_run_id": "verified036-codex-wsl-ubuntu-260615212520",
+      "verified_batch": "verified036",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "50/50",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "50/50",
+      "baseline_patch": "results/verified036-codex-wsl-ubuntu-260615212520/scikit-learn__scikit-learn-11310/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified036-codex-wsl-ubuntu-260615212520/scikit-learn__scikit-learn-11310/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-11578",
+      "source_run_id": "verified036-codex-wsl-ubuntu-260615212520",
+      "verified_batch": "verified036",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "93/93",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "93/93",
+      "baseline_patch": "results/verified036-codex-wsl-ubuntu-260615212520/scikit-learn__scikit-learn-11578/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified036-codex-wsl-ubuntu-260615212520/scikit-learn__scikit-learn-11578/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-12585",
+      "source_run_id": "verified036-codex-wsl-ubuntu-260615212520",
+      "verified_batch": "verified036",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "22/22",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "22/22",
+      "baseline_patch": "results/verified036-codex-wsl-ubuntu-260615212520/scikit-learn__scikit-learn-12585/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified036-codex-wsl-ubuntu-260615212520/scikit-learn__scikit-learn-12585/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-12682",
+      "source_run_id": "verified036-codex-wsl-ubuntu-260615212520",
+      "verified_batch": "verified036",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "66/66",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "66/66",
+      "baseline_patch": "results/verified036-codex-wsl-ubuntu-260615212520/scikit-learn__scikit-learn-12682/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified036-codex-wsl-ubuntu-260615212520/scikit-learn__scikit-learn-12682/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-12973",
+      "source_run_id": "verified036-codex-wsl-ubuntu-260615212520",
+      "verified_batch": "verified036",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "32/32",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "32/32",
+      "baseline_patch": "results/verified036-codex-wsl-ubuntu-260615212520/scikit-learn__scikit-learn-12973/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified036-codex-wsl-ubuntu-260615212520/scikit-learn__scikit-learn-12973/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-13124",
+      "source_run_id": "verified036-codex-wsl-ubuntu-260615212520",
+      "verified_batch": "verified036",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "60/60",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "60/60",
+      "baseline_patch": "results/verified036-codex-wsl-ubuntu-260615212520/scikit-learn__scikit-learn-13124/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified036-codex-wsl-ubuntu-260615212520/scikit-learn__scikit-learn-13124/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-13135",
+      "source_run_id": "verified036-codex-wsl-ubuntu-260615212520",
+      "verified_batch": "verified036",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "33/33",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "33/33",
+      "baseline_patch": "results/verified036-codex-wsl-ubuntu-260615212520/scikit-learn__scikit-learn-13135/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified036-codex-wsl-ubuntu-260615212520/scikit-learn__scikit-learn-13135/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-13142",
+      "source_run_id": "verified036-codex-wsl-ubuntu-260615212520",
+      "verified_batch": "verified036",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "54/54",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "54/54",
+      "baseline_patch": "results/verified036-codex-wsl-ubuntu-260615212520/scikit-learn__scikit-learn-13142/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified036-codex-wsl-ubuntu-260615212520/scikit-learn__scikit-learn-13142/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-13328",
+      "source_run_id": "verified037-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified037",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "9/9",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "9/9",
+      "baseline_patch": "results/verified037-codex-wsl-ubuntu-260615221107/scikit-learn__scikit-learn-13328/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified037-codex-wsl-ubuntu-260615221107/scikit-learn__scikit-learn-13328/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-13439",
+      "source_run_id": "verified037-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified037",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "40/40",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "40/40",
+      "baseline_patch": "results/verified037-codex-wsl-ubuntu-260615221107/scikit-learn__scikit-learn-13439/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified037-codex-wsl-ubuntu-260615221107/scikit-learn__scikit-learn-13439/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-13496",
+      "source_run_id": "verified037-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified037",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "19/19",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "19/19",
+      "baseline_patch": "results/verified037-codex-wsl-ubuntu-260615221107/scikit-learn__scikit-learn-13496/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified037-codex-wsl-ubuntu-260615221107/scikit-learn__scikit-learn-13496/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-13779",
+      "source_run_id": "verified037-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified037",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "18/18",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "18/18",
+      "baseline_patch": "results/verified037-codex-wsl-ubuntu-260615221107/scikit-learn__scikit-learn-13779/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified037-codex-wsl-ubuntu-260615221107/scikit-learn__scikit-learn-13779/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression003"
+    }
+  ]
+}

@@ -1,0 +1,1962 @@
+{
+  "schema_version": 1,
+  "batch": "regression002",
+  "count": 103,
+  "instances": [
+    {
+      "instance_id": "django__django-13590",
+      "source_run_id": "verified013-codex-XC-MINI-PRO-AHP-20260616T004115Z",
+      "verified_batch": "verified013",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "145/145",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "145/145",
+      "baseline_patch": "results/verified013-codex-XC-MINI-PRO-AHP-20260616T004115Z/django__django-13590/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified013-codex-XC-MINI-PRO-AHP-20260616T004115Z/django__django-13590/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-13658",
+      "source_run_id": "verified013-codex-XC-MINI-PRO-AHP-20260616T004115Z",
+      "verified_batch": "verified013",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "181/181",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "181/181",
+      "baseline_patch": "results/verified013-codex-XC-MINI-PRO-AHP-20260616T004115Z/django__django-13658/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified013-codex-XC-MINI-PRO-AHP-20260616T004115Z/django__django-13658/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-13670",
+      "source_run_id": "verified013-codex-XC-MINI-PRO-AHP-20260616T004115Z",
+      "verified_batch": "verified013",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "17/17",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "17/17",
+      "baseline_patch": "results/verified013-codex-XC-MINI-PRO-AHP-20260616T004115Z/django__django-13670/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified013-codex-XC-MINI-PRO-AHP-20260616T004115Z/django__django-13670/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-13741",
+      "source_run_id": "verified013-codex-XC-MINI-PRO-AHP-20260616T004115Z",
+      "verified_batch": "verified013",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "82/82",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "82/82",
+      "baseline_patch": "results/verified013-codex-XC-MINI-PRO-AHP-20260616T004115Z/django__django-13741/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified013-codex-XC-MINI-PRO-AHP-20260616T004115Z/django__django-13741/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-13786",
+      "source_run_id": "verified013-codex-XC-MINI-PRO-AHP-20260616T004115Z",
+      "verified_batch": "verified013",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "33/33",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "33/33",
+      "baseline_patch": "results/verified013-codex-XC-MINI-PRO-AHP-20260616T004115Z/django__django-13786/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified013-codex-XC-MINI-PRO-AHP-20260616T004115Z/django__django-13786/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-13807",
+      "source_run_id": "verified013-codex-XC-MINI-PRO-AHP-20260616T004115Z",
+      "verified_batch": "verified013",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "38/38",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "38/38",
+      "baseline_patch": "results/verified013-codex-XC-MINI-PRO-AHP-20260616T004115Z/django__django-13807/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified013-codex-XC-MINI-PRO-AHP-20260616T004115Z/django__django-13807/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-13809",
+      "source_run_id": "verified013-codex-XC-MINI-PRO-AHP-20260616T004115Z",
+      "verified_batch": "verified013",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "245/245",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "245/245",
+      "baseline_patch": "results/verified013-codex-XC-MINI-PRO-AHP-20260616T004115Z/django__django-13809/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified013-codex-XC-MINI-PRO-AHP-20260616T004115Z/django__django-13809/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-13810",
+      "source_run_id": "verified014-codex-XC-MINI-PRO-AHP-20260616T024414Z",
+      "verified_batch": "verified014",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "30/30",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "30/30",
+      "baseline_patch": "results/verified014-codex-XC-MINI-PRO-AHP-20260616T024414Z/django__django-13810/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified014-codex-XC-MINI-PRO-AHP-20260616T024414Z/django__django-13810/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-13820",
+      "source_run_id": "verified014-codex-XC-MINI-PRO-AHP-20260616T024414Z",
+      "verified_batch": "verified014",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "24/24",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "24/24",
+      "baseline_patch": "results/verified014-codex-XC-MINI-PRO-AHP-20260616T024414Z/django__django-13820/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified014-codex-XC-MINI-PRO-AHP-20260616T024414Z/django__django-13820/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-13821",
+      "source_run_id": "verified014-codex-XC-MINI-PRO-AHP-20260616T024414Z",
+      "verified_batch": "verified014",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "14/14",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "14/14",
+      "baseline_patch": "results/verified014-codex-XC-MINI-PRO-AHP-20260616T024414Z/django__django-13821/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified014-codex-XC-MINI-PRO-AHP-20260616T024414Z/django__django-13821/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-13837",
+      "source_run_id": "verified014-codex-XC-MINI-PRO-AHP-20260616T024414Z",
+      "verified_batch": "verified014",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "57/57",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "57/57",
+      "baseline_patch": "results/verified014-codex-XC-MINI-PRO-AHP-20260616T024414Z/django__django-13837/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified014-codex-XC-MINI-PRO-AHP-20260616T024414Z/django__django-13837/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-13925",
+      "source_run_id": "verified014-codex-XC-MINI-PRO-AHP-20260616T024414Z",
+      "verified_batch": "verified014",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "24/24",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "24/24",
+      "baseline_patch": "results/verified014-codex-XC-MINI-PRO-AHP-20260616T024414Z/django__django-13925/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified014-codex-XC-MINI-PRO-AHP-20260616T024414Z/django__django-13925/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-13933",
+      "source_run_id": "verified014-codex-XC-MINI-PRO-AHP-20260616T024414Z",
+      "verified_batch": "verified014",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "19/19",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "19/19",
+      "baseline_patch": "results/verified014-codex-XC-MINI-PRO-AHP-20260616T024414Z/django__django-13933/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified014-codex-XC-MINI-PRO-AHP-20260616T024414Z/django__django-13933/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-13964",
+      "source_run_id": "verified014-codex-XC-MINI-PRO-AHP-20260616T024414Z",
+      "verified_batch": "verified014",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "36/36",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "36/36",
+      "baseline_patch": "results/verified014-codex-XC-MINI-PRO-AHP-20260616T024414Z/django__django-13964/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified014-codex-XC-MINI-PRO-AHP-20260616T024414Z/django__django-13964/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-14007",
+      "source_run_id": "verified014-codex-XC-MINI-PRO-AHP-20260616T024414Z",
+      "verified_batch": "verified014",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "12/12",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "12/12",
+      "baseline_patch": "results/verified014-codex-XC-MINI-PRO-AHP-20260616T024414Z/django__django-14007/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified014-codex-XC-MINI-PRO-AHP-20260616T024414Z/django__django-14007/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-14017",
+      "source_run_id": "verified014-codex-XC-MINI-PRO-AHP-20260616T024414Z",
+      "verified_batch": "verified014",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "147/147",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "147/147",
+      "baseline_patch": "results/verified014-codex-XC-MINI-PRO-AHP-20260616T024414Z/django__django-14017/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified014-codex-XC-MINI-PRO-AHP-20260616T024414Z/django__django-14017/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-14034",
+      "source_run_id": "verified015-codex-XC-MINI-PRO-AHP-20260616T034306Z",
+      "verified_batch": "verified015",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "12/12",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "12/12",
+      "baseline_patch": "results/verified015-codex-XC-MINI-PRO-AHP-20260616T034306Z/django__django-14034/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified015-codex-XC-MINI-PRO-AHP-20260616T034306Z/django__django-14034/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-14053",
+      "source_run_id": "verified015-codex-XC-MINI-PRO-AHP-20260616T034306Z",
+      "verified_batch": "verified015",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "31/31",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "31/31",
+      "baseline_patch": "results/verified015-codex-XC-MINI-PRO-AHP-20260616T034306Z/django__django-14053/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified015-codex-XC-MINI-PRO-AHP-20260616T034306Z/django__django-14053/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-14089",
+      "source_run_id": "verified015-codex-XC-MINI-PRO-AHP-20260616T034306Z",
+      "verified_batch": "verified015",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "43/43",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "43/43",
+      "baseline_patch": "results/verified015-codex-XC-MINI-PRO-AHP-20260616T034306Z/django__django-14089/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified015-codex-XC-MINI-PRO-AHP-20260616T034306Z/django__django-14089/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-14122",
+      "source_run_id": "verified015-codex-XC-MINI-PRO-AHP-20260616T034306Z",
+      "verified_batch": "verified015",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "26/26",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "26/26",
+      "baseline_patch": "results/verified015-codex-XC-MINI-PRO-AHP-20260616T034306Z/django__django-14122/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified015-codex-XC-MINI-PRO-AHP-20260616T034306Z/django__django-14122/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-14170",
+      "source_run_id": "verified015-codex-XC-MINI-PRO-AHP-20260616T034306Z",
+      "verified_batch": "verified015",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "76/76",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "76/76",
+      "baseline_patch": "results/verified015-codex-XC-MINI-PRO-AHP-20260616T034306Z/django__django-14170/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified015-codex-XC-MINI-PRO-AHP-20260616T034306Z/django__django-14170/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-14238",
+      "source_run_id": "verified015-codex-XC-MINI-PRO-AHP-20260616T034306Z",
+      "verified_batch": "verified015",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "39/39",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "39/39",
+      "baseline_patch": "results/verified015-codex-XC-MINI-PRO-AHP-20260616T034306Z/django__django-14238/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified015-codex-XC-MINI-PRO-AHP-20260616T034306Z/django__django-14238/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-14311",
+      "source_run_id": "verified015-codex-XC-MINI-PRO-AHP-20260616T034306Z",
+      "verified_batch": "verified015",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "59/59",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "59/59",
+      "baseline_patch": "results/verified015-codex-XC-MINI-PRO-AHP-20260616T034306Z/django__django-14311/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified015-codex-XC-MINI-PRO-AHP-20260616T034306Z/django__django-14311/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-14315",
+      "source_run_id": "verified015-codex-XC-MINI-PRO-AHP-20260616T034306Z",
+      "verified_batch": "verified015",
+      "baseline_official_resolved": false,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "9/11",
+      "baseline_official_ptp": "0/0",
+      "fvk_official_ftp": "11/11",
+      "fvk_official_ptp": "0/0",
+      "baseline_patch": "results/verified015-codex-XC-MINI-PRO-AHP-20260616T034306Z/django__django-14315/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified015-codex-XC-MINI-PRO-AHP-20260616T034306Z/django__django-14315/solutions/solution_fvk.patch",
+      "category": "fvk_only",
+      "arms_to_run": [
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-14349",
+      "source_run_id": "verified016-codex-XC-MINI-PRO-AHP-20260616T043623Z",
+      "verified_batch": "verified016",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "18/18",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "18/18",
+      "baseline_patch": "results/verified016-codex-XC-MINI-PRO-AHP-20260616T043623Z/django__django-14349/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified016-codex-XC-MINI-PRO-AHP-20260616T043623Z/django__django-14349/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-14351",
+      "source_run_id": "verified016-codex-XC-MINI-PRO-AHP-20260616T043623Z",
+      "verified_batch": "verified016",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "58/58",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "58/58",
+      "baseline_patch": "results/verified016-codex-XC-MINI-PRO-AHP-20260616T043623Z/django__django-14351/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified016-codex-XC-MINI-PRO-AHP-20260616T043623Z/django__django-14351/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-14373",
+      "source_run_id": "verified016-codex-XC-MINI-PRO-AHP-20260616T043623Z",
+      "verified_batch": "verified016",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "19/19",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "19/19",
+      "baseline_patch": "results/verified016-codex-XC-MINI-PRO-AHP-20260616T043623Z/django__django-14373/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified016-codex-XC-MINI-PRO-AHP-20260616T043623Z/django__django-14373/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-14404",
+      "source_run_id": "verified016-codex-XC-MINI-PRO-AHP-20260616T043623Z",
+      "verified_batch": "verified016",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "323/323",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "323/323",
+      "baseline_patch": "results/verified016-codex-XC-MINI-PRO-AHP-20260616T043623Z/django__django-14404/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified016-codex-XC-MINI-PRO-AHP-20260616T043623Z/django__django-14404/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-14434",
+      "source_run_id": "verified016-codex-XC-MINI-PRO-AHP-20260616T043623Z",
+      "verified_batch": "verified016",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "133/133",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "133/133",
+      "baseline_patch": "results/verified016-codex-XC-MINI-PRO-AHP-20260616T043623Z/django__django-14434/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified016-codex-XC-MINI-PRO-AHP-20260616T043623Z/django__django-14434/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-14493",
+      "source_run_id": "verified016-codex-XC-MINI-PRO-AHP-20260616T043623Z",
+      "verified_batch": "verified016",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "36/36",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "36/36",
+      "baseline_patch": "results/verified016-codex-XC-MINI-PRO-AHP-20260616T043623Z/django__django-14493/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified016-codex-XC-MINI-PRO-AHP-20260616T043623Z/django__django-14493/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-14500",
+      "source_run_id": "verified016-codex-XC-MINI-PRO-AHP-20260616T043623Z",
+      "verified_batch": "verified016",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "21/21",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "21/21",
+      "baseline_patch": "results/verified016-codex-XC-MINI-PRO-AHP-20260616T043623Z/django__django-14500/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified016-codex-XC-MINI-PRO-AHP-20260616T043623Z/django__django-14500/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-14539",
+      "source_run_id": "verified016-codex-XC-MINI-PRO-AHP-20260616T043623Z",
+      "verified_batch": "verified016",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "14/14",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "14/14",
+      "baseline_patch": "results/verified016-codex-XC-MINI-PRO-AHP-20260616T043623Z/django__django-14539/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified016-codex-XC-MINI-PRO-AHP-20260616T043623Z/django__django-14539/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-14559",
+      "source_run_id": "verified017-codex-XC-MINI-PRO-AHP-20260616T052940Z",
+      "verified_batch": "verified017",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "3/3",
+      "baseline_official_ptp": "23/23",
+      "fvk_official_ftp": "3/3",
+      "fvk_official_ptp": "23/23",
+      "baseline_patch": "results/verified017-codex-XC-MINI-PRO-AHP-20260616T052940Z/django__django-14559/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified017-codex-XC-MINI-PRO-AHP-20260616T052940Z/django__django-14559/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-14580",
+      "source_run_id": "verified017-codex-XC-MINI-PRO-AHP-20260616T052940Z",
+      "verified_batch": "verified017",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "49/49",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "49/49",
+      "baseline_patch": "results/verified017-codex-XC-MINI-PRO-AHP-20260616T052940Z/django__django-14580/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified017-codex-XC-MINI-PRO-AHP-20260616T052940Z/django__django-14580/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-14608",
+      "source_run_id": "verified017-codex-XC-MINI-PRO-AHP-20260616T052940Z",
+      "verified_batch": "verified017",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "4/4",
+      "baseline_official_ptp": "394/394",
+      "fvk_official_ftp": "4/4",
+      "fvk_official_ptp": "394/394",
+      "baseline_patch": "results/verified017-codex-XC-MINI-PRO-AHP-20260616T052940Z/django__django-14608/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified017-codex-XC-MINI-PRO-AHP-20260616T052940Z/django__django-14608/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-14631",
+      "source_run_id": "verified017-codex-XC-MINI-PRO-AHP-20260616T052940Z",
+      "verified_batch": "verified017",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "117/117",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "117/117",
+      "baseline_patch": "results/verified017-codex-XC-MINI-PRO-AHP-20260616T052940Z/django__django-14631/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified017-codex-XC-MINI-PRO-AHP-20260616T052940Z/django__django-14631/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-14672",
+      "source_run_id": "verified017-codex-XC-MINI-PRO-AHP-20260616T052940Z",
+      "verified_batch": "verified017",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "168/168",
+      "baseline_official_ptp": "0/0",
+      "fvk_official_ftp": "168/168",
+      "fvk_official_ptp": "0/0",
+      "baseline_patch": "results/verified017-codex-XC-MINI-PRO-AHP-20260616T052940Z/django__django-14672/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified017-codex-XC-MINI-PRO-AHP-20260616T052940Z/django__django-14672/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-14725",
+      "source_run_id": "verified017-codex-XC-MINI-PRO-AHP-20260616T052940Z",
+      "verified_batch": "verified017",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "3/3",
+      "baseline_official_ptp": "64/64",
+      "fvk_official_ftp": "3/3",
+      "fvk_official_ptp": "64/64",
+      "baseline_patch": "results/verified017-codex-XC-MINI-PRO-AHP-20260616T052940Z/django__django-14725/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified017-codex-XC-MINI-PRO-AHP-20260616T052940Z/django__django-14725/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-14752",
+      "source_run_id": "verified017-codex-XC-MINI-PRO-AHP-20260616T052940Z",
+      "verified_batch": "verified017",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "15/15",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "15/15",
+      "baseline_patch": "results/verified017-codex-XC-MINI-PRO-AHP-20260616T052940Z/django__django-14752/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified017-codex-XC-MINI-PRO-AHP-20260616T052940Z/django__django-14752/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-14765",
+      "source_run_id": "verified017-codex-XC-MINI-PRO-AHP-20260616T052940Z",
+      "verified_batch": "verified017",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "64/64",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "64/64",
+      "baseline_patch": "results/verified017-codex-XC-MINI-PRO-AHP-20260616T052940Z/django__django-14765/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified017-codex-XC-MINI-PRO-AHP-20260616T052940Z/django__django-14765/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-14771",
+      "source_run_id": "verified017-codex-XC-MINI-PRO-AHP-20260616T052940Z",
+      "verified_batch": "verified017",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "60/60",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "60/60",
+      "baseline_patch": "results/verified017-codex-XC-MINI-PRO-AHP-20260616T052940Z/django__django-14771/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified017-codex-XC-MINI-PRO-AHP-20260616T052940Z/django__django-14771/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-14787",
+      "source_run_id": "verified017-codex-XC-MINI-PRO-AHP-20260616T052940Z",
+      "verified_batch": "verified017",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "20/20",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "20/20",
+      "baseline_patch": "results/verified017-codex-XC-MINI-PRO-AHP-20260616T052940Z/django__django-14787/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified017-codex-XC-MINI-PRO-AHP-20260616T052940Z/django__django-14787/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-14855",
+      "source_run_id": "verified018-codex-XC-MINI-PRO-AHP-20260616T062203Z",
+      "verified_batch": "verified018",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "325/325",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "325/325",
+      "baseline_patch": "results/verified018-codex-XC-MINI-PRO-AHP-20260616T062203Z/django__django-14855/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified018-codex-XC-MINI-PRO-AHP-20260616T062203Z/django__django-14855/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-14915",
+      "source_run_id": "verified018-codex-XC-MINI-PRO-AHP-20260616T062203Z",
+      "verified_batch": "verified018",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "23/23",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "23/23",
+      "baseline_patch": "results/verified018-codex-XC-MINI-PRO-AHP-20260616T062203Z/django__django-14915/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified018-codex-XC-MINI-PRO-AHP-20260616T062203Z/django__django-14915/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-14999",
+      "source_run_id": "verified018-codex-XC-MINI-PRO-AHP-20260616T062203Z",
+      "verified_batch": "verified018",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "113/113",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "113/113",
+      "baseline_patch": "results/verified018-codex-XC-MINI-PRO-AHP-20260616T062203Z/django__django-14999/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified018-codex-XC-MINI-PRO-AHP-20260616T062203Z/django__django-14999/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-15022",
+      "source_run_id": "verified018-codex-XC-MINI-PRO-AHP-20260616T062203Z",
+      "verified_batch": "verified018",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "3/3",
+      "baseline_official_ptp": "56/56",
+      "fvk_official_ftp": "3/3",
+      "fvk_official_ptp": "56/56",
+      "baseline_patch": "results/verified018-codex-XC-MINI-PRO-AHP-20260616T062203Z/django__django-15022/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified018-codex-XC-MINI-PRO-AHP-20260616T062203Z/django__django-15022/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-15098",
+      "source_run_id": "verified018-codex-XC-MINI-PRO-AHP-20260616T062203Z",
+      "verified_batch": "verified018",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "88/88",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "88/88",
+      "baseline_patch": "results/verified018-codex-XC-MINI-PRO-AHP-20260616T062203Z/django__django-15098/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified018-codex-XC-MINI-PRO-AHP-20260616T062203Z/django__django-15098/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-15103",
+      "source_run_id": "verified018-codex-XC-MINI-PRO-AHP-20260616T062203Z",
+      "verified_batch": "verified018",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "17/17",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "17/17",
+      "baseline_patch": "results/verified018-codex-XC-MINI-PRO-AHP-20260616T062203Z/django__django-15103/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified018-codex-XC-MINI-PRO-AHP-20260616T062203Z/django__django-15103/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-15104",
+      "source_run_id": "verified018-codex-XC-MINI-PRO-AHP-20260616T062203Z",
+      "verified_batch": "verified018",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "131/131",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "131/131",
+      "baseline_patch": "results/verified018-codex-XC-MINI-PRO-AHP-20260616T062203Z/django__django-15104/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified018-codex-XC-MINI-PRO-AHP-20260616T062203Z/django__django-15104/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-15127",
+      "source_run_id": "verified018-codex-XC-MINI-PRO-AHP-20260616T062203Z",
+      "verified_batch": "verified018",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "1/1",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "1/1",
+      "baseline_patch": "results/verified018-codex-XC-MINI-PRO-AHP-20260616T062203Z/django__django-15127/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified018-codex-XC-MINI-PRO-AHP-20260616T062203Z/django__django-15127/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-15128",
+      "source_run_id": "verified019-codex-XC-MINI-PRO-AHP-20260616T072953Z",
+      "verified_batch": "verified019",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "282/282",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "282/282",
+      "baseline_patch": "results/verified019-codex-XC-MINI-PRO-AHP-20260616T072953Z/django__django-15128/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified019-codex-XC-MINI-PRO-AHP-20260616T072953Z/django__django-15128/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-15161",
+      "source_run_id": "verified019-codex-XC-MINI-PRO-AHP-20260616T072953Z",
+      "verified_batch": "verified019",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "3/3",
+      "baseline_official_ptp": "208/208",
+      "fvk_official_ftp": "3/3",
+      "fvk_official_ptp": "208/208",
+      "baseline_patch": "results/verified019-codex-XC-MINI-PRO-AHP-20260616T072953Z/django__django-15161/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified019-codex-XC-MINI-PRO-AHP-20260616T072953Z/django__django-15161/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-15252",
+      "source_run_id": "verified019-codex-XC-MINI-PRO-AHP-20260616T072953Z",
+      "verified_batch": "verified019",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "34/34",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "34/34",
+      "baseline_patch": "results/verified019-codex-XC-MINI-PRO-AHP-20260616T072953Z/django__django-15252/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified019-codex-XC-MINI-PRO-AHP-20260616T072953Z/django__django-15252/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-15268",
+      "source_run_id": "verified019-codex-XC-MINI-PRO-AHP-20260616T072953Z",
+      "verified_batch": "verified019",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "3/3",
+      "baseline_official_ptp": "130/130",
+      "fvk_official_ftp": "3/3",
+      "fvk_official_ptp": "130/130",
+      "baseline_patch": "results/verified019-codex-XC-MINI-PRO-AHP-20260616T072953Z/django__django-15268/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified019-codex-XC-MINI-PRO-AHP-20260616T072953Z/django__django-15268/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-15277",
+      "source_run_id": "verified019-codex-XC-MINI-PRO-AHP-20260616T072953Z",
+      "verified_batch": "verified019",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "158/158",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "158/158",
+      "baseline_patch": "results/verified019-codex-XC-MINI-PRO-AHP-20260616T072953Z/django__django-15277/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified019-codex-XC-MINI-PRO-AHP-20260616T072953Z/django__django-15277/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-15278",
+      "source_run_id": "verified019-codex-XC-MINI-PRO-AHP-20260616T072953Z",
+      "verified_batch": "verified019",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "138/138",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "138/138",
+      "baseline_patch": "results/verified019-codex-XC-MINI-PRO-AHP-20260616T072953Z/django__django-15278/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified019-codex-XC-MINI-PRO-AHP-20260616T072953Z/django__django-15278/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-15280",
+      "source_run_id": "verified019-codex-XC-MINI-PRO-AHP-20260616T072953Z",
+      "verified_batch": "verified019",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "85/85",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "85/85",
+      "baseline_patch": "results/verified019-codex-XC-MINI-PRO-AHP-20260616T072953Z/django__django-15280/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified019-codex-XC-MINI-PRO-AHP-20260616T072953Z/django__django-15280/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-15315",
+      "source_run_id": "verified019-codex-XC-MINI-PRO-AHP-20260616T072953Z",
+      "verified_batch": "verified019",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "33/33",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "33/33",
+      "baseline_patch": "results/verified019-codex-XC-MINI-PRO-AHP-20260616T072953Z/django__django-15315/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified019-codex-XC-MINI-PRO-AHP-20260616T072953Z/django__django-15315/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-15368",
+      "source_run_id": "verified019-codex-XC-MINI-PRO-AHP-20260616T072953Z",
+      "verified_batch": "verified019",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "29/29",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "29/29",
+      "baseline_patch": "results/verified019-codex-XC-MINI-PRO-AHP-20260616T072953Z/django__django-15368/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified019-codex-XC-MINI-PRO-AHP-20260616T072953Z/django__django-15368/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-15375",
+      "source_run_id": "verified019-codex-XC-MINI-PRO-AHP-20260616T072953Z",
+      "verified_batch": "verified019",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "95/95",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "95/95",
+      "baseline_patch": "results/verified019-codex-XC-MINI-PRO-AHP-20260616T072953Z/django__django-15375/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified019-codex-XC-MINI-PRO-AHP-20260616T072953Z/django__django-15375/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-15380",
+      "source_run_id": "verified020-codex-XC-MINI-PRO-AHP-20260616T083309Z",
+      "verified_batch": "verified020",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "133/133",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "133/133",
+      "baseline_patch": "results/verified020-codex-XC-MINI-PRO-AHP-20260616T083309Z/django__django-15380/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified020-codex-XC-MINI-PRO-AHP-20260616T083309Z/django__django-15380/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-15382",
+      "source_run_id": "verified020-codex-XC-MINI-PRO-AHP-20260616T083309Z",
+      "verified_batch": "verified020",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "161/161",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "161/161",
+      "baseline_patch": "results/verified020-codex-XC-MINI-PRO-AHP-20260616T083309Z/django__django-15382/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified020-codex-XC-MINI-PRO-AHP-20260616T083309Z/django__django-15382/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-15467",
+      "source_run_id": "verified020-codex-XC-MINI-PRO-AHP-20260616T083309Z",
+      "verified_batch": "verified020",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "62/62",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "62/62",
+      "baseline_patch": "results/verified020-codex-XC-MINI-PRO-AHP-20260616T083309Z/django__django-15467/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified020-codex-XC-MINI-PRO-AHP-20260616T083309Z/django__django-15467/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-15499",
+      "source_run_id": "verified020-codex-XC-MINI-PRO-AHP-20260616T083309Z",
+      "verified_batch": "verified020",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "35/35",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "35/35",
+      "baseline_patch": "results/verified020-codex-XC-MINI-PRO-AHP-20260616T083309Z/django__django-15499/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified020-codex-XC-MINI-PRO-AHP-20260616T083309Z/django__django-15499/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-15503",
+      "source_run_id": "verified020-codex-XC-MINI-PRO-AHP-20260616T083309Z",
+      "verified_batch": "verified020",
+      "baseline_official_resolved": false,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "72/78",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "78/78",
+      "baseline_patch": "results/verified020-codex-XC-MINI-PRO-AHP-20260616T083309Z/django__django-15503/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified020-codex-XC-MINI-PRO-AHP-20260616T083309Z/django__django-15503/solutions/solution_fvk.patch",
+      "category": "fvk_only",
+      "arms_to_run": [
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-15525",
+      "source_run_id": "verified020-codex-XC-MINI-PRO-AHP-20260616T083309Z",
+      "verified_batch": "verified020",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "53/53",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "53/53",
+      "baseline_patch": "results/verified020-codex-XC-MINI-PRO-AHP-20260616T083309Z/django__django-15525/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified020-codex-XC-MINI-PRO-AHP-20260616T083309Z/django__django-15525/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-15554",
+      "source_run_id": "verified020-codex-XC-MINI-PRO-AHP-20260616T083309Z",
+      "verified_batch": "verified020",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "41/41",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "41/41",
+      "baseline_patch": "results/verified020-codex-XC-MINI-PRO-AHP-20260616T083309Z/django__django-15554/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified020-codex-XC-MINI-PRO-AHP-20260616T083309Z/django__django-15554/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-15561",
+      "source_run_id": "verified020-codex-XC-MINI-PRO-AHP-20260616T083309Z",
+      "verified_batch": "verified020",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "141/141",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "141/141",
+      "baseline_patch": "results/verified020-codex-XC-MINI-PRO-AHP-20260616T083309Z/django__django-15561/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified020-codex-XC-MINI-PRO-AHP-20260616T083309Z/django__django-15561/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-15563",
+      "source_run_id": "verified020-codex-XC-MINI-PRO-AHP-20260616T083309Z",
+      "verified_batch": "verified020",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "29/29",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "29/29",
+      "baseline_patch": "results/verified020-codex-XC-MINI-PRO-AHP-20260616T083309Z/django__django-15563/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified020-codex-XC-MINI-PRO-AHP-20260616T083309Z/django__django-15563/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-15569",
+      "source_run_id": "verified020-codex-XC-MINI-PRO-AHP-20260616T083309Z",
+      "verified_batch": "verified020",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "242/242",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "242/242",
+      "baseline_patch": "results/verified020-codex-XC-MINI-PRO-AHP-20260616T083309Z/django__django-15569/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified020-codex-XC-MINI-PRO-AHP-20260616T083309Z/django__django-15569/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-15572",
+      "source_run_id": "verified021-codex-archlinux-20260616T035839Z",
+      "verified_batch": "verified021",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "10/10",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "10/10",
+      "baseline_patch": "results/verified021-codex-archlinux-20260616T035839Z/django__django-15572/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified021-codex-archlinux-20260616T035839Z/django__django-15572/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-15731",
+      "source_run_id": "verified021-codex-archlinux-20260616T035839Z",
+      "verified_batch": "verified021",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "58/58",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "58/58",
+      "baseline_patch": "results/verified021-codex-archlinux-20260616T035839Z/django__django-15731/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified021-codex-archlinux-20260616T035839Z/django__django-15731/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-15732",
+      "source_run_id": "verified021-codex-archlinux-20260616T035839Z",
+      "verified_batch": "verified021",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "125/125",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "125/125",
+      "baseline_patch": "results/verified021-codex-archlinux-20260616T035839Z/django__django-15732/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified021-codex-archlinux-20260616T035839Z/django__django-15732/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-15741",
+      "source_run_id": "verified021-codex-archlinux-20260616T035839Z",
+      "verified_batch": "verified021",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "104/104",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "104/104",
+      "baseline_patch": "results/verified021-codex-archlinux-20260616T035839Z/django__django-15741/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified021-codex-archlinux-20260616T035839Z/django__django-15741/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-15814",
+      "source_run_id": "verified021-codex-archlinux-20260616T035839Z",
+      "verified_batch": "verified021",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "29/29",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "29/29",
+      "baseline_patch": "results/verified021-codex-archlinux-20260616T035839Z/django__django-15814/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified021-codex-archlinux-20260616T035839Z/django__django-15814/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-15851",
+      "source_run_id": "verified021-codex-archlinux-20260616T035839Z",
+      "verified_batch": "verified021",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "8/8",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "8/8",
+      "baseline_patch": "results/verified021-codex-archlinux-20260616T035839Z/django__django-15851/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified021-codex-archlinux-20260616T035839Z/django__django-15851/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-15863",
+      "source_run_id": "verified021-codex-archlinux-20260616T035839Z",
+      "verified_batch": "verified021",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "9/9",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "9/9",
+      "baseline_patch": "results/verified021-codex-archlinux-20260616T035839Z/django__django-15863/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified021-codex-archlinux-20260616T035839Z/django__django-15863/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-15916",
+      "source_run_id": "verified021-codex-archlinux-20260616T035839Z",
+      "verified_batch": "verified021",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "149/149",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "149/149",
+      "baseline_patch": "results/verified021-codex-archlinux-20260616T035839Z/django__django-15916/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified021-codex-archlinux-20260616T035839Z/django__django-15916/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-15930",
+      "source_run_id": "verified022-codex-archlinux-20260616T044014Z",
+      "verified_batch": "verified022",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "88/88",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "88/88",
+      "baseline_patch": "results/verified022-codex-archlinux-20260616T044014Z/django__django-15930/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified022-codex-archlinux-20260616T044014Z/django__django-15930/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-15957",
+      "source_run_id": "verified022-codex-archlinux-20260616T044014Z",
+      "verified_batch": "verified022",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "4/4",
+      "baseline_official_ptp": "89/89",
+      "fvk_official_ftp": "4/4",
+      "fvk_official_ptp": "89/89",
+      "baseline_patch": "results/verified022-codex-archlinux-20260616T044014Z/django__django-15957/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified022-codex-archlinux-20260616T044014Z/django__django-15957/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-15973",
+      "source_run_id": "verified022-codex-archlinux-20260616T044014Z",
+      "verified_batch": "verified022",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "157/157",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "157/157",
+      "baseline_patch": "results/verified022-codex-archlinux-20260616T044014Z/django__django-15973/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified022-codex-archlinux-20260616T044014Z/django__django-15973/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-15987",
+      "source_run_id": "verified022-codex-archlinux-20260616T044014Z",
+      "verified_batch": "verified022",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "52/52",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "52/52",
+      "baseline_patch": "results/verified022-codex-archlinux-20260616T044014Z/django__django-15987/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified022-codex-archlinux-20260616T044014Z/django__django-15987/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-16032",
+      "source_run_id": "verified022-codex-archlinux-20260616T044014Z",
+      "verified_batch": "verified022",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "77/77",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "77/77",
+      "baseline_patch": "results/verified022-codex-archlinux-20260616T044014Z/django__django-16032/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified022-codex-archlinux-20260616T044014Z/django__django-16032/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-16082",
+      "source_run_id": "verified022-codex-archlinux-20260616T044014Z",
+      "verified_batch": "verified022",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "170/170",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "170/170",
+      "baseline_patch": "results/verified022-codex-archlinux-20260616T044014Z/django__django-16082/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified022-codex-archlinux-20260616T044014Z/django__django-16082/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-16100",
+      "source_run_id": "verified022-codex-archlinux-20260616T044014Z",
+      "verified_batch": "verified022",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "59/59",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "59/59",
+      "baseline_patch": "results/verified022-codex-archlinux-20260616T044014Z/django__django-16100/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified022-codex-archlinux-20260616T044014Z/django__django-16100/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-16116",
+      "source_run_id": "verified022-codex-archlinux-20260616T044014Z",
+      "verified_batch": "verified022",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "137/137",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "137/137",
+      "baseline_patch": "results/verified022-codex-archlinux-20260616T044014Z/django__django-16116/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified022-codex-archlinux-20260616T044014Z/django__django-16116/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-16136",
+      "source_run_id": "verified022-codex-archlinux-20260616T044014Z",
+      "verified_batch": "verified022",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "7/7",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "7/7",
+      "baseline_patch": "results/verified022-codex-archlinux-20260616T044014Z/django__django-16136/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified022-codex-archlinux-20260616T044014Z/django__django-16136/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-16139",
+      "source_run_id": "verified022-codex-archlinux-20260616T044014Z",
+      "verified_batch": "verified022",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "86/86",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "86/86",
+      "baseline_patch": "results/verified022-codex-archlinux-20260616T044014Z/django__django-16139/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified022-codex-archlinux-20260616T044014Z/django__django-16139/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-16145",
+      "source_run_id": "verified023-codex-archlinux-20260616T052232Z",
+      "verified_batch": "verified023",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "174/174",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "174/174",
+      "baseline_patch": "results/verified023-codex-archlinux-20260616T052232Z/django__django-16145/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified023-codex-archlinux-20260616T052232Z/django__django-16145/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-16255",
+      "source_run_id": "verified023-codex-archlinux-20260616T052232Z",
+      "verified_batch": "verified023",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "36/36",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "36/36",
+      "baseline_patch": "results/verified023-codex-archlinux-20260616T052232Z/django__django-16255/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified023-codex-archlinux-20260616T052232Z/django__django-16255/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-16256",
+      "source_run_id": "verified023-codex-archlinux-20260616T052232Z",
+      "verified_batch": "verified023",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "9/9",
+      "baseline_official_ptp": "53/53",
+      "fvk_official_ftp": "9/9",
+      "fvk_official_ptp": "53/53",
+      "baseline_patch": "results/verified023-codex-archlinux-20260616T052232Z/django__django-16256/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified023-codex-archlinux-20260616T052232Z/django__django-16256/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-16315",
+      "source_run_id": "verified023-codex-archlinux-20260616T052232Z",
+      "verified_batch": "verified023",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "42/42",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "42/42",
+      "baseline_patch": "results/verified023-codex-archlinux-20260616T052232Z/django__django-16315/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified023-codex-archlinux-20260616T052232Z/django__django-16315/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-16333",
+      "source_run_id": "verified023-codex-archlinux-20260616T052232Z",
+      "verified_batch": "verified023",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "87/87",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "87/87",
+      "baseline_patch": "results/verified023-codex-archlinux-20260616T052232Z/django__django-16333/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified023-codex-archlinux-20260616T052232Z/django__django-16333/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-16429",
+      "source_run_id": "verified023-codex-archlinux-20260616T052232Z",
+      "verified_batch": "verified023",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "4/4",
+      "baseline_official_ptp": "21/21",
+      "fvk_official_ftp": "4/4",
+      "fvk_official_ptp": "21/21",
+      "baseline_patch": "results/verified023-codex-archlinux-20260616T052232Z/django__django-16429/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified023-codex-archlinux-20260616T052232Z/django__django-16429/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-16454",
+      "source_run_id": "verified023-codex-archlinux-20260616T052232Z",
+      "verified_batch": "verified023",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "45/45",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "45/45",
+      "baseline_patch": "results/verified023-codex-archlinux-20260616T052232Z/django__django-16454/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified023-codex-archlinux-20260616T052232Z/django__django-16454/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-16485",
+      "source_run_id": "verified023-codex-archlinux-20260616T052232Z",
+      "verified_batch": "verified023",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "9/9",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "9/9",
+      "baseline_patch": "results/verified023-codex-archlinux-20260616T052232Z/django__django-16485/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified023-codex-archlinux-20260616T052232Z/django__django-16485/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-16493",
+      "source_run_id": "verified023-codex-archlinux-20260616T052232Z",
+      "verified_batch": "verified023",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "91/91",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "91/91",
+      "baseline_patch": "results/verified023-codex-archlinux-20260616T052232Z/django__django-16493/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified023-codex-archlinux-20260616T052232Z/django__django-16493/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-16527",
+      "source_run_id": "verified024-codex-archlinux-20260616T060351Z",
+      "verified_batch": "verified024",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "6/6",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "6/6",
+      "baseline_patch": "results/verified024-codex-archlinux-20260616T060351Z/django__django-16527/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified024-codex-archlinux-20260616T060351Z/django__django-16527/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-16560",
+      "source_run_id": "verified024-codex-archlinux-20260616T060351Z",
+      "verified_batch": "verified024",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "8/8",
+      "baseline_official_ptp": "66/66",
+      "fvk_official_ftp": "8/8",
+      "fvk_official_ptp": "66/66",
+      "baseline_patch": "results/verified024-codex-archlinux-20260616T060351Z/django__django-16560/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified024-codex-archlinux-20260616T060351Z/django__django-16560/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-16569",
+      "source_run_id": "verified024-codex-archlinux-20260616T060351Z",
+      "verified_batch": "verified024",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "111/111",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "111/111",
+      "baseline_patch": "results/verified024-codex-archlinux-20260616T060351Z/django__django-16569/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified024-codex-archlinux-20260616T060351Z/django__django-16569/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-16595",
+      "source_run_id": "verified024-codex-archlinux-20260616T060351Z",
+      "verified_batch": "verified024",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "37/37",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "37/37",
+      "baseline_patch": "results/verified024-codex-archlinux-20260616T060351Z/django__django-16595/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified024-codex-archlinux-20260616T060351Z/django__django-16595/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-16612",
+      "source_run_id": "verified024-codex-archlinux-20260616T060351Z",
+      "verified_batch": "verified024",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "335/335",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "335/335",
+      "baseline_patch": "results/verified024-codex-archlinux-20260616T060351Z/django__django-16612/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified024-codex-archlinux-20260616T060351Z/django__django-16612/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    },
+    {
+      "instance_id": "django__django-16631",
+      "source_run_id": "verified024-codex-archlinux-20260616T060351Z",
+      "verified_batch": "verified024",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "12/12",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "12/12",
+      "baseline_patch": "results/verified024-codex-archlinux-20260616T060351Z/django__django-16631/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified024-codex-archlinux-20260616T060351Z/django__django-16631/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression002"
+    }
+  ]
+}

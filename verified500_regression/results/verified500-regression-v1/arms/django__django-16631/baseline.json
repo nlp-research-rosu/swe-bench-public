@@ -1,0 +1,12 @@
+{
+  "instance_id": "django__django-16631",
+  "arm": "baseline",
+  "source_run_id": "verified024-codex-archlinux-20260616T060351Z",
+  "category": "both_resolved",
+  "regression_batch": "regression002",
+  "status": "clean",
+  "trigger_count": 0,
+  "triggers": [],
+  "oracle_report": "/home/chenglong/swe-bench/verified500_regression/results/verified500-regression-v1/oracle/django__django-16631.json",
+  "generated_context_report": "/home/chenglong/swe-bench/verified500_regression/results/verified500-regression-v1/contexts/django__django-16631/baseline.json"
+}

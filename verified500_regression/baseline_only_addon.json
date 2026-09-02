@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "count": 2,
+  "instances": [
+    {
+      "instance_id": "sphinx-doc__sphinx-8056",
+      "source_run_id": "verified040-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified040",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": false,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "40/40",
+      "fvk_official_ftp": "0/1",
+      "fvk_official_ptp": "40/40",
+      "baseline_patch": "results/verified040-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-8056/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified040-codex-wsl-ubuntu-260615221107/sphinx-doc__sphinx-8056/solutions/solution_fvk.patch",
+      "category": "baseline_only_addon",
+      "arms_to_run": [
+        "baseline"
+      ]
+    },
+    {
+      "instance_id": "sympy__sympy-12419",
+      "source_run_id": "verified043-codex-wsl-ubuntu-260615221107",
+      "verified_batch": "verified043",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": false,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "25/25",
+      "fvk_official_ftp": "0/1",
+      "fvk_official_ptp": "25/25",
+      "baseline_patch": "results/verified043-codex-wsl-ubuntu-260615221107/sympy__sympy-12419/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified043-codex-wsl-ubuntu-260615221107/sympy__sympy-12419/solutions/solution_fvk.patch",
+      "category": "baseline_only_addon",
+      "arms_to_run": [
+        "baseline"
+      ]
+    }
+  ]
+}

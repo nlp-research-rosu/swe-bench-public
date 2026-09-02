@@ -1,0 +1,18 @@
+{
+  "instance_id": "django__django-12663",
+  "arm": "baseline",
+  "source_run_id": "verified009-codex-XC-MINI-PRO-AHP-20260615T210902Z",
+  "category": "both_resolved",
+  "regression_batch": "regression001",
+  "status": "regression_fail",
+  "trigger_count": 1,
+  "triggers": [
+    {
+      "test_id": "test_filtered_aggregate_ref_subquery_annotation (aggregation.test_filter_argument.FilteredAggregateTests)",
+      "oracle_status": "PASSED",
+      "generated_status": "ERROR"
+    }
+  ],
+  "oracle_report": "/home/chenglong/swe-bench/verified500_regression/results/verified500-regression-v1/oracle/django__django-12663.json",
+  "generated_context_report": "/home/chenglong/swe-bench/verified500_regression/results/verified500-regression-v1/contexts/django__django-12663/baseline.json"
+}

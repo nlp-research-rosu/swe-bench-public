@@ -1,0 +1,18 @@
+{
+  "instance_id": "django__django-13925",
+  "arm": "fvk",
+  "source_run_id": "verified014-codex-XC-MINI-PRO-AHP-20260616T024414Z",
+  "category": "both_resolved",
+  "regression_batch": "regression002",
+  "status": "regression_fail",
+  "trigger_count": 1,
+  "triggers": [
+    {
+      "test_id": "test_no_write_access (i18n.test_compilation.PoFileTests)",
+      "oracle_status": "PASSED",
+      "generated_status": "SKIPPED"
+    }
+  ],
+  "oracle_report": "/home/chenglong/swe-bench/verified500_regression/results/verified500-regression-v1/oracle/django__django-13925.json",
+  "generated_context_report": "/home/chenglong/swe-bench/verified500_regression/results/verified500-regression-v1/contexts/django__django-13925/fvk.json"
+}

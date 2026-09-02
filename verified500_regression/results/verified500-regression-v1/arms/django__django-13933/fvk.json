@@ -1,0 +1,53 @@
+{
+  "instance_id": "django__django-13933",
+  "arm": "fvk",
+  "source_run_id": "verified014-codex-XC-MINI-PRO-AHP-20260616T024414Z",
+  "category": "both_resolved",
+  "regression_batch": "regression002",
+  "status": "regression_fail",
+  "trigger_count": 8,
+  "triggers": [
+    {
+      "test_id": "test_basics (model_forms.test_modelchoicefield.ModelChoiceFieldTests)",
+      "oracle_status": "PASSED",
+      "generated_status": "FAILED"
+    },
+    {
+      "test_id": "test_clean_model_instance (model_forms.test_modelchoicefield.ModelChoiceFieldTests)",
+      "oracle_status": "PASSED",
+      "generated_status": "FAILED"
+    },
+    {
+      "test_id": "test_disabled_modelchoicefield (model_forms.test_modelchoicefield.ModelChoiceFieldTests)",
+      "oracle_status": "PASSED",
+      "generated_status": "FAILED"
+    },
+    {
+      "test_id": "test_invalid_target_id (admin_widgets.tests.AdminForeignKeyRawIdWidget)",
+      "oracle_status": "PASSED",
+      "generated_status": "FAILED"
+    },
+    {
+      "test_id": "test_nonexistent_target_id (admin_widgets.tests.AdminForeignKeyRawIdWidget)",
+      "oracle_status": "PASSED",
+      "generated_status": "FAILED"
+    },
+    {
+      "test_id": "test_validate_foreign_key_uses_default_manager (model_forms.tests.ModelFormBasicTests)",
+      "oracle_status": "PASSED",
+      "generated_status": "FAILED"
+    },
+    {
+      "test_id": "test_validation_with_invalid_id (model_formsets.tests.ModelFormsetTest)",
+      "oracle_status": "PASSED",
+      "generated_status": "FAILED"
+    },
+    {
+      "test_id": "test_validation_with_nonexistent_id (model_formsets.tests.ModelFormsetTest)",
+      "oracle_status": "PASSED",
+      "generated_status": "FAILED"
+    }
+  ],
+  "oracle_report": "/home/chenglong/swe-bench/verified500_regression/results/verified500-regression-v1/oracle/django__django-13933.json",
+  "generated_context_report": "/home/chenglong/swe-bench/verified500_regression/results/verified500-regression-v1/contexts/django__django-13933/fvk.json"
+}

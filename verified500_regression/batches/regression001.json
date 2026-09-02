@@ -1,0 +1,1980 @@
+{
+  "schema_version": 1,
+  "batch": "regression001",
+  "count": 104,
+  "instances": [
+    {
+      "instance_id": "astropy__astropy-12907",
+      "source_run_id": "verified001-codex-XC-MINI-PRO-AHP-20260615T131050Z",
+      "verified_batch": "verified001",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "13/13",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "13/13",
+      "baseline_patch": "results/verified001-codex-XC-MINI-PRO-AHP-20260615T131050Z/astropy__astropy-12907/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified001-codex-XC-MINI-PRO-AHP-20260615T131050Z/astropy__astropy-12907/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "astropy__astropy-13236",
+      "source_run_id": "verified001-codex-XC-MINI-PRO-AHP-20260615T131050Z",
+      "verified_batch": "verified001",
+      "baseline_official_resolved": false,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "0/2",
+      "baseline_official_ptp": "0/644",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "644/644",
+      "baseline_patch": "results/verified001-codex-XC-MINI-PRO-AHP-20260615T131050Z/astropy__astropy-13236/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified001-codex-XC-MINI-PRO-AHP-20260615T131050Z/astropy__astropy-13236/solutions/solution_fvk.patch",
+      "category": "fvk_only",
+      "arms_to_run": [
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "astropy__astropy-13398",
+      "source_run_id": "verified001-codex-XC-MINI-PRO-AHP-20260615T131050Z",
+      "verified_batch": "verified001",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "4/4",
+      "baseline_official_ptp": "68/68",
+      "fvk_official_ftp": "4/4",
+      "fvk_official_ptp": "68/68",
+      "baseline_patch": "results/verified001-codex-XC-MINI-PRO-AHP-20260615T131050Z/astropy__astropy-13398/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified001-codex-XC-MINI-PRO-AHP-20260615T131050Z/astropy__astropy-13398/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "astropy__astropy-13453",
+      "source_run_id": "verified001-codex-XC-MINI-PRO-AHP-20260615T131050Z",
+      "verified_batch": "verified001",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "9/9",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "9/9",
+      "baseline_patch": "results/verified001-codex-XC-MINI-PRO-AHP-20260615T131050Z/astropy__astropy-13453/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified001-codex-XC-MINI-PRO-AHP-20260615T131050Z/astropy__astropy-13453/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "astropy__astropy-13579",
+      "source_run_id": "verified001-codex-XC-MINI-PRO-AHP-20260615T131050Z",
+      "verified_batch": "verified001",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "40/40",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "40/40",
+      "baseline_patch": "results/verified001-codex-XC-MINI-PRO-AHP-20260615T131050Z/astropy__astropy-13579/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified001-codex-XC-MINI-PRO-AHP-20260615T131050Z/astropy__astropy-13579/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "astropy__astropy-14096",
+      "source_run_id": "verified001-codex-XC-MINI-PRO-AHP-20260615T131050Z",
+      "verified_batch": "verified001",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "426/426",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "426/426",
+      "baseline_patch": "results/verified001-codex-XC-MINI-PRO-AHP-20260615T131050Z/astropy__astropy-14096/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified001-codex-XC-MINI-PRO-AHP-20260615T131050Z/astropy__astropy-14096/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "astropy__astropy-14182",
+      "source_run_id": "verified001-codex-XC-MINI-PRO-AHP-20260615T131050Z",
+      "verified_batch": "verified001",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "9/9",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "9/9",
+      "baseline_patch": "results/verified001-codex-XC-MINI-PRO-AHP-20260615T131050Z/astropy__astropy-14182/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified001-codex-XC-MINI-PRO-AHP-20260615T131050Z/astropy__astropy-14182/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "astropy__astropy-14309",
+      "source_run_id": "verified001-codex-XC-MINI-PRO-AHP-20260615T131050Z",
+      "verified_batch": "verified001",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "141/141",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "141/141",
+      "baseline_patch": "results/verified001-codex-XC-MINI-PRO-AHP-20260615T131050Z/astropy__astropy-14309/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified001-codex-XC-MINI-PRO-AHP-20260615T131050Z/astropy__astropy-14309/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "astropy__astropy-14508",
+      "source_run_id": "verified002-codex-XC-MINI-PRO-AHP-20260615T143019Z",
+      "verified_batch": "verified002",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "174/174",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "174/174",
+      "baseline_patch": "results/verified002-codex-XC-MINI-PRO-AHP-20260615T143019Z/astropy__astropy-14508/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified002-codex-XC-MINI-PRO-AHP-20260615T143019Z/astropy__astropy-14508/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "astropy__astropy-14539",
+      "source_run_id": "verified002-codex-XC-MINI-PRO-AHP-20260615T143019Z",
+      "verified_batch": "verified002",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "46/46",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "46/46",
+      "baseline_patch": "results/verified002-codex-XC-MINI-PRO-AHP-20260615T143019Z/astropy__astropy-14539/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified002-codex-XC-MINI-PRO-AHP-20260615T143019Z/astropy__astropy-14539/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "astropy__astropy-14598",
+      "source_run_id": "verified002-codex-XC-MINI-PRO-AHP-20260615T143019Z",
+      "verified_batch": "verified002",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "175/175",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "175/175",
+      "baseline_patch": "results/verified002-codex-XC-MINI-PRO-AHP-20260615T143019Z/astropy__astropy-14598/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified002-codex-XC-MINI-PRO-AHP-20260615T143019Z/astropy__astropy-14598/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "astropy__astropy-14995",
+      "source_run_id": "verified002-codex-XC-MINI-PRO-AHP-20260615T143019Z",
+      "verified_batch": "verified002",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "179/179",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "179/179",
+      "baseline_patch": "results/verified002-codex-XC-MINI-PRO-AHP-20260615T143019Z/astropy__astropy-14995/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified002-codex-XC-MINI-PRO-AHP-20260615T143019Z/astropy__astropy-14995/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "astropy__astropy-7166",
+      "source_run_id": "verified002-codex-XC-MINI-PRO-AHP-20260615T143019Z",
+      "verified_batch": "verified002",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "6/6",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "6/6",
+      "baseline_patch": "results/verified002-codex-XC-MINI-PRO-AHP-20260615T143019Z/astropy__astropy-7166/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified002-codex-XC-MINI-PRO-AHP-20260615T143019Z/astropy__astropy-7166/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "astropy__astropy-7336",
+      "source_run_id": "verified002-codex-XC-MINI-PRO-AHP-20260615T143019Z",
+      "verified_batch": "verified002",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "339/339",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "339/339",
+      "baseline_patch": "results/verified002-codex-XC-MINI-PRO-AHP-20260615T143019Z/astropy__astropy-7336/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified002-codex-XC-MINI-PRO-AHP-20260615T143019Z/astropy__astropy-7336/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "astropy__astropy-7606",
+      "source_run_id": "verified002-codex-XC-MINI-PRO-AHP-20260615T143019Z",
+      "verified_batch": "verified002",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "241/241",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "241/241",
+      "baseline_patch": "results/verified002-codex-XC-MINI-PRO-AHP-20260615T143019Z/astropy__astropy-7606/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified002-codex-XC-MINI-PRO-AHP-20260615T143019Z/astropy__astropy-7606/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "astropy__astropy-7671",
+      "source_run_id": "verified002-codex-XC-MINI-PRO-AHP-20260615T143019Z",
+      "verified_batch": "verified002",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "3/3",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "3/3",
+      "baseline_patch": "results/verified002-codex-XC-MINI-PRO-AHP-20260615T143019Z/astropy__astropy-7671/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified002-codex-XC-MINI-PRO-AHP-20260615T143019Z/astropy__astropy-7671/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "astropy__astropy-8707",
+      "source_run_id": "verified003-codex-XC-MINI-PRO-AHP-20260615T162338Z",
+      "verified_batch": "verified003",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "11/11",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "11/11",
+      "baseline_patch": "results/verified003-codex-XC-MINI-PRO-AHP-20260615T162338Z/astropy__astropy-8707/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified003-codex-XC-MINI-PRO-AHP-20260615T162338Z/astropy__astropy-8707/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "astropy__astropy-8872",
+      "source_run_id": "verified003-codex-XC-MINI-PRO-AHP-20260615T162338Z",
+      "verified_batch": "verified003",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "80/80",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "80/80",
+      "baseline_patch": "results/verified003-codex-XC-MINI-PRO-AHP-20260615T162338Z/astropy__astropy-8872/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified003-codex-XC-MINI-PRO-AHP-20260615T162338Z/astropy__astropy-8872/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-10097",
+      "source_run_id": "verified003-codex-XC-MINI-PRO-AHP-20260615T162338Z",
+      "verified_batch": "verified003",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "438/438",
+      "baseline_official_ptp": "1432/1432",
+      "fvk_official_ftp": "438/438",
+      "fvk_official_ptp": "1432/1432",
+      "baseline_patch": "results/verified003-codex-XC-MINI-PRO-AHP-20260615T162338Z/django__django-10097/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified003-codex-XC-MINI-PRO-AHP-20260615T162338Z/django__django-10097/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-10880",
+      "source_run_id": "verified003-codex-XC-MINI-PRO-AHP-20260615T162338Z",
+      "verified_batch": "verified003",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "55/55",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "55/55",
+      "baseline_patch": "results/verified003-codex-XC-MINI-PRO-AHP-20260615T162338Z/django__django-10880/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified003-codex-XC-MINI-PRO-AHP-20260615T162338Z/django__django-10880/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-10914",
+      "source_run_id": "verified003-codex-XC-MINI-PRO-AHP-20260615T162338Z",
+      "verified_batch": "verified003",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "98/98",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "98/98",
+      "baseline_patch": "results/verified003-codex-XC-MINI-PRO-AHP-20260615T162338Z/django__django-10914/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified003-codex-XC-MINI-PRO-AHP-20260615T162338Z/django__django-10914/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-10973",
+      "source_run_id": "verified003-codex-XC-MINI-PRO-AHP-20260615T162338Z",
+      "verified_batch": "verified003",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "5/5",
+      "baseline_official_ptp": "0/0",
+      "fvk_official_ftp": "5/5",
+      "fvk_official_ptp": "0/0",
+      "baseline_patch": "results/verified003-codex-XC-MINI-PRO-AHP-20260615T162338Z/django__django-10973/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified003-codex-XC-MINI-PRO-AHP-20260615T162338Z/django__django-10973/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-10999",
+      "source_run_id": "verified003-codex-XC-MINI-PRO-AHP-20260615T162338Z",
+      "verified_batch": "verified003",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "10/10",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "10/10",
+      "baseline_patch": "results/verified003-codex-XC-MINI-PRO-AHP-20260615T162338Z/django__django-10999/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified003-codex-XC-MINI-PRO-AHP-20260615T162338Z/django__django-10999/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-11066",
+      "source_run_id": "verified003-codex-XC-MINI-PRO-AHP-20260615T162338Z",
+      "verified_batch": "verified003",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "3/3",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "3/3",
+      "baseline_patch": "results/verified003-codex-XC-MINI-PRO-AHP-20260615T162338Z/django__django-11066/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified003-codex-XC-MINI-PRO-AHP-20260615T162338Z/django__django-11066/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-11087",
+      "source_run_id": "verified003-codex-XC-MINI-PRO-AHP-20260615T162338Z",
+      "verified_batch": "verified003",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "41/41",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "41/41",
+      "baseline_patch": "results/verified003-codex-XC-MINI-PRO-AHP-20260615T162338Z/django__django-11087/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified003-codex-XC-MINI-PRO-AHP-20260615T162338Z/django__django-11087/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-11095",
+      "source_run_id": "verified004-codex-XC-MINI-PRO-AHP-20260615T173203Z",
+      "verified_batch": "verified004",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "19/19",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "19/19",
+      "baseline_patch": "results/verified004-codex-XC-MINI-PRO-AHP-20260615T173203Z/django__django-11095/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified004-codex-XC-MINI-PRO-AHP-20260615T173203Z/django__django-11095/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-11099",
+      "source_run_id": "verified004-codex-XC-MINI-PRO-AHP-20260615T173203Z",
+      "verified_batch": "verified004",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "3/3",
+      "baseline_official_ptp": "19/19",
+      "fvk_official_ftp": "3/3",
+      "fvk_official_ptp": "19/19",
+      "baseline_patch": "results/verified004-codex-XC-MINI-PRO-AHP-20260615T173203Z/django__django-11099/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified004-codex-XC-MINI-PRO-AHP-20260615T173203Z/django__django-11099/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-11119",
+      "source_run_id": "verified004-codex-XC-MINI-PRO-AHP-20260615T173203Z",
+      "verified_batch": "verified004",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "7/7",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "7/7",
+      "baseline_patch": "results/verified004-codex-XC-MINI-PRO-AHP-20260615T173203Z/django__django-11119/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified004-codex-XC-MINI-PRO-AHP-20260615T173203Z/django__django-11119/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-11133",
+      "source_run_id": "verified004-codex-XC-MINI-PRO-AHP-20260615T173203Z",
+      "verified_batch": "verified004",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "64/64",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "64/64",
+      "baseline_patch": "results/verified004-codex-XC-MINI-PRO-AHP-20260615T173203Z/django__django-11133/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified004-codex-XC-MINI-PRO-AHP-20260615T173203Z/django__django-11133/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-11138",
+      "source_run_id": "verified004-codex-XC-MINI-PRO-AHP-20260615T173203Z",
+      "verified_batch": "verified004",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "73/73",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "73/73",
+      "baseline_patch": "results/verified004-codex-XC-MINI-PRO-AHP-20260615T173203Z/django__django-11138/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified004-codex-XC-MINI-PRO-AHP-20260615T173203Z/django__django-11138/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-11149",
+      "source_run_id": "verified004-codex-XC-MINI-PRO-AHP-20260615T173203Z",
+      "verified_batch": "verified004",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "46/46",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "46/46",
+      "baseline_patch": "results/verified004-codex-XC-MINI-PRO-AHP-20260615T173203Z/django__django-11149/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified004-codex-XC-MINI-PRO-AHP-20260615T173203Z/django__django-11149/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-11163",
+      "source_run_id": "verified004-codex-XC-MINI-PRO-AHP-20260615T173203Z",
+      "verified_batch": "verified004",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "141/141",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "141/141",
+      "baseline_patch": "results/verified004-codex-XC-MINI-PRO-AHP-20260615T173203Z/django__django-11163/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified004-codex-XC-MINI-PRO-AHP-20260615T173203Z/django__django-11163/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-11179",
+      "source_run_id": "verified004-codex-XC-MINI-PRO-AHP-20260615T173203Z",
+      "verified_batch": "verified004",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "40/40",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "40/40",
+      "baseline_patch": "results/verified004-codex-XC-MINI-PRO-AHP-20260615T173203Z/django__django-11179/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified004-codex-XC-MINI-PRO-AHP-20260615T173203Z/django__django-11179/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-11206",
+      "source_run_id": "verified004-codex-XC-MINI-PRO-AHP-20260615T173203Z",
+      "verified_batch": "verified004",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "4/4",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "4/4",
+      "baseline_patch": "results/verified004-codex-XC-MINI-PRO-AHP-20260615T173203Z/django__django-11206/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified004-codex-XC-MINI-PRO-AHP-20260615T173203Z/django__django-11206/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-11211",
+      "source_run_id": "verified005-codex-XC-MINI-PRO-AHP-20260615T181744Z",
+      "verified_batch": "verified005",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "76/76",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "76/76",
+      "baseline_patch": "results/verified005-codex-XC-MINI-PRO-AHP-20260615T181744Z/django__django-11211/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified005-codex-XC-MINI-PRO-AHP-20260615T181744Z/django__django-11211/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-11239",
+      "source_run_id": "verified005-codex-XC-MINI-PRO-AHP-20260615T181744Z",
+      "verified_batch": "verified005",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "5/5",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "5/5",
+      "baseline_patch": "results/verified005-codex-XC-MINI-PRO-AHP-20260615T181744Z/django__django-11239/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified005-codex-XC-MINI-PRO-AHP-20260615T181744Z/django__django-11239/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-11265",
+      "source_run_id": "verified005-codex-XC-MINI-PRO-AHP-20260615T181744Z",
+      "verified_batch": "verified005",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "30/30",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "30/30",
+      "baseline_patch": "results/verified005-codex-XC-MINI-PRO-AHP-20260615T181744Z/django__django-11265/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified005-codex-XC-MINI-PRO-AHP-20260615T181744Z/django__django-11265/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-11276",
+      "source_run_id": "verified005-codex-XC-MINI-PRO-AHP-20260615T181744Z",
+      "verified_batch": "verified005",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "26/26",
+      "baseline_official_ptp": "548/548",
+      "fvk_official_ftp": "26/26",
+      "fvk_official_ptp": "548/548",
+      "baseline_patch": "results/verified005-codex-XC-MINI-PRO-AHP-20260615T181744Z/django__django-11276/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified005-codex-XC-MINI-PRO-AHP-20260615T181744Z/django__django-11276/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-11292",
+      "source_run_id": "verified005-codex-XC-MINI-PRO-AHP-20260615T181744Z",
+      "verified_batch": "verified005",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "31/31",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "31/31",
+      "baseline_patch": "results/verified005-codex-XC-MINI-PRO-AHP-20260615T181744Z/django__django-11292/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified005-codex-XC-MINI-PRO-AHP-20260615T181744Z/django__django-11292/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-11299",
+      "source_run_id": "verified005-codex-XC-MINI-PRO-AHP-20260615T181744Z",
+      "verified_batch": "verified005",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "103/103",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "103/103",
+      "baseline_patch": "results/verified005-codex-XC-MINI-PRO-AHP-20260615T181744Z/django__django-11299/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified005-codex-XC-MINI-PRO-AHP-20260615T181744Z/django__django-11299/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-11333",
+      "source_run_id": "verified005-codex-XC-MINI-PRO-AHP-20260615T181744Z",
+      "verified_batch": "verified005",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "2/2",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "2/2",
+      "baseline_patch": "results/verified005-codex-XC-MINI-PRO-AHP-20260615T181744Z/django__django-11333/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified005-codex-XC-MINI-PRO-AHP-20260615T181744Z/django__django-11333/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-11433",
+      "source_run_id": "verified005-codex-XC-MINI-PRO-AHP-20260615T181744Z",
+      "verified_batch": "verified005",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "142/142",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "142/142",
+      "baseline_patch": "results/verified005-codex-XC-MINI-PRO-AHP-20260615T181744Z/django__django-11433/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified005-codex-XC-MINI-PRO-AHP-20260615T181744Z/django__django-11433/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-11451",
+      "source_run_id": "verified005-codex-XC-MINI-PRO-AHP-20260615T181744Z",
+      "verified_batch": "verified005",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "6/6",
+      "baseline_official_ptp": "45/45",
+      "fvk_official_ftp": "6/6",
+      "fvk_official_ptp": "45/45",
+      "baseline_patch": "results/verified005-codex-XC-MINI-PRO-AHP-20260615T181744Z/django__django-11451/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified005-codex-XC-MINI-PRO-AHP-20260615T181744Z/django__django-11451/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-11490",
+      "source_run_id": "verified006-codex-XC-MINI-PRO-AHP-20260615T190047Z",
+      "verified_batch": "verified006",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "23/23",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "23/23",
+      "baseline_patch": "results/verified006-codex-XC-MINI-PRO-AHP-20260615T190047Z/django__django-11490/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified006-codex-XC-MINI-PRO-AHP-20260615T190047Z/django__django-11490/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-11532",
+      "source_run_id": "verified006-codex-XC-MINI-PRO-AHP-20260615T190047Z",
+      "verified_batch": "verified006",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "148/148",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "148/148",
+      "baseline_patch": "results/verified006-codex-XC-MINI-PRO-AHP-20260615T190047Z/django__django-11532/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified006-codex-XC-MINI-PRO-AHP-20260615T190047Z/django__django-11532/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-11551",
+      "source_run_id": "verified006-codex-XC-MINI-PRO-AHP-20260615T190047Z",
+      "verified_batch": "verified006",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "119/119",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "119/119",
+      "baseline_patch": "results/verified006-codex-XC-MINI-PRO-AHP-20260615T190047Z/django__django-11551/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified006-codex-XC-MINI-PRO-AHP-20260615T190047Z/django__django-11551/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-11555",
+      "source_run_id": "verified006-codex-XC-MINI-PRO-AHP-20260615T190047Z",
+      "verified_batch": "verified006",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "26/26",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "26/26",
+      "baseline_patch": "results/verified006-codex-XC-MINI-PRO-AHP-20260615T190047Z/django__django-11555/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified006-codex-XC-MINI-PRO-AHP-20260615T190047Z/django__django-11555/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-11603",
+      "source_run_id": "verified006-codex-XC-MINI-PRO-AHP-20260615T190047Z",
+      "verified_batch": "verified006",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "58/58",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "58/58",
+      "baseline_patch": "results/verified006-codex-XC-MINI-PRO-AHP-20260615T190047Z/django__django-11603/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified006-codex-XC-MINI-PRO-AHP-20260615T190047Z/django__django-11603/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-11728",
+      "source_run_id": "verified006-codex-XC-MINI-PRO-AHP-20260615T190047Z",
+      "verified_batch": "verified006",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "44/44",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "44/44",
+      "baseline_patch": "results/verified006-codex-XC-MINI-PRO-AHP-20260615T190047Z/django__django-11728/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified006-codex-XC-MINI-PRO-AHP-20260615T190047Z/django__django-11728/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-11740",
+      "source_run_id": "verified006-codex-XC-MINI-PRO-AHP-20260615T190047Z",
+      "verified_batch": "verified006",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "109/109",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "109/109",
+      "baseline_patch": "results/verified006-codex-XC-MINI-PRO-AHP-20260615T190047Z/django__django-11740/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified006-codex-XC-MINI-PRO-AHP-20260615T190047Z/django__django-11740/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-11749",
+      "source_run_id": "verified006-codex-XC-MINI-PRO-AHP-20260615T190047Z",
+      "verified_batch": "verified006",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "34/34",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "34/34",
+      "baseline_patch": "results/verified006-codex-XC-MINI-PRO-AHP-20260615T190047Z/django__django-11749/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified006-codex-XC-MINI-PRO-AHP-20260615T190047Z/django__django-11749/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-11815",
+      "source_run_id": "verified007-codex-XC-MINI-PRO-AHP-20260615T194407Z",
+      "verified_batch": "verified007",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "44/44",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "44/44",
+      "baseline_patch": "results/verified007-codex-XC-MINI-PRO-AHP-20260615T194407Z/django__django-11815/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified007-codex-XC-MINI-PRO-AHP-20260615T194407Z/django__django-11815/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-11820",
+      "source_run_id": "verified007-codex-XC-MINI-PRO-AHP-20260615T194407Z",
+      "verified_batch": "verified007",
+      "baseline_official_resolved": false,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/2",
+      "baseline_official_ptp": "61/61",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "61/61",
+      "baseline_patch": "results/verified007-codex-XC-MINI-PRO-AHP-20260615T194407Z/django__django-11820/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified007-codex-XC-MINI-PRO-AHP-20260615T194407Z/django__django-11820/solutions/solution_fvk.patch",
+      "category": "fvk_only",
+      "arms_to_run": [
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-11848",
+      "source_run_id": "verified007-codex-XC-MINI-PRO-AHP-20260615T194407Z",
+      "verified_batch": "verified007",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "43/43",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "43/43",
+      "baseline_patch": "results/verified007-codex-XC-MINI-PRO-AHP-20260615T194407Z/django__django-11848/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified007-codex-XC-MINI-PRO-AHP-20260615T194407Z/django__django-11848/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-11880",
+      "source_run_id": "verified007-codex-XC-MINI-PRO-AHP-20260615T194407Z",
+      "verified_batch": "verified007",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "114/114",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "114/114",
+      "baseline_patch": "results/verified007-codex-XC-MINI-PRO-AHP-20260615T194407Z/django__django-11880/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified007-codex-XC-MINI-PRO-AHP-20260615T194407Z/django__django-11880/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-11885",
+      "source_run_id": "verified007-codex-XC-MINI-PRO-AHP-20260615T194407Z",
+      "verified_batch": "verified007",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "43/43",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "43/43",
+      "baseline_patch": "results/verified007-codex-XC-MINI-PRO-AHP-20260615T194407Z/django__django-11885/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified007-codex-XC-MINI-PRO-AHP-20260615T194407Z/django__django-11885/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-11951",
+      "source_run_id": "verified007-codex-XC-MINI-PRO-AHP-20260615T194407Z",
+      "verified_batch": "verified007",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "21/21",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "21/21",
+      "baseline_patch": "results/verified007-codex-XC-MINI-PRO-AHP-20260615T194407Z/django__django-11951/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified007-codex-XC-MINI-PRO-AHP-20260615T194407Z/django__django-11951/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-11964",
+      "source_run_id": "verified007-codex-XC-MINI-PRO-AHP-20260615T194407Z",
+      "verified_batch": "verified007",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "15/15",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "15/15",
+      "baseline_patch": "results/verified007-codex-XC-MINI-PRO-AHP-20260615T194407Z/django__django-11964/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified007-codex-XC-MINI-PRO-AHP-20260615T194407Z/django__django-11964/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-11999",
+      "source_run_id": "verified007-codex-XC-MINI-PRO-AHP-20260615T194407Z",
+      "verified_batch": "verified007",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "30/30",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "30/30",
+      "baseline_patch": "results/verified007-codex-XC-MINI-PRO-AHP-20260615T194407Z/django__django-11999/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified007-codex-XC-MINI-PRO-AHP-20260615T194407Z/django__django-11999/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-12039",
+      "source_run_id": "verified007-codex-XC-MINI-PRO-AHP-20260615T194407Z",
+      "verified_batch": "verified007",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "11/11",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "11/11",
+      "baseline_patch": "results/verified007-codex-XC-MINI-PRO-AHP-20260615T194407Z/django__django-12039/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified007-codex-XC-MINI-PRO-AHP-20260615T194407Z/django__django-12039/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-12050",
+      "source_run_id": "verified008-codex-XC-MINI-PRO-AHP-20260615T202640Z",
+      "verified_batch": "verified008",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "10/10",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "10/10",
+      "baseline_patch": "results/verified008-codex-XC-MINI-PRO-AHP-20260615T202640Z/django__django-12050/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified008-codex-XC-MINI-PRO-AHP-20260615T202640Z/django__django-12050/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-12125",
+      "source_run_id": "verified008-codex-XC-MINI-PRO-AHP-20260615T202640Z",
+      "verified_batch": "verified008",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "45/45",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "45/45",
+      "baseline_patch": "results/verified008-codex-XC-MINI-PRO-AHP-20260615T202640Z/django__django-12125/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified008-codex-XC-MINI-PRO-AHP-20260615T202640Z/django__django-12125/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-12143",
+      "source_run_id": "verified008-codex-XC-MINI-PRO-AHP-20260615T202640Z",
+      "verified_batch": "verified008",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "52/52",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "52/52",
+      "baseline_patch": "results/verified008-codex-XC-MINI-PRO-AHP-20260615T202640Z/django__django-12143/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified008-codex-XC-MINI-PRO-AHP-20260615T202640Z/django__django-12143/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-12155",
+      "source_run_id": "verified008-codex-XC-MINI-PRO-AHP-20260615T202640Z",
+      "verified_batch": "verified008",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "6/6",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "6/6",
+      "baseline_patch": "results/verified008-codex-XC-MINI-PRO-AHP-20260615T202640Z/django__django-12155/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified008-codex-XC-MINI-PRO-AHP-20260615T202640Z/django__django-12155/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-12193",
+      "source_run_id": "verified008-codex-XC-MINI-PRO-AHP-20260615T202640Z",
+      "verified_batch": "verified008",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "11/11",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "11/11",
+      "baseline_patch": "results/verified008-codex-XC-MINI-PRO-AHP-20260615T202640Z/django__django-12193/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified008-codex-XC-MINI-PRO-AHP-20260615T202640Z/django__django-12193/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-12209",
+      "source_run_id": "verified008-codex-XC-MINI-PRO-AHP-20260615T202640Z",
+      "verified_batch": "verified008",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "0/0",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "0/0",
+      "baseline_patch": "results/verified008-codex-XC-MINI-PRO-AHP-20260615T202640Z/django__django-12209/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified008-codex-XC-MINI-PRO-AHP-20260615T202640Z/django__django-12209/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-12262",
+      "source_run_id": "verified008-codex-XC-MINI-PRO-AHP-20260615T202640Z",
+      "verified_batch": "verified008",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "4/4",
+      "baseline_official_ptp": "18/18",
+      "fvk_official_ftp": "4/4",
+      "fvk_official_ptp": "18/18",
+      "baseline_patch": "results/verified008-codex-XC-MINI-PRO-AHP-20260615T202640Z/django__django-12262/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified008-codex-XC-MINI-PRO-AHP-20260615T202640Z/django__django-12262/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-12276",
+      "source_run_id": "verified008-codex-XC-MINI-PRO-AHP-20260615T202640Z",
+      "verified_batch": "verified008",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "117/117",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "117/117",
+      "baseline_patch": "results/verified008-codex-XC-MINI-PRO-AHP-20260615T202640Z/django__django-12276/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified008-codex-XC-MINI-PRO-AHP-20260615T202640Z/django__django-12276/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-12304",
+      "source_run_id": "verified008-codex-XC-MINI-PRO-AHP-20260615T202640Z",
+      "verified_batch": "verified008",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "17/17",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "17/17",
+      "baseline_patch": "results/verified008-codex-XC-MINI-PRO-AHP-20260615T202640Z/django__django-12304/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified008-codex-XC-MINI-PRO-AHP-20260615T202640Z/django__django-12304/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-12325",
+      "source_run_id": "verified009-codex-XC-MINI-PRO-AHP-20260615T210902Z",
+      "verified_batch": "verified009",
+      "baseline_official_resolved": false,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/2",
+      "baseline_official_ptp": "201/201",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "201/201",
+      "baseline_patch": "results/verified009-codex-XC-MINI-PRO-AHP-20260615T210902Z/django__django-12325/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified009-codex-XC-MINI-PRO-AHP-20260615T210902Z/django__django-12325/solutions/solution_fvk.patch",
+      "category": "fvk_only",
+      "arms_to_run": [
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-12419",
+      "source_run_id": "verified009-codex-XC-MINI-PRO-AHP-20260615T210902Z",
+      "verified_batch": "verified009",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "0/0",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "0/0",
+      "baseline_patch": "results/verified009-codex-XC-MINI-PRO-AHP-20260615T210902Z/django__django-12419/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified009-codex-XC-MINI-PRO-AHP-20260615T210902Z/django__django-12419/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-12663",
+      "source_run_id": "verified009-codex-XC-MINI-PRO-AHP-20260615T210902Z",
+      "verified_batch": "verified009",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "135/135",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "135/135",
+      "baseline_patch": "results/verified009-codex-XC-MINI-PRO-AHP-20260615T210902Z/django__django-12663/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified009-codex-XC-MINI-PRO-AHP-20260615T210902Z/django__django-12663/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-12708",
+      "source_run_id": "verified009-codex-XC-MINI-PRO-AHP-20260615T210902Z",
+      "verified_batch": "verified009",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "101/101",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "101/101",
+      "baseline_patch": "results/verified009-codex-XC-MINI-PRO-AHP-20260615T210902Z/django__django-12708/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified009-codex-XC-MINI-PRO-AHP-20260615T210902Z/django__django-12708/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-12713",
+      "source_run_id": "verified009-codex-XC-MINI-PRO-AHP-20260615T210902Z",
+      "verified_batch": "verified009",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "58/58",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "58/58",
+      "baseline_patch": "results/verified009-codex-XC-MINI-PRO-AHP-20260615T210902Z/django__django-12713/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified009-codex-XC-MINI-PRO-AHP-20260615T210902Z/django__django-12713/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-12741",
+      "source_run_id": "verified009-codex-XC-MINI-PRO-AHP-20260615T210902Z",
+      "verified_batch": "verified009",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "67/67",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "67/67",
+      "baseline_patch": "results/verified009-codex-XC-MINI-PRO-AHP-20260615T210902Z/django__django-12741/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified009-codex-XC-MINI-PRO-AHP-20260615T210902Z/django__django-12741/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-12754",
+      "source_run_id": "verified009-codex-XC-MINI-PRO-AHP-20260615T210902Z",
+      "verified_batch": "verified009",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "112/112",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "112/112",
+      "baseline_patch": "results/verified009-codex-XC-MINI-PRO-AHP-20260615T210902Z/django__django-12754/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified009-codex-XC-MINI-PRO-AHP-20260615T210902Z/django__django-12754/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-12774",
+      "source_run_id": "verified009-codex-XC-MINI-PRO-AHP-20260615T210902Z",
+      "verified_batch": "verified009",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "41/41",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "41/41",
+      "baseline_patch": "results/verified009-codex-XC-MINI-PRO-AHP-20260615T210902Z/django__django-12774/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified009-codex-XC-MINI-PRO-AHP-20260615T210902Z/django__django-12774/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-12858",
+      "source_run_id": "verified010-codex-XC-MINI-PRO-AHP-20260615T215736Z",
+      "verified_batch": "verified010",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "73/73",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "73/73",
+      "baseline_patch": "results/verified010-codex-XC-MINI-PRO-AHP-20260615T215736Z/django__django-12858/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified010-codex-XC-MINI-PRO-AHP-20260615T215736Z/django__django-12858/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-12965",
+      "source_run_id": "verified010-codex-XC-MINI-PRO-AHP-20260615T215736Z",
+      "verified_batch": "verified010",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "52/52",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "52/52",
+      "baseline_patch": "results/verified010-codex-XC-MINI-PRO-AHP-20260615T215736Z/django__django-12965/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified010-codex-XC-MINI-PRO-AHP-20260615T215736Z/django__django-12965/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-13012",
+      "source_run_id": "verified010-codex-XC-MINI-PRO-AHP-20260615T215736Z",
+      "verified_batch": "verified010",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "137/137",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "137/137",
+      "baseline_patch": "results/verified010-codex-XC-MINI-PRO-AHP-20260615T215736Z/django__django-13012/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified010-codex-XC-MINI-PRO-AHP-20260615T215736Z/django__django-13012/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-13023",
+      "source_run_id": "verified010-codex-XC-MINI-PRO-AHP-20260615T215736Z",
+      "verified_batch": "verified010",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "9/9",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "9/9",
+      "baseline_patch": "results/verified010-codex-XC-MINI-PRO-AHP-20260615T215736Z/django__django-13023/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified010-codex-XC-MINI-PRO-AHP-20260615T215736Z/django__django-13023/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-13028",
+      "source_run_id": "verified010-codex-XC-MINI-PRO-AHP-20260615T215736Z",
+      "verified_batch": "verified010",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "276/276",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "276/276",
+      "baseline_patch": "results/verified010-codex-XC-MINI-PRO-AHP-20260615T215736Z/django__django-13028/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified010-codex-XC-MINI-PRO-AHP-20260615T215736Z/django__django-13028/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-13033",
+      "source_run_id": "verified010-codex-XC-MINI-PRO-AHP-20260615T215736Z",
+      "verified_batch": "verified010",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "26/26",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "26/26",
+      "baseline_patch": "results/verified010-codex-XC-MINI-PRO-AHP-20260615T215736Z/django__django-13033/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified010-codex-XC-MINI-PRO-AHP-20260615T215736Z/django__django-13033/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-13089",
+      "source_run_id": "verified010-codex-XC-MINI-PRO-AHP-20260615T215736Z",
+      "verified_batch": "verified010",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "352/352",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "352/352",
+      "baseline_patch": "results/verified010-codex-XC-MINI-PRO-AHP-20260615T215736Z/django__django-13089/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified010-codex-XC-MINI-PRO-AHP-20260615T215736Z/django__django-13089/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-13109",
+      "source_run_id": "verified010-codex-XC-MINI-PRO-AHP-20260615T215736Z",
+      "verified_batch": "verified010",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "170/170",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "170/170",
+      "baseline_patch": "results/verified010-codex-XC-MINI-PRO-AHP-20260615T215736Z/django__django-13109/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified010-codex-XC-MINI-PRO-AHP-20260615T215736Z/django__django-13109/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-13121",
+      "source_run_id": "verified010-codex-XC-MINI-PRO-AHP-20260615T215736Z",
+      "verified_batch": "verified010",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "168/168",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "168/168",
+      "baseline_patch": "results/verified010-codex-XC-MINI-PRO-AHP-20260615T215736Z/django__django-13121/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified010-codex-XC-MINI-PRO-AHP-20260615T215736Z/django__django-13121/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-13128",
+      "source_run_id": "verified011-codex-XC-MINI-PRO-AHP-20260615T225846Z",
+      "verified_batch": "verified011",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "7/7",
+      "baseline_official_ptp": "134/134",
+      "fvk_official_ftp": "7/7",
+      "fvk_official_ptp": "134/134",
+      "baseline_patch": "results/verified011-codex-XC-MINI-PRO-AHP-20260615T225846Z/django__django-13128/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified011-codex-XC-MINI-PRO-AHP-20260615T225846Z/django__django-13128/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-13158",
+      "source_run_id": "verified011-codex-XC-MINI-PRO-AHP-20260615T225846Z",
+      "verified_batch": "verified011",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "29/29",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "29/29",
+      "baseline_patch": "results/verified011-codex-XC-MINI-PRO-AHP-20260615T225846Z/django__django-13158/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified011-codex-XC-MINI-PRO-AHP-20260615T225846Z/django__django-13158/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-13195",
+      "source_run_id": "verified011-codex-XC-MINI-PRO-AHP-20260615T225846Z",
+      "verified_batch": "verified011",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "5/5",
+      "baseline_official_ptp": "382/382",
+      "fvk_official_ftp": "5/5",
+      "fvk_official_ptp": "382/382",
+      "baseline_patch": "results/verified011-codex-XC-MINI-PRO-AHP-20260615T225846Z/django__django-13195/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified011-codex-XC-MINI-PRO-AHP-20260615T225846Z/django__django-13195/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-13279",
+      "source_run_id": "verified011-codex-XC-MINI-PRO-AHP-20260615T225846Z",
+      "verified_batch": "verified011",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "9/9",
+      "baseline_official_ptp": "346/346",
+      "fvk_official_ftp": "9/9",
+      "fvk_official_ptp": "346/346",
+      "baseline_patch": "results/verified011-codex-XC-MINI-PRO-AHP-20260615T225846Z/django__django-13279/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified011-codex-XC-MINI-PRO-AHP-20260615T225846Z/django__django-13279/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-13297",
+      "source_run_id": "verified011-codex-XC-MINI-PRO-AHP-20260615T225846Z",
+      "verified_batch": "verified011",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "52/52",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "52/52",
+      "baseline_patch": "results/verified011-codex-XC-MINI-PRO-AHP-20260615T225846Z/django__django-13297/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified011-codex-XC-MINI-PRO-AHP-20260615T225846Z/django__django-13297/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-13315",
+      "source_run_id": "verified011-codex-XC-MINI-PRO-AHP-20260615T225846Z",
+      "verified_batch": "verified011",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "146/146",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "146/146",
+      "baseline_patch": "results/verified011-codex-XC-MINI-PRO-AHP-20260615T225846Z/django__django-13315/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified011-codex-XC-MINI-PRO-AHP-20260615T225846Z/django__django-13315/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-13343",
+      "source_run_id": "verified011-codex-XC-MINI-PRO-AHP-20260615T225846Z",
+      "verified_batch": "verified011",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "130/130",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "130/130",
+      "baseline_patch": "results/verified011-codex-XC-MINI-PRO-AHP-20260615T225846Z/django__django-13343/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified011-codex-XC-MINI-PRO-AHP-20260615T225846Z/django__django-13343/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-13344",
+      "source_run_id": "verified011-codex-XC-MINI-PRO-AHP-20260615T225846Z",
+      "verified_batch": "verified011",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "356/356",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "356/356",
+      "baseline_patch": "results/verified011-codex-XC-MINI-PRO-AHP-20260615T225846Z/django__django-13344/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified011-codex-XC-MINI-PRO-AHP-20260615T225846Z/django__django-13344/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-13346",
+      "source_run_id": "verified011-codex-XC-MINI-PRO-AHP-20260615T225846Z",
+      "verified_batch": "verified011",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "65/65",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "65/65",
+      "baseline_patch": "results/verified011-codex-XC-MINI-PRO-AHP-20260615T225846Z/django__django-13346/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified011-codex-XC-MINI-PRO-AHP-20260615T225846Z/django__django-13346/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-13363",
+      "source_run_id": "verified012-codex-XC-MINI-PRO-AHP-20260615T235523Z",
+      "verified_batch": "verified012",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "76/76",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "76/76",
+      "baseline_patch": "results/verified012-codex-XC-MINI-PRO-AHP-20260615T235523Z/django__django-13363/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified012-codex-XC-MINI-PRO-AHP-20260615T235523Z/django__django-13363/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-13401",
+      "source_run_id": "verified012-codex-XC-MINI-PRO-AHP-20260615T235523Z",
+      "verified_batch": "verified012",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "32/32",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "32/32",
+      "baseline_patch": "results/verified012-codex-XC-MINI-PRO-AHP-20260615T235523Z/django__django-13401/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified012-codex-XC-MINI-PRO-AHP-20260615T235523Z/django__django-13401/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-13410",
+      "source_run_id": "verified012-codex-XC-MINI-PRO-AHP-20260615T235523Z",
+      "verified_batch": "verified012",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "40/40",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "40/40",
+      "baseline_patch": "results/verified012-codex-XC-MINI-PRO-AHP-20260615T235523Z/django__django-13410/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified012-codex-XC-MINI-PRO-AHP-20260615T235523Z/django__django-13410/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-13417",
+      "source_run_id": "verified012-codex-XC-MINI-PRO-AHP-20260615T235523Z",
+      "verified_batch": "verified012",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "280/280",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "280/280",
+      "baseline_patch": "results/verified012-codex-XC-MINI-PRO-AHP-20260615T235523Z/django__django-13417/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified012-codex-XC-MINI-PRO-AHP-20260615T235523Z/django__django-13417/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-13449",
+      "source_run_id": "verified012-codex-XC-MINI-PRO-AHP-20260615T235523Z",
+      "verified_batch": "verified012",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "46/46",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "46/46",
+      "baseline_patch": "results/verified012-codex-XC-MINI-PRO-AHP-20260615T235523Z/django__django-13449/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified012-codex-XC-MINI-PRO-AHP-20260615T235523Z/django__django-13449/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-13516",
+      "source_run_id": "verified012-codex-XC-MINI-PRO-AHP-20260615T235523Z",
+      "verified_batch": "verified012",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "43/43",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "43/43",
+      "baseline_patch": "results/verified012-codex-XC-MINI-PRO-AHP-20260615T235523Z/django__django-13516/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified012-codex-XC-MINI-PRO-AHP-20260615T235523Z/django__django-13516/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-13551",
+      "source_run_id": "verified012-codex-XC-MINI-PRO-AHP-20260615T235523Z",
+      "verified_batch": "verified012",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "2/2",
+      "baseline_official_ptp": "56/56",
+      "fvk_official_ftp": "2/2",
+      "fvk_official_ptp": "56/56",
+      "baseline_patch": "results/verified012-codex-XC-MINI-PRO-AHP-20260615T235523Z/django__django-13551/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified012-codex-XC-MINI-PRO-AHP-20260615T235523Z/django__django-13551/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-13568",
+      "source_run_id": "verified013-codex-XC-MINI-PRO-AHP-20260616T004115Z",
+      "verified_batch": "verified013",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "13/13",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "13/13",
+      "baseline_patch": "results/verified013-codex-XC-MINI-PRO-AHP-20260616T004115Z/django__django-13568/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified013-codex-XC-MINI-PRO-AHP-20260616T004115Z/django__django-13568/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    },
+    {
+      "instance_id": "django__django-13569",
+      "source_run_id": "verified013-codex-XC-MINI-PRO-AHP-20260616T004115Z",
+      "verified_batch": "verified013",
+      "baseline_official_resolved": true,
+      "fvk_official_resolved": true,
+      "baseline_official_ftp": "1/1",
+      "baseline_official_ptp": "66/66",
+      "fvk_official_ftp": "1/1",
+      "fvk_official_ptp": "66/66",
+      "baseline_patch": "results/verified013-codex-XC-MINI-PRO-AHP-20260616T004115Z/django__django-13569/solutions/solution_baseline.patch",
+      "fvk_patch": "results/verified013-codex-XC-MINI-PRO-AHP-20260616T004115Z/django__django-13569/solutions/solution_fvk.patch",
+      "category": "both_resolved",
+      "arms_to_run": [
+        "baseline",
+        "fvk"
+      ],
+      "regression_batch": "regression001"
+    }
+  ]
+}

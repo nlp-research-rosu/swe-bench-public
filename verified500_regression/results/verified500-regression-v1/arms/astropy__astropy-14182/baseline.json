@@ -1,0 +1,12 @@
+{
+  "instance_id": "astropy__astropy-14182",
+  "arm": "baseline",
+  "source_run_id": "verified001-codex-XC-MINI-PRO-AHP-20260615T131050Z",
+  "category": "both_resolved",
+  "regression_batch": "regression001",
+  "status": "clean",
+  "trigger_count": 0,
+  "triggers": [],
+  "oracle_report": "/home/chenglong/swe-bench/verified500_regression/results/verified500-regression-v1/oracle/astropy__astropy-14182.json",
+  "generated_context_report": "/home/chenglong/swe-bench/verified500_regression/results/verified500-regression-v1/contexts/astropy__astropy-14182/baseline.json"
+}

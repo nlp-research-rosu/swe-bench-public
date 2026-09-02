@@ -1,0 +1,18 @@
+{
+  "instance_id": "astropy__astropy-13579",
+  "arm": "fvk",
+  "source_run_id": "verified001-codex-XC-MINI-PRO-AHP-20260615T131050Z",
+  "category": "both_resolved",
+  "regression_batch": "regression001",
+  "status": "regression_fail",
+  "trigger_count": 1,
+  "triggers": [
+    {
+      "test_id": "astropy/cosmology/flrw/tests/test_lambdacdm.py::TestFlatLambdaCDM::test_toformat_model",
+      "oracle_status": "PASSED",
+      "generated_status": "FAILED"
+    }
+  ],
+  "oracle_report": "/home/chenglong/swe-bench/verified500_regression/results/verified500-regression-v1/oracle/astropy__astropy-13579.json",
+  "generated_context_report": "/home/chenglong/swe-bench/verified500_regression/results/verified500-regression-v1/contexts/astropy__astropy-13579/fvk.json"
+}
