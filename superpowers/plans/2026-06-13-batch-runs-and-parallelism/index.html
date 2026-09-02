@@ -1,0 +1,1326 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://swe-bench.com/superpowers/plans/2026-06-13-batch-runs-and-parallelism/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/swellama.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Batch Runs + Instance Parallelism Implementation Plan - SWE-bench</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M22%2012a10%2010%200%200%201-10%2010A10%2010%200%200%201%202%2012%2010%2010%200%200%201%2012%202a10%2010%200%200%201%2010%2010m-12%206%206-6-6-6-1.4%201.4%204.6%204.6-4.6%204.6z%22/%3E%3C/svg%3E');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../../css/custom.css">
+    
+      <link rel="stylesheet" href="../../../css/mkdocstrings.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-T5P2NYGJYR"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-T5P2NYGJYR",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-T5P2NYGJYR",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#batch-runs-instance-parallelism-implementation-plan" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="SWE-bench" class="md-header__button md-logo" aria-label="SWE-bench" data-md-component="logo">
+      
+  <img src="../../../assets/swellama.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SWE-bench
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Batch Runs + Instance Parallelism Implementation Plan
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-orange" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="deep-orange" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/SWE-bench/SWE-bench" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    SWE-bench
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://swebench.com" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Leaderboard
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../.." class="md-tabs__link">
+          
+  
+  
+    
+  
+  SWE-bench
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../guides/quickstart/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  User Guides
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="SWE-bench" class="md-nav__button md-logo" aria-label="SWE-bench" data-md-component="logo">
+      
+  <img src="../../../assets/swellama.svg" alt="logo">
+
+    </a>
+    SWE-bench
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/SWE-bench/SWE-bench" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    SWE-bench
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://swebench.com" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Leaderboard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../.." class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SWE-bench
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SWE-bench
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guides
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    User Guides
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SWE-bench Quickstart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/evaluation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Evaluation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/docker_setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docker Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/datasets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Datasets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/create_rag_datasets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Create RAG Datasets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6">
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reference/harness/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Harness
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reference/inference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reference/versioning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Versioning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7">
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/harness/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Harness
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/inference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/versioning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Versioning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#task-b1-fvk_benchbatchespy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task B1: fvk_bench/batches.py
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-b2-parallel-safe-mirror-clone-cli-wiring-rolling-executor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task B2: parallel-safe mirror clone + CLI wiring + rolling executor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-b3-startmd-batch-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task B3: START.md batch section
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-r1-independent-read-only-cross-arm-collectioncomparison-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task R1 (independent, read-only): cross-arm collection/comparison review
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#self-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Self-review
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/SWE-bench/SWE-bench/edit/main/docs/superpowers/plans/2026-06-13-batch-runs-and-parallelism.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
+    </a>
+  
+  
+
+
+<h1 id="batch-runs-instance-parallelism-implementation-plan">Batch Runs + Instance Parallelism Implementation Plan</h1>
+<blockquote>
+<p><strong>For agentic workers:</strong> REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (<code>- [ ]</code>) syntax for tracking.</p>
+</blockquote>
+<p><strong>Goal:</strong> Five fixed 9-problem batches runnable via <code>--batch batchN</code>, optional rolling parallelism via <code>run --max-parallel N</code>, documented in START.md; plus a read-only targeted review of cross-arm result collection.</p>
+<p><strong>Architecture:</strong> New <code>fvk_bench/batches.py</code> is the single source of truth for batch membership; <code>cli.py</code> wires <code>--batch</code> into run/validate-gold/list and replaces the sequential run loop with a ThreadPoolExecutor fan-out (default max_workers=1 ≡ today's behavior); <code>scaffold.ensure_mirror</code> gets a thread-unique temp suffix and <code>run</code> pre-warms mirrors before fan-out.</p>
+<p><strong>Tech Stack:</strong> Python stdlib (<code>concurrent.futures</code>, <code>threading</code>, <code>uuid</code>), pytest, existing fake-claude test harness.</p>
+<p><strong>Authoritative spec:</strong> <code>docs/superpowers/specs/2026-06-13-batch-runs-and-parallelism-design.md</code>. Conventions identical to the 2026-06-12 plan (venv pytest, TDD, stdlib-only, no prints outside cli.py, commit trailer <code>Co-Authored-By: Claude Fable 5 &lt;noreply@anthropic.com&gt;</code>).</p>
+<hr>
+<h3 id="task-b1-fvk_benchbatchespy">Task B1: <code>fvk_bench/batches.py</code></h3>
+<p><strong>Files:</strong> Create <code>fvk_bench/batches.py</code>, <code>tests/fvk_bench/test_batches.py</code>.</p>
+<ul>
+<li>[ ] <strong>Step 1: Failing tests</strong> (<code>test_batches.py</code>):</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">fvk_bench</span><span class="w"> </span><span class="kn">import</span> <span class="n">batches</span><span class="p">,</span> <span class="n">instances</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_five_batches_of_nine_disjoint_covering_all_45</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">batches</span><span class="o">.</span><span class="n">BATCHES</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s2">"batch1"</span><span class="p">,</span> <span class="s2">"batch2"</span><span class="p">,</span> <span class="s2">"batch3"</span><span class="p">,</span> <span class="s2">"batch4"</span><span class="p">,</span> <span class="s2">"batch5"</span><span class="p">]</span>
+    <span class="n">all_ids</span> <span class="o">=</span> <span class="p">[</span><span class="n">iid</span> <span class="k">for</span> <span class="n">ids</span> <span class="ow">in</span> <span class="n">batches</span><span class="o">.</span><span class="n">BATCHES</span><span class="o">.</span><span class="n">values</span><span class="p">()</span> <span class="k">for</span> <span class="n">iid</span> <span class="ow">in</span> <span class="n">ids</span><span class="p">]</span>
+    <span class="k">assert</span> <span class="nb">all</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ids</span><span class="p">)</span> <span class="o">==</span> <span class="mi">9</span> <span class="k">for</span> <span class="n">ids</span> <span class="ow">in</span> <span class="n">batches</span><span class="o">.</span><span class="n">BATCHES</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">all_ids</span><span class="p">)</span> <span class="o">==</span> <span class="mi">45</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">all_ids</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="nb">set</span><span class="p">(</span><span class="n">all_ids</span><span class="p">)</span> <span class="o">==</span> <span class="nb">set</span><span class="p">(</span><span class="n">instances</span><span class="o">.</span><span class="n">submodule_instance_ids</span><span class="p">())</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_hard_instances_subset</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">batches</span><span class="o">.</span><span class="n">HARD_INSTANCES</span> <span class="o">&lt;=</span> <span class="nb">set</span><span class="p">(</span>
+        <span class="n">iid</span> <span class="k">for</span> <span class="n">ids</span> <span class="ow">in</span> <span class="n">batches</span><span class="o">.</span><span class="n">BATCHES</span><span class="o">.</span><span class="n">values</span><span class="p">()</span> <span class="k">for</span> <span class="n">iid</span> <span class="ow">in</span> <span class="n">ids</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">batches</span><span class="o">.</span><span class="n">HARD_INSTANCES</span><span class="p">)</span> <span class="o">==</span> <span class="mi">6</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_batch_instances_accessor</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">batches</span><span class="o">.</span><span class="n">batch_instances</span><span class="p">(</span><span class="s2">"batch5"</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"pydata__xarray-6992"</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">batches</span><span class="o">.</span><span class="n">batch_instances</span><span class="p">(</span><span class="s2">"batch9"</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="kc">False</span><span class="p">,</span> <span class="s2">"expected KeyError"</span>
+    <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="s2">"batch1"</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>[ ] <strong>Step 2: Run</strong> <code>.venv/bin/python -m pytest tests/fvk_bench/test_batches.py -q</code> → FAIL (no module).</li>
+<li>[ ] <strong>Step 3: Implement</strong> — module docstring: owner-specified division, 2026-06-13; membership is contract, <code>[H]</code> documentation-only. Exact data:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">BATCHES</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"batch1"</span><span class="p">:</span> <span class="p">(</span><span class="s2">"astropy__astropy-13398"</span><span class="p">,</span> <span class="s2">"django__django-10554"</span><span class="p">,</span> <span class="s2">"django__django-11138"</span><span class="p">,</span>
+               <span class="s2">"django__django-11400"</span><span class="p">,</span> <span class="s2">"django__django-11885"</span><span class="p">,</span> <span class="s2">"django__django-12325"</span><span class="p">,</span>
+               <span class="s2">"django__django-12708"</span><span class="p">,</span> <span class="s2">"django__django-13128"</span><span class="p">,</span> <span class="s2">"django__django-13212"</span><span class="p">),</span>
+    <span class="s2">"batch2"</span><span class="p">:</span> <span class="p">(</span><span class="s2">"astropy__astropy-13579"</span><span class="p">,</span> <span class="s2">"django__django-13344"</span><span class="p">,</span> <span class="s2">"django__django-13449"</span><span class="p">,</span>
+               <span class="s2">"django__django-13837"</span><span class="p">,</span> <span class="s2">"django__django-14007"</span><span class="p">,</span> <span class="s2">"django__django-14011"</span><span class="p">,</span>
+               <span class="s2">"django__django-14631"</span><span class="p">,</span> <span class="s2">"django__django-15128"</span><span class="p">,</span> <span class="s2">"django__django-15268"</span><span class="p">),</span>
+    <span class="s2">"batch3"</span><span class="p">:</span> <span class="p">(</span><span class="s2">"astropy__astropy-14369"</span><span class="p">,</span> <span class="s2">"django__django-15503"</span><span class="p">,</span> <span class="s2">"django__django-15629"</span><span class="p">,</span>
+               <span class="s2">"django__django-15957"</span><span class="p">,</span> <span class="s2">"django__django-16263"</span><span class="p">,</span> <span class="s2">"django__django-16560"</span><span class="p">,</span>
+               <span class="s2">"django__django-16631"</span><span class="p">,</span> <span class="s2">"pylint-dev__pylint-4551"</span><span class="p">,</span> <span class="s2">"pylint-dev__pylint-8898"</span><span class="p">),</span>
+    <span class="s2">"batch4"</span><span class="p">:</span> <span class="p">(</span><span class="s2">"pydata__xarray-3993"</span><span class="p">,</span> <span class="s2">"pytest-dev__pytest-10356"</span><span class="p">,</span> <span class="s2">"pytest-dev__pytest-5787"</span><span class="p">,</span>
+               <span class="s2">"pytest-dev__pytest-6197"</span><span class="p">,</span> <span class="s2">"sphinx-doc__sphinx-11510"</span><span class="p">,</span> <span class="s2">"sphinx-doc__sphinx-7590"</span><span class="p">,</span>
+               <span class="s2">"sphinx-doc__sphinx-8548"</span><span class="p">,</span> <span class="s2">"sphinx-doc__sphinx-9229"</span><span class="p">,</span> <span class="s2">"sphinx-doc__sphinx-9461"</span><span class="p">),</span>
+    <span class="s2">"batch5"</span><span class="p">:</span> <span class="p">(</span><span class="s2">"pydata__xarray-6992"</span><span class="p">,</span> <span class="s2">"scikit-learn__scikit-learn-25102"</span><span class="p">,</span> <span class="s2">"sympy__sympy-12489"</span><span class="p">,</span>
+               <span class="s2">"sympy__sympy-13852"</span><span class="p">,</span> <span class="s2">"sympy__sympy-13878"</span><span class="p">,</span> <span class="s2">"sympy__sympy-14248"</span><span class="p">,</span>
+               <span class="s2">"sympy__sympy-16597"</span><span class="p">,</span> <span class="s2">"sympy__sympy-17630"</span><span class="p">,</span> <span class="s2">"sympy__sympy-18199"</span><span class="p">),</span>
+<span class="p">}</span>
+<span class="n">HARD_INSTANCES</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">({</span>
+    <span class="s2">"astropy__astropy-13398"</span><span class="p">,</span> <span class="s2">"astropy__astropy-13579"</span><span class="p">,</span> <span class="s2">"astropy__astropy-14369"</span><span class="p">,</span>
+    <span class="s2">"pydata__xarray-3993"</span><span class="p">,</span> <span class="s2">"pydata__xarray-6992"</span><span class="p">,</span> <span class="s2">"scikit-learn__scikit-learn-25102"</span><span class="p">,</span>
+<span class="p">})</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">batch_instances</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">]:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">BATCHES</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+    <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"unknown batch </span><span class="si">{</span><span class="n">name</span><span class="si">!r}</span><span class="s2">; valid: </span><span class="si">{</span><span class="s1">', '</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">BATCHES</span><span class="p">))</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="kc">None</span>
+</code></pre></div>
+<ul>
+<li>[ ] <strong>Step 4: Run</strong> → PASS. <strong>Step 5: Commit</strong> <code>feat(fvk_bench): five fixed 9-problem batches</code>.</li>
+</ul>
+<h3 id="task-b2-parallel-safe-mirror-clone-cli-wiring-rolling-executor">Task B2: parallel-safe mirror clone + CLI wiring + rolling executor</h3>
+<p><strong>Files:</strong> Modify <code>fvk_bench/scaffold.py</code> (temp suffix), <code>fvk_bench/cli.py</code> (selection group, pre-warm, executor, <code>--max-parallel</code>, list annotation), <code>fvk_bench/harvest.py</code> ONLY if recording max_parallel needs a param (preferred: cli writes <code>run_manifest</code> then injects <code>"max_parallel"</code> — NO: cleaner, add optional <code>extra: dict | None = None</code> param to <code>write_run_manifest</code> merged into the manifest top level). Tests: extend <code>tests/fvk_bench/test_scaffold.py</code>, <code>tests/fvk_bench/test_cli.py</code>.</p>
+<ul>
+<li>[ ] <strong>Step 1: Failing tests</strong></li>
+<li><code>test_scaffold.py::test_mirror_tmp_suffix_thread_unique</code>: call the private suffix helper (factor <code>_clone_tmp_path(dst)</code>) twice → different paths; both contain <code>.tmp-</code>.</li>
+<li><code>test_cli.py::test_run_batch_selection</code>: monkeypatch <code>load_instances</code> to return 45 fixture instances whose ids = <code>submodule_instance_ids()</code> (reuse pattern; build Instances cheaply with same repo/base_commit from <code>fixture_remote_repo</code>); monkeypatch <code>arms.run_instance</code> and <code>harvest.harvest_instance</code> to record calls; <code>main(["run","--batch","batch5","--run-id","t",...])</code> → exactly the 9 batch5 ids dispatched, in order, exit 0.</li>
+<li><code>test_cli.py::test_run_rejects_batch_with_instances</code>: argparse error (exit 2) when both <code>--batch</code> and <code>--instances</code> given.</li>
+<li><code>test_cli.py::test_validate_gold_batch</code>: monkeypatch <code>evaluate.gold_eval</code> capturing ids → batch3 ids.</li>
+<li><code>test_cli.py::test_run_max_parallel_rolling</code>: 3 fixture instances (demo repo, distinct ids), fake-claude happy wrapper, <code>--max-parallel 2</code>; assert all 3 completed + harvested; assert max concurrency observed ≥... (hard to assert true overlap robustly with fake speed — instead monkeypatch <code>arms.run_instance</code> with a function using a <code>threading.Barrier(2, timeout=10)</code> on first two calls to PROVE two run concurrently, recording thread names; third call passes through; assert barrier didn't time out, exit 0).</li>
+<li><code>test_cli.py::test_run_max_parallel_records_manifest</code>: run with <code>--max-parallel 3</code> → <code>run_manifest.json</code> contains <code>"max_parallel": 3</code>.</li>
+<li><code>test_cli.py::test_run_prewarms_mirrors_once</code>: monkeypatch <code>scaffold.ensure_mirror</code> counting calls per repo; 3 same-repo instances with <code>--max-parallel 3</code> → pre-warm called once for the repo BEFORE any run_instance (record ordering via a shared list).</li>
+<li><code>test_cli.py::test_list_batch_filter</code>: <code>list --batch batch4</code> prints only those 9 ids; plain <code>list</code> output annotates batch names.</li>
+<li>[ ] <strong>Step 2: RED.</strong> <strong>Step 3: Implement</strong></li>
+<li><code>scaffold.py</code>: <code>_clone_tmp_path(dst) = dst.with_name(f"{dst.name}.tmp-{os.getpid()}-{uuid.uuid4().hex[:8]}")</code>; ensure_mirror uses it (stale-cleanup glob unchanged: <code>*.tmp-*</code>).</li>
+<li><code>cli.py</code> run: selection resolution helper <code>_resolve_selection(args) -&gt; list[str]</code> shared by run/validate-gold (<code>--instances</code> xor <code>--all</code> xor <code>--batch</code>); pre-warm: <code>for repo in unique repos of selection (preserving order): scaffold.ensure_mirror(repo, cache_dir)</code> before fan-out (cache_dir derived exactly as <code>arms.run_instance</code> derives it: <code>workspace_root/"cache"/"repos"</code> honoring <code>--workspace-root</code>); executor:
+    <div class="highlight"><pre><span></span><code><span class="n">print_lock</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Lock</span><span class="p">()</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">_one</span><span class="p">(</span><span class="n">iid</span><span class="p">):</span>
+    <span class="n">inst</span> <span class="o">=</span> <span class="n">insts</span><span class="p">[</span><span class="n">iid</span><span class="p">]</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">state</span> <span class="o">=</span> <span class="n">arms</span><span class="o">.</span><span class="n">run_instance</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+        <span class="n">harvest</span><span class="o">.</span><span class="n">harvest_instance</span><span class="p">(</span><span class="n">ws_path</span><span class="p">,</span> <span class="n">run_id</span><span class="p">,</span> <span class="n">inst</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
+    <span class="k">except</span> <span class="p">(</span><span class="ne">RuntimeError</span><span class="p">,</span> <span class="ne">OSError</span><span class="p">)</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+        <span class="n">_write_stub_manifest</span><span class="p">(</span><span class="o">...</span><span class="p">);</span> <span class="n">state</span> <span class="o">=</span> <span class="n">stub</span>
+    <span class="k">with</span> <span class="n">print_lock</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">per</span><span class="o">-</span><span class="n">instance</span> <span class="n">status</span> <span class="n">line</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">iid</span><span class="p">,</span> <span class="n">state</span>
+<span class="k">with</span> <span class="n">ThreadPoolExecutor</span><span class="p">(</span><span class="n">max_workers</span><span class="o">=</span><span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">max_parallel</span><span class="p">))</span> <span class="k">as</span> <span class="n">ex</span><span class="p">:</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">ex</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">_one</span><span class="p">,</span> <span class="n">selected_ids</span><span class="p">))</span>
+</code></pre></div>
+    (keep submission order; <code>ex.map</code> preserves result order and rolls naturally). run_manifest: <code>write_run_manifest(run_id, extra={"max_parallel": args.max_parallel})</code>.</li>
+<li><code>harvest.write_run_manifest(run_id, results_dir=..., extra=None)</code>: <code>manifest.update(extra or {})</code>.</li>
+<li><code>list</code>: annotate <code>[batchN]</code> per instance (reverse lookup), <code>[H]</code> marker from HARD_INSTANCES; <code>--batch</code> filters.</li>
+<li>[ ] <strong>Step 4: GREEN</strong> (full <code>tests/fvk_bench</code>). <strong>Step 5: Commit</strong> <code>feat(fvk_bench): --batch selection and --max-parallel rolling execution</code>.</li>
+</ul>
+<h3 id="task-b3-startmd-batch-section">Task B3: START.md batch section</h3>
+<p><strong>Files:</strong> Modify <code>START.md</code> (add "Run a batch" section + batch table after the single-problem happy path), <code>docs</code> only.</p>
+<ul>
+<li>[ ] <strong>Step 1:</strong> Add the batch table (5 rows, short names + <code>[H]</code> markers as in the spec) and instructions:
+  <div class="highlight"><pre><span></span><code>.venv/bin/python<span class="w"> </span>-m<span class="w"> </span>fvk_bench<span class="w"> </span>validate-gold<span class="w"> </span>--run-id<span class="w"> </span>batch1-<span class="k">$(</span>hostname<span class="k">)</span><span class="w"> </span>--batch<span class="w"> </span>batch1
+.venv/bin/python<span class="w"> </span>-m<span class="w"> </span>fvk_bench<span class="w"> </span>run<span class="w"> </span>--run-id<span class="w"> </span>batch1-<span class="k">$(</span>hostname<span class="k">)</span><span class="w"> </span>--batch<span class="w"> </span>batch1<span class="w"> </span>--max-parallel<span class="w"> </span><span class="m">3</span>
+.venv/bin/python<span class="w"> </span>-m<span class="w"> </span>fvk_bench<span class="w"> </span>evaluate<span class="w"> </span>--run-id<span class="w"> </span>batch1-<span class="k">$(</span>hostname<span class="k">)</span>
+.venv/bin/python<span class="w"> </span>-m<span class="w"> </span>fvk_bench<span class="w"> </span>report<span class="w"> </span>--run-id<span class="w"> </span>batch1-<span class="k">$(</span>hostname<span class="k">)</span>
+git<span class="w"> </span>add<span class="w"> </span>results/<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"results: batch1 run on </span><span class="k">$(</span>hostname<span class="k">)</span><span class="s2">"</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>push
+</code></pre></div>
+  Notes: <code>--max-parallel 1</code> (default) = sequential canonical mode; parallel runs contend for machine resources and subscription rate limits — use the same setting across runs you compare; resuming after interruption = rerun the same command (completed arms skip); <code>--retry-failed</code> for failed arms. Mention expected duration (9 problems × 3 arms, sequential ≈ a working day; <code>--max-parallel 3</code> ≈ a few hours, machine/limits permitting).</li>
+<li>[ ] <strong>Step 2:</strong> Verify documented flags against <code>--help</code>; suite still green. <strong>Step 3: Commit</strong> <code>docs: batch run instructions in START.md</code>.</li>
+</ul>
+<h3 id="task-r1-independent-read-only-cross-arm-collectioncomparison-review">Task R1 (independent, read-only): cross-arm collection/comparison review</h3>
+<p>No files unless bugs found. Read <code>evaluate.py</code>, <code>report.py</code>, <code>harvest.py</code>, <code>arms.py</code> state keys, plus the live run artifacts in <code>results/20260612T170620Z-XC-MINI-PRO-AHP/</code>. Questions: per-arm predictions/<code>model_name_or_path</code> separation; harness run-id dotting collisions; report.json keying per instance per arm; collect_scores arm keying; flip logic correctness (up/down sets, denominators, empty-patch semantics); INDEX aggregation; any place arm A's result could overwrite/shadow arm B's. Deliverable: findings list with verdicts; fix ONLY real bugs (with tests), no refactoring.</p>
+<h2 id="self-review">Self-review</h2>
+<ul>
+<li>Spec coverage: batches module (B1), CLI batch+parallel+pre-warm+tmp-suffix+manifest recording (B2), START.md+fairness note (B3), review subtask (R1). ✓</li>
+<li>No placeholders; data is exact (45 ids cross-checkable in B1 test). ✓</li>
+<li>Type consistency: <code>batch_instances</code> used only in cli; <code>write_run_manifest(extra=)</code> defined and used in B2. ✓</li>
+</ul>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "content.action.edit", "navigation.footer", "content.code.copy", "content.footnote.tooltips", "header.autohide", "announce.dismiss", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

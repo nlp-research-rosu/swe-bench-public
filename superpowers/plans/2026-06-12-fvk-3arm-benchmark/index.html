@@ -1,0 +1,1795 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://swe-bench.com/superpowers/plans/2026-06-12-fvk-3arm-benchmark/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/swellama.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>FVK 3-Arm Benchmark Infrastructure Implementation Plan - SWE-bench</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M22%2012a10%2010%200%200%201-10%2010A10%2010%200%200%201%202%2012%2010%2010%200%200%201%2012%202a10%2010%200%200%201%2010%2010m-12%206%206-6-6-6-1.4%201.4%204.6%204.6-4.6%204.6z%22/%3E%3C/svg%3E');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../../css/custom.css">
+    
+      <link rel="stylesheet" href="../../../css/mkdocstrings.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-T5P2NYGJYR"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-T5P2NYGJYR",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-T5P2NYGJYR",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fvk-3-arm-benchmark-infrastructure-implementation-plan" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="SWE-bench" class="md-header__button md-logo" aria-label="SWE-bench" data-md-component="logo">
+      
+  <img src="../../../assets/swellama.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SWE-bench
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              FVK 3-Arm Benchmark Infrastructure Implementation Plan
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-orange" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="deep-orange" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/SWE-bench/SWE-bench" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    SWE-bench
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://swebench.com" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Leaderboard
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../.." class="md-tabs__link">
+          
+  
+  
+    
+  
+  SWE-bench
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../guides/quickstart/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  User Guides
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="SWE-bench" class="md-nav__button md-logo" aria-label="SWE-bench" data-md-component="logo">
+      
+  <img src="../../../assets/swellama.svg" alt="logo">
+
+    </a>
+    SWE-bench
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/SWE-bench/SWE-bench" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    SWE-bench
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://swebench.com" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Leaderboard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../.." class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SWE-bench
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SWE-bench
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guides
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    User Guides
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SWE-bench Quickstart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/evaluation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Evaluation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/docker_setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docker Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/datasets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Datasets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/create_rag_datasets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Create RAG Datasets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6">
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reference/harness/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Harness
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reference/inference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reference/versioning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Versioning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7">
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/harness/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Harness
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/inference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/versioning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Versioning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#task-1-submodules-package-skeleton-results-re-include" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 1: Submodules, package skeleton, results re-include
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-2-configpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 2: config.py
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-3-instancespy-vendoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 3: instances.py + vendoring
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-4-scaffoldpy-workspace-mirror-cache-git-checkout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 4: scaffold.py (workspace + mirror cache + git checkout)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-5-claude_runnerpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 5: claude_runner.py
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-6-prompt-templates-dedicated-deliverable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 6: Prompt templates (dedicated deliverable)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-7-armspy-state-machine-git-choreography" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 7: arms.py (state machine + git choreography)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-8-harvestpy-results-tree-manifests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 8: harvest.py (results tree + manifests)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-9-evaluatepy-reportpy-clipy-doctor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 9: evaluate.py, report.py, cli.py, doctor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-10-vendor-real-instance-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 10: Vendor real instance data
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-11-startmd-push-infra" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 11: START.md + push infra
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-12-live-validation-on-one-instance-publish-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 12: Live validation on one instance + publish results
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#self-review-done-at-write-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Self-review (done at write time)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/SWE-bench/SWE-bench/edit/main/docs/superpowers/plans/2026-06-12-fvk-3arm-benchmark.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
+    </a>
+  
+  
+
+
+<h1 id="fvk-3-arm-benchmark-infrastructure-implementation-plan">FVK 3-Arm Benchmark Infrastructure Implementation Plan</h1>
+<blockquote>
+<p><strong>For agentic workers:</strong> REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (<code>- [ ]</code>) syntax for tracking.</p>
+</blockquote>
+<p><strong>Goal:</strong> Build <code>fvk_bench</code>, a reproducible 3-arm (baseline/fvk/control) Claude Code benchmarking infrastructure over 45 SWE-bench Verified instances, then validate live on one instance and publish results.</p>
+<p><strong>Architecture:</strong> A standalone Python package (<code>fvk_bench/</code>) in this repo orchestrates hermetic Claude Code sessions in workspaces outside the repo, manages git state per arm, harvests artifacts into committed <code>results/</code>, and scores patches via the official dockerized <code>swebench.harness.run_evaluation</code>. Two git submodules provide the 45 problem IDs and the FVK docs.</p>
+<p><strong>Tech Stack:</strong> Python ≥3.10 stdlib (argparse, subprocess, json, hashlib, uuid, gzip, shutil), <code>datasets</code> (vendoring only), <code>swebench</code> harness (eval only), <code>claude</code> CLI 2.1.169+, git, Docker (eval only), pytest.</p>
+<p><strong>Authoritative spec:</strong> <code>docs/superpowers/specs/2026-06-12-fvk-3arm-benchmark-design.md</code> — read it before starting any task. On any conflict, the spec wins.</p>
+<p><strong>Conventions for all tasks:</strong>
+- Work directly on <code>main</code> (solo linear work; user-authorized).
+- Python: stdlib-only inside <code>fvk_bench</code> runtime (no new deps). Type hints. No prints from library modules — return data; only <code>cli.py</code> prints.
+- Tests live in <code>tests/fvk_bench/</code>; run with <code>python -m pytest tests/fvk_bench -q</code>. The repo's existing tests are not touched.
+- Every task ends with a commit (message given per task, with <code>Co-Authored-By: Claude Fable 5 &lt;noreply@anthropic.com&gt;</code> trailer).
+- TDD: write the test first whenever the step says so; run it; see it fail; implement; see it pass.</p>
+<hr>
+<h3 id="task-1-submodules-package-skeleton-results-re-include">Task 1: Submodules, package skeleton, results re-include</h3>
+<p><strong>Files:</strong>
+- Create: <code>.gitmodules</code> (via <code>git submodule add</code>)
+- Create: <code>third_party/swebench-fvk-reproducibility/</code> (submodule)
+- Create: <code>third_party/formal-verification-kit/</code> (submodule)
+- Create: <code>fvk_bench/__init__.py</code> (<code>__version__ = "0.1.0"</code>), <code>fvk_bench/__main__.py</code>
+- Create: <code>results/.gitignore</code>, <code>results/INDEX.md</code>
+- Create: <code>tests/fvk_bench/__init__.py</code> (empty)</p>
+<ul>
+<li>[ ] <strong>Step 1: Add submodules</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>submodule<span class="w"> </span>add<span class="w"> </span>git@github.com:fastxyz/swebench-fvk-reproducibility.git<span class="w"> </span>third_party/swebench-fvk-reproducibility
+git<span class="w"> </span>submodule<span class="w"> </span>add<span class="w"> </span>git@github.com:grosu/formal-verification-kit.git<span class="w"> </span>third_party/formal-verification-kit
+</code></pre></div>
+<p>Verify: <code>ls third_party/swebench-fvk-reproducibility/prompts/*.md | wc -l</code> → exactly <strong>45</strong>; the 8 FVK doc files exist: <code>README.md AGENTS.md commands/formalize.md commands/verify.md knowledge/k-framework.md knowledge/matching-logic.md knowledge/reachability-and-circularities.md knowledge/sources.md</code> under <code>third_party/formal-verification-kit/</code>.</p>
+<ul>
+<li>[ ] <strong>Step 2: Package skeleton + results dir</strong></li>
+</ul>
+<p><code>fvk_bench/__main__.py</code>:
+</p><div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">fvk_bench.cli</span><span class="w"> </span><span class="kn">import</span> <span class="n">main</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="ne">SystemExit</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
+</code></pre></div>
+(<code>cli.py</code> arrives in Task 9; that's fine — <code>__main__</code> is only imported when executed.)<p></p>
+<p><code>results/.gitignore</code> (root <code>.gitignore</code> globally ignores <code>*.patch</code>, <code>*.jsonl</code>, <code>*.jsonl.*</code>; re-include inside results):
+</p><div class="highlight"><pre><span></span><code>!*.patch
+!*.jsonl
+!*.jsonl.*
+</code></pre></div><p></p>
+<p><code>results/INDEX.md</code>:
+</p><div class="highlight"><pre><span></span><code><span class="gh"># Benchmark results index</span>
+
+No runs recorded yet. Regenerated by <span class="sb">`python -m fvk_bench report`</span>.
+</code></pre></div><p></p>
+<ul>
+<li>[ ] <strong>Step 3: Verify re-include works</strong></li>
+</ul>
+<p></p><div class="highlight"><pre><span></span><code>touch<span class="w"> </span>results/probe.patch<span class="w"> </span>results/probe.jsonl.gz
+git<span class="w"> </span>check-ignore<span class="w"> </span>results/probe.patch<span class="w"> </span>results/probe.jsonl.gz<span class="p">;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"exit=</span><span class="nv">$?</span><span class="s2">"</span>
+</code></pre></div>
+Expected: <code>exit=1</code> (NOT ignored). Then <code>rm results/probe.*</code>.<p></p>
+<ul>
+<li>[ ] <strong>Step 4: Commit</strong> — <code>feat(fvk_bench): add submodules, package skeleton, results re-include</code></li>
+</ul>
+<hr>
+<h3 id="task-2-configpy">Task 2: <code>config.py</code></h3>
+<p><strong>Files:</strong> Create: <code>fvk_bench/config.py</code>, <code>tests/fvk_bench/test_config.py</code></p>
+<ul>
+<li>[ ] <strong>Step 1: Write failing test</strong> (<code>tests/fvk_bench/test_config.py</code>)</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">fvk_bench</span><span class="w"> </span><span class="kn">import</span> <span class="n">config</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_pinned_invocation_constants</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">config</span><span class="o">.</span><span class="n">MODEL</span> <span class="o">==</span> <span class="s2">"claude-opus-4-8"</span>
+    <span class="k">assert</span> <span class="n">config</span><span class="o">.</span><span class="n">EFFORT</span> <span class="o">==</span> <span class="s2">"max"</span>
+    <span class="k">assert</span> <span class="n">config</span><span class="o">.</span><span class="n">MAX_TURNS</span> <span class="o">==</span> <span class="p">{</span><span class="s2">"baseline"</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="s2">"fvk"</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="s2">"control"</span><span class="p">:</span> <span class="mi">200</span><span class="p">}</span>
+    <span class="k">assert</span> <span class="n">config</span><span class="o">.</span><span class="n">MAX_TURNS</span><span class="p">[</span><span class="s2">"fvk"</span><span class="p">]</span> <span class="o">==</span> <span class="n">config</span><span class="o">.</span><span class="n">MAX_TURNS</span><span class="p">[</span><span class="s2">"control"</span><span class="p">]</span>  <span class="c1"># control validity</span>
+    <span class="k">assert</span> <span class="n">config</span><span class="o">.</span><span class="n">TOOLS</span> <span class="o">==</span> <span class="s2">"Read,Write,Edit,Glob,Grep"</span>
+    <span class="k">assert</span> <span class="n">config</span><span class="o">.</span><span class="n">ARMS</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"baseline"</span><span class="p">,</span> <span class="s2">"fvk"</span><span class="p">,</span> <span class="s2">"control"</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">config</span><span class="o">.</span><span class="n">ARM_TIMEOUT_SECONDS</span> <span class="o">==</span> <span class="mi">4</span> <span class="o">*</span> <span class="mi">3600</span>
+    <span class="k">assert</span> <span class="n">config</span><span class="o">.</span><span class="n">DATASET_NAME</span> <span class="o">==</span> <span class="s2">"princeton-nlp/SWE-bench_Verified"</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_fvk_materials_copy_set</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">config</span><span class="o">.</span><span class="n">FVK_MATERIALS_FILES</span> <span class="o">==</span> <span class="p">(</span>
+        <span class="s2">"README.md"</span><span class="p">,</span> <span class="s2">"AGENTS.md"</span><span class="p">,</span> <span class="s2">"commands/formalize.md"</span><span class="p">,</span> <span class="s2">"commands/verify.md"</span><span class="p">,</span>
+        <span class="s2">"knowledge/k-framework.md"</span><span class="p">,</span> <span class="s2">"knowledge/matching-logic.md"</span><span class="p">,</span>
+        <span class="s2">"knowledge/reachability-and-circularities.md"</span><span class="p">,</span> <span class="s2">"knowledge/sources.md"</span><span class="p">,</span>
+    <span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_workspace_root_env_override</span><span class="p">(</span><span class="n">monkeypatch</span><span class="p">,</span> <span class="n">tmp_path</span><span class="p">):</span>
+    <span class="n">monkeypatch</span><span class="o">.</span><span class="n">setenv</span><span class="p">(</span><span class="s2">"FVK_BENCH_WORKSPACE"</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">tmp_path</span> <span class="o">/</span> <span class="s2">"ws"</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="n">config</span><span class="o">.</span><span class="n">workspace_root</span><span class="p">()</span> <span class="o">==</span> <span class="n">tmp_path</span> <span class="o">/</span> <span class="s2">"ws"</span>
+    <span class="n">monkeypatch</span><span class="o">.</span><span class="n">delenv</span><span class="p">(</span><span class="s2">"FVK_BENCH_WORKSPACE"</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">config</span><span class="o">.</span><span class="n">workspace_root</span><span class="p">()</span> <span class="o">==</span> <span class="n">Path</span><span class="o">.</span><span class="n">home</span><span class="p">()</span> <span class="o">/</span> <span class="s2">".swe-fvk-runs"</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_session_env_allowlist</span><span class="p">():</span>
+    <span class="n">env</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">session_env</span><span class="p">()</span>
+    <span class="k">assert</span> <span class="nb">set</span><span class="p">(</span><span class="n">env</span><span class="p">)</span> <span class="o">==</span> <span class="p">{</span><span class="s2">"HOME"</span><span class="p">,</span> <span class="s2">"PATH"</span><span class="p">,</span> <span class="s2">"USER"</span><span class="p">,</span> <span class="s2">"TERM"</span><span class="p">,</span> <span class="s2">"LANG"</span><span class="p">,</span> <span class="s2">"TZ"</span><span class="p">}</span>
+    <span class="k">assert</span> <span class="n">env</span><span class="p">[</span><span class="s2">"TERM"</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"dumb"</span> <span class="ow">and</span> <span class="n">env</span><span class="p">[</span><span class="s2">"LANG"</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"C.UTF-8"</span> <span class="ow">and</span> <span class="n">env</span><span class="p">[</span><span class="s2">"TZ"</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"UTC"</span>
+    <span class="k">assert</span> <span class="n">env</span><span class="p">[</span><span class="s2">"HOME"</span><span class="p">]</span> <span class="o">==</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">"HOME"</span><span class="p">]</span>
+</code></pre></div>
+<ul>
+<li>
+<p>[ ] <strong>Step 2: Run, verify fail</strong> — <code>python -m pytest tests/fvk_bench/test_config.py -q</code> → ImportError/AttributeError.</p>
+</li>
+<li>
+<p>[ ] <strong>Step 3: Implement <code>fvk_bench/config.py</code></strong></p>
+</li>
+</ul>
+<p>Module-level constants exactly as tested, plus:
+</p><div class="highlight"><pre><span></span><code><span class="n">REPO_ROOT</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span>
+<span class="n">PACKAGE_DIR</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span><span class="o">.</span><span class="n">parent</span>
+<span class="n">PROMPTS_DIR</span> <span class="o">=</span> <span class="n">PACKAGE_DIR</span> <span class="o">/</span> <span class="s2">"prompts"</span>
+<span class="n">INSTANCES_JSON</span> <span class="o">=</span> <span class="n">PACKAGE_DIR</span> <span class="o">/</span> <span class="s2">"data"</span> <span class="o">/</span> <span class="s2">"instances.json"</span>
+<span class="n">REPRO_SUBMODULE</span> <span class="o">=</span> <span class="n">REPO_ROOT</span> <span class="o">/</span> <span class="s2">"third_party"</span> <span class="o">/</span> <span class="s2">"swebench-fvk-reproducibility"</span>
+<span class="n">FVK_SUBMODULE</span> <span class="o">=</span> <span class="n">REPO_ROOT</span> <span class="o">/</span> <span class="s2">"third_party"</span> <span class="o">/</span> <span class="s2">"formal-verification-kit"</span>
+<span class="n">RESULTS_DIR</span> <span class="o">=</span> <span class="n">REPO_ROOT</span> <span class="o">/</span> <span class="s2">"results"</span>
+<span class="n">PERMISSION_MODE</span> <span class="o">=</span> <span class="s2">"bypassPermissions"</span>
+<span class="n">SETTING_SOURCES</span> <span class="o">=</span> <span class="s2">"project,local"</span>   <span class="c1"># narrowed at runtime if CLI accepts narrower (Task 9 doctor records actual)</span>
+<span class="n">CANARY_MODEL</span> <span class="o">=</span> <span class="s2">"claude-haiku-4-5-20251001"</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">workspace_root</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Path</span><span class="p">:</span> <span class="o">...</span>   <span class="c1"># env FVK_BENCH_WORKSPACE or Path.home()/".swe-fvk-runs"</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">session_env</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span> <span class="o">...</span>  <span class="c1"># the 6-key allowlist; HOME/PATH/USER from os.environ</span>
+</code></pre></div><p></p>
+<ul>
+<li>[ ] <strong>Step 4: Run, verify pass.</strong></li>
+<li>[ ] <strong>Step 5: Commit</strong> — <code>feat(fvk_bench): pinned configuration</code></li>
+</ul>
+<hr>
+<h3 id="task-3-instancespy-vendoring">Task 3: <code>instances.py</code> + vendoring</h3>
+<p><strong>Files:</strong> Create: <code>fvk_bench/instances.py</code>, <code>fvk_bench/data/__init__.py</code> (absent — data dir holds json only), <code>tests/fvk_bench/test_instances.py</code>, fixture <code>tests/fvk_bench/fixtures/instances_fixture.json</code></p>
+<p>Public API:
+</p><div class="highlight"><pre><span></span><code><span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Instance</span><span class="p">:</span>
+    <span class="n">instance_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">;</span> <span class="n">repo</span><span class="p">:</span> <span class="nb">str</span><span class="p">;</span> <span class="n">base_commit</span><span class="p">:</span> <span class="nb">str</span><span class="p">;</span> <span class="n">version</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">problem_statement</span><span class="p">:</span> <span class="nb">str</span><span class="p">;</span> <span class="n">hints_text</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">fail_to_pass_count</span><span class="p">:</span> <span class="nb">int</span><span class="p">;</span> <span class="n">pass_to_pass_count</span><span class="p">:</span> <span class="nb">int</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">submodule_instance_ids</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>      <span class="c1"># sorted stems of REPRO_SUBMODULE/prompts/*.md; len must be 45</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">load_instances</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Instance</span><span class="p">]</span>    <span class="c1"># from INSTANCES_JSON; raises if IDs != submodule_instance_ids()</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">vendor_instances</span><span class="p">(</span><span class="n">out_path</span><span class="p">:</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span>    <span class="c1"># network: HF datasets → public fields only; returns count</span>
+</code></pre></div><p></p>
+<ul>
+<li>[ ] <strong>Step 1: Failing tests</strong> — fixture has 2 fake instances; tests: dataclass roundtrip from fixture json; <code>load_instances</code> raises <code>RuntimeError</code> on ID mismatch (point it at fixture with monkeypatched <code>submodule_instance_ids</code>); <code>submodule_instance_ids()</code> returns 45 real IDs including <code>sympy__sympy-12489</code> and <code>django__django-14011</code> (uses the real submodule — fine, it's checked out).</li>
+<li>[ ] <strong>Step 2: Run, verify fail.</strong></li>
+<li>[ ] <strong>Step 3: Implement.</strong> <code>vendor_instances</code> uses <code>datasets.load_dataset(config.DATASET_NAME, split="test")</code> filtered to the 45; counts come from <code>len(json.loads(row["FAIL_TO_PASS"]))</code> (dataset stores lists as JSON strings — handle both list and str defensively); writes sorted-by-id, <code>indent=2</code>, <code>ensure_ascii=False</code>. <strong>Never</strong> writes <code>patch</code>/<code>test_patch</code> fields. Import <code>datasets</code> inside the function only (keeps runtime stdlib-only).</li>
+<li>[ ] <strong>Step 4: Run, verify pass.</strong></li>
+<li>[ ] <strong>Step 5: Commit</strong> — <code>feat(fvk_bench): instance metadata loading and vendoring</code></li>
+</ul>
+<hr>
+<h3 id="task-4-scaffoldpy-workspace-mirror-cache-git-checkout">Task 4: <code>scaffold.py</code> (workspace + mirror cache + git checkout)</h3>
+<p><strong>Files:</strong> Create: <code>fvk_bench/scaffold.py</code>, <code>tests/fvk_bench/test_scaffold.py</code>, helper <code>tests/fvk_bench/conftest.py</code></p>
+<p>Public API:
+</p><div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">ensure_mirror</span><span class="p">(</span><span class="n">repo</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">cache_dir</span><span class="p">:</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Path</span>
+    <span class="c1"># cache_dir/&lt;org&gt;__&lt;name&gt;.git ; `git clone --mirror https://github.com/&lt;repo&gt;.git &lt;dst&gt;` if missing.</span>
+    <span class="c1"># If a needed commit is missing later, caller may `git fetch --all` — expose refresh_mirror(repo, cache_dir).</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">create_workspace</span><span class="p">(</span><span class="n">run_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">inst</span><span class="p">:</span> <span class="n">Instance</span><span class="p">,</span> <span class="n">ws_root</span><span class="p">:</span> <span class="n">Path</span><span class="p">,</span> <span class="n">mirror</span><span class="p">:</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Path</span>
+    <span class="c1"># &lt;ws_root&gt;/&lt;run_id&gt;/&lt;inst.instance_id&gt;/ with: benchmark/PROBLEM.md, benchmark/instance.json,</span>
+    <span class="c1"># repo/ (git clone --no-hardlinks file://&lt;mirror&gt; repo; checkout -q &lt;base_commit&gt;;</span>
+    <span class="c1">#        config core.hooksPath /dev/null, user.email bench@local, user.name fvk-bench),</span>
+    <span class="c1"># reports/, .fvk_bench/{prompts,raw,artifacts,solutions}/ . NO fvk/, review/, fvk_materials/ yet.</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">render_problem_md</span><span class="p">(</span><span class="n">inst</span><span class="p">:</span> <span class="n">Instance</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+    <span class="c1"># "# {instance_id}: issue from {repo}\n\n…problem_statement…" + optional "\n\n## Hints (public)\n\n…hints_text…"</span>
+</code></pre></div><p></p>
+<p><code>benchmark/instance.json</code> content: <strong>only</strong> <code>{"instance_id", "repo", "base_commit", "version"}</code> — no counts, no test info (spec).</p>
+<ul>
+<li>[ ] <strong>Step 1: conftest fixture <code>fixture_remote_repo(tmp_path_factory)</code></strong> — builds a tiny git repo (2 commits: <code>lib.py</code> v1, then v2; a <code>tests/test_lib.py</code> file) and returns (path, first_commit_sha). All scaffold/arms tests reuse it.</li>
+<li>[ ] <strong>Step 2: Failing tests</strong> — mirror created once (second call no-ops, assert mtime unchanged); workspace tree exact (assert exact dir/file set, including absence of <code>fvk/</code>, <code>review/</code>, <code>fvk_materials/</code>); <code>repo/</code> is detached at base_commit (<code>git -C repo rev-parse HEAD</code> == sha); hooksPath set; PROBLEM.md contains problem text and hints section only when hints non-empty; instance.json has exactly the 4 keys.</li>
+<li>[ ] <strong>Step 3: Run, verify fail.</strong> <strong>Step 4: Implement</strong> (subprocess git, <code>check=True</code>, capture output). <strong>Step 5: Run, verify pass.</strong> <strong>Step 6: Commit</strong> — <code>feat(fvk_bench): workspace scaffolding and repo mirror cache</code></li>
+</ul>
+<hr>
+<h3 id="task-5-claude_runnerpy">Task 5: <code>claude_runner.py</code></h3>
+<p><strong>Files:</strong> Create: <code>fvk_bench/claude_runner.py</code>, <code>tests/fvk_bench/test_claude_runner.py</code>, fixture <code>tests/fvk_bench/fixtures/fake_claude.py</code></p>
+<p>Public API:
+</p><div class="highlight"><pre><span></span><code><span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">ClaudeResult</span><span class="p">:</span>
+    <span class="n">ok</span><span class="p">:</span> <span class="nb">bool</span><span class="p">;</span> <span class="n">session_id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">;</span> <span class="n">num_turns</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span><span class="p">;</span> <span class="n">subtype</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">duration_seconds</span><span class="p">:</span> <span class="nb">float</span><span class="p">;</span> <span class="n">raw_json</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">|</span> <span class="kc">None</span><span class="p">;</span> <span class="n">error</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span>  <span class="c1"># error: "timeout" | "nonzero_exit:&lt;n&gt;" | "bad_json"</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">build_argv</span><span class="p">(</span><span class="n">prompt</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">arm</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">session_id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span> <span class="n">resume_id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+    <span class="c1"># ["claude", "-p", prompt, "--model", config.MODEL, "--effort", config.EFFORT,</span>
+    <span class="c1">#  "--max-turns", str(config.MAX_TURNS[arm]), "--output-format", "json",</span>
+    <span class="c1">#  "--permission-mode", config.PERMISSION_MODE, "--setting-sources", config.SETTING_SOURCES,</span>
+    <span class="c1">#  "--disable-slash-commands", "--tools", config.TOOLS,</span>
+    <span class="c1">#  "--strict-mcp-config", "--mcp-config", '{"mcpServers":{}}']</span>
+    <span class="c1"># + ["--session-id", session_id] when fresh, or ["--resume", resume_id, "--fork-session"] when forking.</span>
+    <span class="c1"># Exactly one of session_id/resume_id must be set.</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">run_arm_session</span><span class="p">(</span><span class="n">ws</span><span class="p">:</span> <span class="n">Path</span><span class="p">,</span> <span class="n">arm</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">prompt_text</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">session_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">resume_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                    <span class="n">timeout</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">ARM_TIMEOUT_SECONDS</span><span class="p">,</span> <span class="n">claude_bin</span><span class="o">=</span><span class="s2">"claude"</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ClaudeResult</span>
+    <span class="c1"># writes prompt to ws/.fvk_bench/prompts/&lt;arm&gt;.md; runs with cwd=ws, env=config.session_env();</span>
+    <span class="c1"># saves raw stdout to ws/.fvk_bench/raw/&lt;arm&gt;.stdout.json (+ stderr .txt); parses JSON envelope:</span>
+    <span class="c1"># session_id key, num_turns, subtype, is_error. timeout → kill proc group, error="timeout".</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">transcript_path</span><span class="p">(</span><span class="n">ws</span><span class="p">:</span> <span class="n">Path</span><span class="p">,</span> <span class="n">session_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Path</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="c1"># primary: ~/.claude/projects/&lt;munge(str(ws))&gt;/&lt;session_id&gt;.jsonl where munge = re.sub(r"[^A-Za-z0-9-]", "-", path)</span>
+    <span class="c1"># fallback: glob ~/.claude/projects/*/&lt;session_id&gt;.jsonl. None if absent.</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">audit_transcript</span><span class="p">(</span><span class="n">jsonl_path</span><span class="p">:</span> <span class="n">Path</span><span class="p">,</span> <span class="n">allowed_tools</span><span class="o">=</span><span class="p">(</span><span class="s2">"Read"</span><span class="p">,</span><span class="s2">"Write"</span><span class="p">,</span><span class="s2">"Edit"</span><span class="p">,</span><span class="s2">"Glob"</span><span class="p">,</span><span class="s2">"Grep"</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="nb">dict</span>
+    <span class="c1"># parses each line as json; collects every assistant tool_use name.</span>
+    <span class="c1"># returns {"ok": bool, "tool_uses": Counter, "violations": [names not in allowed],</span>
+    <span class="c1">#          "marker_warnings": [lines containing "Available agent types" or "mcp__" or "&lt;functions&gt;"]}</span>
+    <span class="c1"># ok = no violations (markers are warnings, recorded not fatal).</span>
+</code></pre></div><p></p>
+<ul>
+<li>[ ] <strong>Step 1: fake_claude fixture</strong> — a Python script installed by a conftest helper into <code>tmp_path/bin/claude</code> (chmod +x, shebang <code>#!/usr/bin/env python3</code>). Behavior driven by env var <code>FAKE_CLAUDE_SCENARIO</code> ∈ {<code>ok</code>, <code>slow</code>, <code>badjson</code>, <code>exit2</code>}: <code>ok</code> writes argv+env to <code>fake_claude_capture.json</code> in cwd, optionally executes a file-edit script if <code>FAKE_CLAUDE_EDITS</code> points at one, prints <code>{"type":"result","subtype":"success","is_error":false,"session_id":env FAKE_CLAUDE_SESSION or "f4k3-...","num_turns":7,"usage":{}}</code>; <code>slow</code> sleeps 30s; others as named.</li>
+<li>[ ] <strong>Step 2: Failing tests</strong> — argv golden test (exact list equality for fresh + fork forms; mutual-exclusion ValueError); run_arm_session with fake <code>ok</code>: capture file proves cwd==ws, env has exactly the 6 allowlist keys (plus PWD which subprocess may add — assert no ANTHROPIC_API_KEY/CLAUDE_* keys instead of exact set), prompt file written, raw stdout saved, result fields parsed; <code>timeout=2</code> with <code>slow</code> → error=="timeout"; <code>badjson</code> → error=="bad_json"; <code>exit2</code> → error=="nonzero_exit:2"; munge: <code>transcript_path</code> for ws <code>/home/xc/Projects Demo_x</code> style asserts regex munging (unit-test munge directly via internal <code>_munge</code>); audit_transcript over a hand-written 4-line jsonl fixture (one Bash tool_use → violation).</li>
+<li>[ ] <strong>Step 3-5: fail → implement → pass.</strong> Use <code>subprocess.run(..., start_new_session=True)</code> + <code>proc.kill()</code> via <code>subprocess.TimeoutExpired</code> handling (Popen + communicate(timeout) + os.killpg on expiry).</li>
+<li>[ ] <strong>Step 6: Commit</strong> — <code>feat(fvk_bench): hermetic claude invocation, transcripts, audit</code></li>
+</ul>
+<hr>
+<h3 id="task-6-prompt-templates-dedicated-deliverable">Task 6: Prompt templates (dedicated deliverable)</h3>
+<p><strong>Files:</strong> Create: <code>fvk_bench/prompts/baseline.md</code>, <code>fvk_bench/prompts/fvk.md</code>, <code>fvk_bench/prompts/control.md</code>, <code>fvk_bench/prompting.py</code>, <code>tests/fvk_bench/test_prompts.py</code></p>
+<p><code>prompting.py</code>:
+</p><div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">render_prompt</span><span class="p">(</span><span class="n">arm</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">inst</span><span class="p">:</span> <span class="n">Instance</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>   <span class="c1"># reads PROMPTS_DIR/&lt;arm&gt;.md, str.format(instance_id=, repo=, base_commit=)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">template_hashes</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span>              <span class="c1"># sha256 hex of each template file's bytes</span>
+</code></pre></div><p></p>
+<p>Templates use <code>{repo}</code>, <code>{base_commit}</code>, <code>{instance_id}</code> placeholders and <code>&lt;!-- SECTION: name --&gt;</code> marker comments. <strong>Use these exact texts</strong> (the methodology delta between fvk/control is confined to the <code>intro-task</code>, <code>inputs-extra</code>, <code>no-exec</code>, and <code>tasks</code> sections):</p>
+<p><code>baseline.md</code>:
+</p><div class="highlight"><pre><span></span><code>&lt;!-- SECTION: header --&gt;
+<span class="gh"># Task: fix a real GitHub issue in {repo}</span>
+
+You are working in a benchmark workspace. The repository <span class="sb">`{repo}`</span> is checked out at
+commit <span class="sb">`{base_commit}`</span> in the <span class="sb">`repo/`</span> directory. A real GitHub issue from this
+repository is described in <span class="sb">`benchmark/PROBLEM.md`</span>.
+
+&lt;!-- SECTION: allowed --&gt;
+<span class="gu">## Allowed inputs</span>
+<span class="k">-</span><span class="w"> </span><span class="sb">`benchmark/PROBLEM.md`</span> — the issue to fix (includes any public hints).
+<span class="k">-</span><span class="w"> </span><span class="sb">`benchmark/instance.json`</span> — public metadata about this task.
+<span class="k">-</span><span class="w"> </span>Source code under <span class="sb">`repo/`</span>.
+
+&lt;!-- SECTION: forbidden --&gt;
+<span class="gu">## Forbidden</span>
+<span class="k">-</span><span class="w"> </span>Internet access, external benchmark data, knowledge of the original upstream fix,
+  hidden tests, evaluator scripts, or any files outside this working directory.
+<span class="k">-</span><span class="w"> </span>Do not run tests or any code: this session has no execution environment. There are
+  intentionally no test results available; do not infer or ask for them.
+<span class="k">-</span><span class="w"> </span>Do not modify any test files: the project's test suite is fixed and hidden. Your
+  fix must change non-test source code only.
+
+&lt;!-- SECTION: tasks --&gt;
+<span class="gu">## Task</span>
+<span class="k">1.</span> Read <span class="sb">`benchmark/PROBLEM.md`</span> carefully.
+<span class="k">2.</span> Explore the code under <span class="sb">`repo/`</span> to locate the root cause of the issue.
+<span class="k">3.</span> Implement the fix by directly editing the source files under <span class="sb">`repo/`</span>. Multi-file
+   edits are allowed. Keep the change minimal and targeted: fix the described issue
+   without unrelated refactoring.
+<span class="k">4.</span> Write <span class="sb">`reports/baseline_notes.md`</span> covering: the root cause; each file you changed
+   and why; the assumptions you made and any alternative interpretations you
+   considered and rejected.
+
+&lt;!-- SECTION: finish --&gt;
+<span class="gu">## Finishing</span>
+Finish only after the code fix and <span class="sb">`reports/baseline_notes.md`</span> are both complete.
+Your final message must be a one-paragraph summary of the fix.
+</code></pre></div><p></p>
+<p><code>fvk.md</code>:
+</p><div class="highlight"><pre><span></span><code>&lt;!-- SECTION: header --&gt;
+<span class="gh"># Continue: audit and improve your fix for {instance_id}</span>
+
+&lt;!-- SECTION: intro-task --&gt;
+Continue from the same context. The <span class="sb">`repo/`</span> directory currently contains your V1 fix
+applied on top of <span class="sb">`{base_commit}`</span>, exactly as you left it, and
+<span class="sb">`reports/baseline_notes.md`</span> is your V1 explanation. Now apply the Formal
+Verification Kit (FVK) methodology to audit that fix, then improve or confirm it.
+
+&lt;!-- SECTION: allowed --&gt;
+<span class="gu">## Allowed inputs</span>
+<span class="k">-</span><span class="w"> </span><span class="sb">`benchmark/PROBLEM.md`</span> and <span class="sb">`benchmark/instance.json`</span>;
+<span class="k">-</span><span class="w"> </span>source code under <span class="sb">`repo/`</span> (your V1 fix is applied);
+<span class="k">-</span><span class="w"> </span><span class="sb">`reports/baseline_notes.md`</span>;
+&lt;!-- SECTION: inputs-extra --&gt;
+<span class="k">-</span><span class="w"> </span>the FVK method documentation under <span class="sb">`fvk_materials/`</span>.
+
+&lt;!-- SECTION: forbidden --&gt;
+<span class="gu">## Forbidden</span>
+<span class="k">-</span><span class="w"> </span>Hidden tests, knowledge of the original upstream fix, evaluator scripts, benchmark
+  result files, previous runs, internet access, or any files outside this working
+  directory.
+<span class="k">-</span><span class="w"> </span>There are intentionally no test results available for your V1 fix. Do not infer
+  or ask for them.
+<span class="k">-</span><span class="w"> </span>Do not modify any test files: the project's test suite is fixed and hidden.
+&lt;!-- SECTION: no-exec --&gt;
+<span class="k">-</span><span class="w"> </span>No execution environment exists: do not attempt to run tests, Python, or K
+  framework tooling such as <span class="sb">`kompile`</span>/<span class="sb">`kprove`</span>. Where the FVK documents call for
+  running commands, write the commands into the artifacts and reason about their
+  expected outcome instead of executing them.
+
+&lt;!-- SECTION: tasks --&gt;
+<span class="gu">## Tasks</span>
+<span class="k">1.</span> Read the FVK docs in <span class="sb">`fvk_materials/README.md`</span>, <span class="sb">`fvk_materials/AGENTS.md`</span>,
+   <span class="sb">`fvk_materials/commands/formalize.md`</span>, and <span class="sb">`fvk_materials/commands/verify.md`</span>.
+<span class="k">2.</span> Apply the FVK methodology to the V1 fix and produce the FVK artifacts under <span class="sb">`fvk/`</span>:
+<span class="w">   </span><span class="k">-</span><span class="w"> </span><span class="sb">`fvk/SPEC.md`</span>
+<span class="w">   </span><span class="k">-</span><span class="w"> </span><span class="sb">`fvk/FINDINGS.md`</span>
+<span class="w">   </span><span class="k">-</span><span class="w"> </span><span class="sb">`fvk/PROOF_OBLIGATIONS.md`</span>
+<span class="w">   </span><span class="k">-</span><span class="w"> </span><span class="sb">`fvk/PROOF.md`</span>
+<span class="w">   </span><span class="k">-</span><span class="w"> </span><span class="sb">`fvk/ITERATION_GUIDANCE.md`</span>
+<span class="k">3.</span> Revise or confirm the fix: if the audit surfaced problems, edit the source files
+   under <span class="sb">`repo/`</span> to address them; if V1 is already correct according to your spec
+   and proof obligations, it may stand unchanged or be minimally refactored — but
+   that conclusion must be justified by the FVK artifacts.
+<span class="k">4.</span> Write <span class="sb">`reports/fvk_notes.md`</span> explaining every decision — each change, and any
+   decision to keep V1 unchanged — by tracing it to specific entries in
+   <span class="sb">`fvk/FINDINGS.md`</span> and <span class="sb">`fvk/PROOF_OBLIGATIONS.md`</span>.
+
+&lt;!-- SECTION: finish --&gt;
+<span class="gu">## Finishing</span>
+Finish only after all five <span class="sb">`fvk/`</span> artifacts, any code edits, and
+<span class="sb">`reports/fvk_notes.md`</span> are complete. Your final message must be a one-paragraph
+summary of what changed, or of why V1 stands.
+</code></pre></div><p></p>
+<p><code>control.md</code>:
+</p><div class="highlight"><pre><span></span><code>&lt;!-- SECTION: header --&gt;
+<span class="gh"># Continue: audit and improve your fix for {instance_id}</span>
+
+&lt;!-- SECTION: intro-task --&gt;
+Continue from the same context. The <span class="sb">`repo/`</span> directory currently contains your V1 fix
+applied on top of <span class="sb">`{base_commit}`</span>, exactly as you left it, and
+<span class="sb">`reports/baseline_notes.md`</span> is your V1 explanation. Now perform a careful,
+systematic code review of that fix, then improve or confirm it.
+
+&lt;!-- SECTION: allowed --&gt;
+<span class="gu">## Allowed inputs</span>
+<span class="k">-</span><span class="w"> </span><span class="sb">`benchmark/PROBLEM.md`</span> and <span class="sb">`benchmark/instance.json`</span>;
+<span class="k">-</span><span class="w"> </span>source code under <span class="sb">`repo/`</span> (your V1 fix is applied);
+<span class="k">-</span><span class="w"> </span><span class="sb">`reports/baseline_notes.md`</span>;
+&lt;!-- SECTION: inputs-extra --&gt;
+
+&lt;!-- SECTION: forbidden --&gt;
+<span class="gu">## Forbidden</span>
+<span class="k">-</span><span class="w"> </span>Hidden tests, knowledge of the original upstream fix, evaluator scripts, benchmark
+  result files, previous runs, internet access, or any files outside this working
+  directory.
+<span class="k">-</span><span class="w"> </span>There are intentionally no test results available for your V1 fix. Do not infer
+  or ask for them.
+<span class="k">-</span><span class="w"> </span>Do not modify any test files: the project's test suite is fixed and hidden.
+&lt;!-- SECTION: no-exec --&gt;
+<span class="k">-</span><span class="w"> </span>No execution environment exists: do not attempt to run tests or any code. Where
+  your review would normally rely on executing code, reason about the expected
+  behavior in writing instead.
+
+&lt;!-- SECTION: tasks --&gt;
+<span class="gu">## Tasks</span>
+<span class="k">1.</span> Re-read <span class="sb">`benchmark/PROBLEM.md`</span> and re-examine the relevant code under <span class="sb">`repo/`</span>
+   with fresh, skeptical eyes.
+<span class="k">2.</span> Conduct a careful, standard code review of the V1 fix and record concrete,
+   numbered findings in <span class="sb">`review/FINDINGS.md`</span>. Cover at least: correctness against
+   the issue as described; edge cases and boundary conditions; error handling;
+   interactions with and possible regressions in surrounding code; consistency with
+   the codebase's conventions and API contracts.
+<span class="k">3.</span> Revise or confirm the fix: if the review surfaced problems, edit the source files
+   under <span class="sb">`repo/`</span> to address them; if V1 is already correct according to your review,
+   it may stand unchanged or be minimally refactored — but that conclusion must be
+   justified by the review findings.
+<span class="k">4.</span> Write <span class="sb">`reports/control_notes.md`</span> explaining every decision — each change, and any
+   decision to keep V1 unchanged — by tracing it to specific numbered entries in
+   <span class="sb">`review/FINDINGS.md`</span>.
+
+&lt;!-- SECTION: finish --&gt;
+<span class="gu">## Finishing</span>
+Finish only after <span class="sb">`review/FINDINGS.md`</span>, any code edits, and
+<span class="sb">`reports/control_notes.md`</span> are complete. Your final message must be a one-paragraph
+summary of what changed, or of why V1 stands.
+</code></pre></div><p></p>
+<ul>
+<li>[ ] <strong>Step 1: Failing tests</strong> (<code>test_prompts.py</code>):</li>
+<li>render for a fixture Instance substitutes all placeholders, no <code>{</code> remains (<code>re.search(r"\{[a-z_]+\}", out) is None</code>).</li>
+<li><strong>Parity test:</strong> parse both fvk.md and control.md into <code>{section_name: text}</code> via the <code>&lt;!-- SECTION: x --&gt;</code> markers; assert section names identical and sections <code>allowed</code>, <code>forbidden</code>, <code>finish</code>-adjacent shared parts behave as designed: precisely — sections <code>header</code>, <code>allowed</code>, <code>forbidden</code> are <strong>byte-identical</strong> between fvk and control <strong>after</strong> removing the <code>inputs-extra</code> and <code>no-exec</code> sections; only <code>intro-task</code>, <code>inputs-extra</code>, <code>no-exec</code>, <code>tasks</code>, <code>finish</code> may differ. (Implement: compare dicts key-by-key with an allowed-diff set <code>{"intro-task","inputs-extra","no-exec","tasks","finish"}</code>.)</li>
+<li>Leakage test: none of the three templates contains any of: <code>FAIL_TO_PASS</code>, <code>PASS_TO_PASS</code>, <code>resolved</code>, <code>gold</code>, <code>test_patch</code>, <code>score</code> (case-insensitive).</li>
+<li>Baseline isolation: baseline.md does not mention <code>fvk</code>, <code>review/</code>, <code>FINDINGS</code>, <code>control</code> (case-insensitive <code>fvk</code>).</li>
+<li><code>template_hashes()</code> returns 3 hex digests.</li>
+<li>[ ] <strong>Step 2-4: fail → implement (write the 3 files exactly as above + prompting.py) → pass.</strong></li>
+<li>[ ] <strong>Step 5: Commit</strong> — <code>feat(fvk_bench): versioned 3-arm prompt templates with parity tests</code></li>
+</ul>
+<hr>
+<h3 id="task-7-armspy-state-machine-git-choreography">Task 7: <code>arms.py</code> (state machine + git choreography)</h3>
+<p><strong>Files:</strong> Create: <code>fvk_bench/arms.py</code>, <code>tests/fvk_bench/test_arms.py</code></p>
+<p>Public API:
+</p><div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">core_tree_hash</span><span class="p">(</span><span class="n">ws</span><span class="p">:</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+    <span class="c1"># sha256 over sorted(relpath + b"\0" + file_bytes) for every file under ws EXCLUDING</span>
+    <span class="c1"># .fvk_bench/**, fvk/**, fvk_materials/**, review/**, repo/.git/** . Symlinks: hash target string.</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">extract_patch</span><span class="p">(</span><span class="n">ws</span><span class="p">:</span> <span class="n">Path</span><span class="p">,</span> <span class="n">arm</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Path</span>
+    <span class="c1"># git -C repo add -A ; git -C repo diff --cached --binary HEAD &gt; .fvk_bench/solutions/solution_&lt;arm&gt;.patch ;</span>
+    <span class="c1"># git -C repo reset -q  (unstage; working tree untouched). Returns patch path. Empty diff → empty file (recorded).</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">reset_repo_to_v1</span><span class="p">(</span><span class="n">ws</span><span class="p">:</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+    <span class="c1"># git -C repo checkout -q -f &lt;base_commit from benchmark/instance.json&gt; ; git -C repo clean -fdxq ;</span>
+    <span class="c1"># if solution_baseline.patch non-empty: git -C repo apply --whitespace=nowarn .fvk_bench/solutions/solution_baseline.patch</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">stage_fvk</span><span class="p">(</span><span class="n">ws</span><span class="p">:</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>      <span class="c1"># reset_repo_to_v1 + mkdir fvk/ + copy config.FVK_MATERIALS_FILES from FVK_SUBMODULE into fvk_materials/ (preserving relative paths)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">scrub_fvk</span><span class="p">(</span><span class="n">ws</span><span class="p">:</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>      <span class="c1"># rm -rf fvk_materials/ fvk/ reports/fvk_notes.md (after snapshot!)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">snapshot_artifacts</span><span class="p">(</span><span class="n">ws</span><span class="p">:</span> <span class="n">Path</span><span class="p">,</span> <span class="n">arm</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+    <span class="c1"># copy into .fvk_bench/artifacts/&lt;arm&gt;/ : reports/&lt;arm&gt;_notes.md (if exists);</span>
+    <span class="c1"># for fvk: the whole fvk/ dir; for control: review/ dir.</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">run_instance</span><span class="p">(</span><span class="n">run_id</span><span class="p">,</span> <span class="n">inst</span><span class="p">,</span> <span class="n">ws_root</span><span class="p">,</span> <span class="n">arms</span><span class="o">=</span><span class="p">(</span><span class="s2">"baseline"</span><span class="p">,</span><span class="s2">"fvk"</span><span class="p">,</span><span class="s2">"control"</span><span class="p">),</span> <span class="n">claude_bin</span><span class="o">=</span><span class="s2">"claude"</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=...</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span>
+    <span class="c1"># The orchestrating state machine. state.json at ws/.fvk_bench/state.json:</span>
+    <span class="c1"># {"arms": {arm: {"status": "pending|running|completed|failed", "reason": str|None,</span>
+    <span class="c1">#                 "session_id": ..., "attempts": int, "started_at": ..., "ended_at": ...,</span>
+    <span class="c1">#                 "num_turns": ..., "duration_seconds": ...}},</span>
+    <span class="c1">#  "baseline_session_id": ..., "core_hash_post_baseline": ...}</span>
+    <span class="c1"># Flow: scaffold if missing → baseline (skip if completed) → extract patch → record H1 = core_tree_hash</span>
+    <span class="c1">#       → stage_fvk → audit precondition: core_tree_hash(ws) == H1 (fvk_materials/fvk are excluded from hash, so equality holds)</span>
+    <span class="c1">#       → fvk arm (resume baseline_session_id, fork) → extract patch → snapshot_artifacts → scrub_fvk</span>
+    <span class="c1">#       → assert core_tree_hash == H1 else mark control failed("contaminated_workspace") and stop</span>
+    <span class="c1">#       → mkdir review/ → control arm (resume, fork) → extract patch → snapshot_artifacts</span>
+    <span class="c1">#       → post-arm transcript audit for each arm (audit_transcript): violations → status failed("contaminated_session")</span>
+    <span class="c1">#         (still keep artifacts for forensics).</span>
+    <span class="c1"># A failed baseline ⇒ fvk and control marked skipped("baseline_failed").</span>
+    <span class="c1"># Existing completed arms are never re-run unless retry_failed=True and status==failed.</span>
+</code></pre></div><p></p>
+<ul>
+<li>[ ] <strong>Step 1: Failing tests</strong> (fake claude with <code>FAKE_CLAUDE_EDITS</code> scripts):</li>
+<li><strong>Happy path:</strong> baseline edit-script modifies <code>repo/lib.py</code> + writes <code>reports/baseline_notes.md</code>; fvk script writes 5 <code>fvk/</code> files + edits lib.py again + <code>reports/fvk_notes.md</code>; control script writes <code>review/FINDINGS.md</code> + <code>reports/control_notes.md</code> (no code edit). Assert: 3 patches exist; baseline patch contains lib.py hunk; fvk patch is cumulative (contains both edits); control patch == baseline patch bytes; state.json all completed with 3 distinct session ids; baseline session id == the pre-generated uuid (fake echoes <code>--session-id</code> back via env capture); fvk artifacts snapshotted under <code>.fvk_bench/artifacts/fvk/fvk/...</code>; post-control workspace has NO <code>fvk_materials/</code>, NO <code>fvk/</code>, NO <code>reports/fvk_notes.md</code>.</li>
+<li><strong>New-file capture:</strong> baseline script creates a brand-new <code>repo/newmod.py</code> → patch contains <code>new file mode</code>.</li>
+<li><strong>Contamination guard:</strong> fvk script also drops stray file <code>reports/extra.txt</code>; scrub doesn't remove it → control must be <code>failed</code> with reason <code>contaminated_workspace</code> and control session never launched (no capture file for it).</li>
+<li><strong>Baseline failure:</strong> scenario <code>exit2</code> on baseline → fvk/control <code>skipped</code>, reason <code>baseline_failed</code>.</li>
+<li><strong>Resume skips completed:</strong> run twice; second run makes zero claude invocations (capture count unchanged).</li>
+<li>[ ] <strong>Step 2-4: fail → implement → pass.</strong> (Fork session ids: fake claude generates distinct ids per call; orchestrator passes <code>--resume &lt;baseline-id&gt; --fork-session</code> — assert from capture argv.)</li>
+<li>[ ] <strong>Step 5: Commit</strong> — <code>feat(fvk_bench): 3-arm state machine with scrub/hash contamination guards</code></li>
+</ul>
+<hr>
+<h3 id="task-8-harvestpy-results-tree-manifests">Task 8: <code>harvest.py</code> (results tree + manifests)</h3>
+<p><strong>Files:</strong> Create: <code>fvk_bench/harvest.py</code>, <code>tests/fvk_bench/test_harvest.py</code></p>
+<p>Public API:
+</p><div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">harvest_instance</span><span class="p">(</span><span class="n">ws</span><span class="p">:</span> <span class="n">Path</span><span class="p">,</span> <span class="n">run_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">inst</span><span class="p">:</span> <span class="n">Instance</span><span class="p">,</span> <span class="n">results_dir</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">RESULTS_DIR</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Path</span>
+    <span class="c1"># results/&lt;run_id&gt;/&lt;instance_id&gt;/ ←</span>
+    <span class="c1">#   manifest.json            (state.json content + per-arm raw envelope summaries + template hash per arm + tree hashes)</span>
+    <span class="c1">#   prompts/&lt;arm&gt;.md         (from ws/.fvk_bench/prompts/)</span>
+    <span class="c1">#   solutions/solution_&lt;arm&gt;.patch</span>
+    <span class="c1">#   reports/&lt;arm&gt;_notes.md   (from artifacts snapshots)</span>
+    <span class="c1">#   fvk/*                    (from .fvk_bench/artifacts/fvk/fvk/)</span>
+    <span class="c1">#   review/FINDINGS.md       (from .fvk_bench/artifacts/control/review/)</span>
+    <span class="c1">#   transcripts/&lt;arm&gt;.jsonl.gz  (gzip of transcript_path(ws, session_id); missing transcript → manifest note)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">write_run_manifest</span><span class="p">(</span><span class="n">run_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">results_dir</span><span class="o">=...</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Path</span>
+    <span class="c1"># results/&lt;run_id&gt;/run_manifest.json: {run_id, created_utc, host: {hostname, os, arch, kernel},</span>
+    <span class="c1">#  python_version, claude_version (subprocess `claude --version`), model, effort, max_turns, tools,</span>
+    <span class="c1">#  permission_mode, setting_sources, dataset, prompt template_hashes(), fvk_bench_version,</span>
+    <span class="c1">#  repo_git_sha, submodule_shas (git submodule status)}</span>
+</code></pre></div><p></p>
+<ul>
+<li>[ ] <strong>Step 1: Failing tests</strong> — build a fake completed workspace (reuse arms happy-path fixture flow with fake claude, or hand-construct .fvk_bench tree); assert exact results tree; gzip roundtrips; manifest fields present; <code>git check-ignore</code> on harvested <code>.patch</code> and <code>.jsonl.gz</code> files exits 1 (not ignored — uses the Task 1 re-include).</li>
+<li>[ ] <strong>Step 2-4: fail → implement → pass.</strong> <strong>Step 5: Commit</strong> — <code>feat(fvk_bench): artifact harvesting and manifests</code></li>
+</ul>
+<hr>
+<h3 id="task-9-evaluatepy-reportpy-clipy-doctor">Task 9: <code>evaluate.py</code>, <code>report.py</code>, <code>cli.py</code>, doctor</h3>
+<p><strong>Files:</strong> Create: <code>fvk_bench/evaluate.py</code>, <code>fvk_bench/report.py</code>, <code>fvk_bench/cli.py</code>, <code>fvk_bench/doctor.py</code>, <code>tests/fvk_bench/test_evaluate.py</code>, <code>tests/fvk_bench/test_report.py</code>, <code>tests/fvk_bench/test_cli.py</code></p>
+<p><code>evaluate.py</code>:
+</p><div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">build_predictions</span><span class="p">(</span><span class="n">run_dir</span><span class="p">:</span> <span class="n">Path</span><span class="p">,</span> <span class="n">arm</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Path</span>
+    <span class="c1"># scans run_dir/*/solutions/solution_&lt;arm&gt;.patch → results/&lt;run_id&gt;/eval/predictions_&lt;arm&gt;.jsonl</span>
+    <span class="c1"># rows: {"instance_id", "model_name_or_path": f"{run_id}__{arm}", "model_patch": patch_text}</span>
+    <span class="c1"># empty patch → still emitted (harness scores it unresolved) with manifest note.</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">run_official_eval</span><span class="p">(</span><span class="n">run_id</span><span class="p">,</span> <span class="n">arm</span><span class="p">,</span> <span class="n">instance_ids</span><span class="p">,</span> <span class="n">max_workers</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">namespace</span><span class="o">=</span><span class="s2">"swebench"</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+    <span class="c1"># subprocess: [sys.executable, "-m", "swebench.harness.run_evaluation",</span>
+    <span class="c1">#   "--dataset_name", config.DATASET_NAME, "--predictions_path", str(predictions),</span>
+    <span class="c1">#   "--run_id", f"{run_id}.{arm}", "--instance_ids", *ids, "--max_workers", str(max_workers),</span>
+    <span class="c1">#   "--namespace", namespace, "--report_dir", str(run_dir / "eval")]</span>
+    <span class="c1">#   cwd=config.REPO_ROOT (harness writes logs/run_evaluation/&lt;run_id&gt;.&lt;arm&gt;/&lt;model&gt;/&lt;iid&gt;/report.json there)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">harvest_eval</span><span class="p">(</span><span class="n">run_id</span><span class="p">,</span> <span class="n">arm</span><span class="p">,</span> <span class="n">instance_ids</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span>
+    <span class="c1"># copy each logs/run_evaluation/&lt;run_id&gt;.&lt;arm&gt;/&lt;run_id&gt;__&lt;arm&gt;/&lt;iid&gt;/report.json</span>
+    <span class="c1">#   → results/&lt;run_id&gt;/&lt;iid&gt;/eval/&lt;arm&gt;.report.json ; return {iid: report_dict}</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">validate_gold</span><span class="p">(</span><span class="n">run_id</span><span class="p">,</span> <span class="n">instance_ids</span><span class="p">,</span> <span class="n">max_workers</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span>
+    <span class="c1"># run_official_eval with predictions_path="gold", run_id f"{run_id}.goldcheck" → {iid: resolved_bool}</span>
+</code></pre></div>
+<code>report.py</code>:
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">collect_scores</span><span class="p">(</span><span class="n">run_dir</span><span class="p">:</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span>     <span class="c1"># per iid per arm: {status, resolved, ftp: "x/y", ptp: "x/y", empty_patch: bool} from manifests + eval reports</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">render_scores_md</span><span class="p">(</span><span class="n">scores</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">run_manifest</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>   <span class="c1"># table rows=instances, cols=arms; aggregates: resolved/arm, baseline→fvk +n/−m flips, baseline→control flips, fvk−control delta</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">write_reports</span><span class="p">(</span><span class="n">run_id</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Path</span><span class="p">,</span> <span class="n">Path</span><span class="p">]</span>  <span class="c1"># scores.json, scores.md</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">refresh_index</span><span class="p">(</span><span class="n">results_dir</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Path</span>          <span class="c1"># results/INDEX.md: one row per run_id from each run_manifest+scores.json</span>
+</code></pre></div>
+<code>doctor.py</code>: checks (each → (name, ok, detail)): claude on PATH + <code>--version</code>; git; docker reachable (<code>docker info</code>, eval-only warning); arch x86_64; <code>datasets</code>+<code>swebench</code> importable; disk ≥120GB free on docker root (warning); workspace ancestry has no CLAUDE.md/.claude; ANTHROPIC_API_KEY set → warning "will be scrubbed". <code>--canary</code>: temp workspace + 1-turn <code>config.CANARY_MODEL</code> session with production flags (prompt: "Reply with exactly OK. Do not use any tools.") → audit_transcript must pass + assert result envelope ok. <code>--probe-model</code>: same but <code>config.MODEL</code>.
+<code>cli.py</code>: argparse with subcommands exactly per spec CLI-surface section: <code>list</code>, <code>doctor [--canary] [--probe-model]</code>, <code>vendor-instances</code>, <code>validate-gold --run-id --instances...|--all</code>, <code>run --run-id --instances...|--all [--arms] [--retry-failed] [--claude-bin]</code>, <code>evaluate --run-id [--max-workers]</code>, <code>report --run-id</code>. <code>--run-id</code> default <code>time.strftime('%Y%m%dT%H%M%SZ', time.gmtime()) + '-' + socket.gethostname()</code>. <code>run</code> flow per instance: scaffold → arms.run_instance → harvest_instance; then write_run_manifest. Exit code 0 only if all selected arms completed.<p></p>
+<ul>
+<li>[ ] <strong>Step 1: Failing tests</strong> — predictions builder (2 fake instances, one empty patch → 2 rows, empty string patch); <code>run_official_eval</code> argv golden test via monkeypatched subprocess.run; harvest_eval with fixture report.json files in a tmp logs tree; collect/render: golden scores.md snippet asserts the flip aggregate lines (construct fixture where baseline ✗→fvk ✓, control ✗); INDEX regeneration includes the run row; CLI: <code>python -m fvk_bench list</code> prints 45 ids (capsys), <code>run --instances &lt;fixture&gt;</code> wired end-to-end with fake claude (reuse arms fixtures) producing results tree; doctor unit: each check mocked.</li>
+<li>[ ] <strong>Step 2-4: fail → implement → pass.</strong> <strong>Step 5: Commit</strong> — <code>feat(fvk_bench): evaluation, scoring, doctor, CLI</code></li>
+</ul>
+<hr>
+<h3 id="task-10-vendor-real-instance-data">Task 10: Vendor real instance data</h3>
+<p><strong>Files:</strong> Create: <code>fvk_bench/data/instances.json</code> (generated, committed)</p>
+<ul>
+<li>[ ] <strong>Step 1:</strong> <code>python -m fvk_bench vendor-instances</code> (network → HF). Expected output: <code>Vendored 45 instances to fvk_bench/data/instances.json</code>.</li>
+<li>[ ] <strong>Step 2: Verify</strong> — <code>python - &lt;&lt;'EOF'</code> script: load json; assert len==45; ids == submodule list; no key named <code>patch</code>/<code>test_patch</code>/<code>FAIL_TO_PASS</code> (only <code>fail_to_pass_count</code> ints); spot-check <code>sympy__sympy-12489</code> has non-empty problem_statement and <code>base_commit</code> matching the reproducibility prompt file (grep the submodule prompt for the sha).</li>
+<li>[ ] <strong>Step 3:</strong> Full suite: <code>python -m pytest tests/fvk_bench -q</code> → all pass.</li>
+<li>[ ] <strong>Step 4: Commit</strong> — <code>feat(fvk_bench): vendor public metadata for the 45 instances</code></li>
+</ul>
+<hr>
+<h3 id="task-11-startmd-push-infra">Task 11: START.md + push infra</h3>
+<p><strong>Files:</strong> Create: <code>START.md</code>; Modify: <code>README.md</code> (one short pointer line under the title: <code>&gt; Benchmarking Claude Code with FVK? See [START.md](START.md).</code>)</p>
+<ul>
+<li>[ ] <strong>Step 1: Write START.md</strong> — sections: What this is (3-arm experiment, arms explained in 4 lines); Prerequisites (Ubuntu x86_64, Claude Code ≥2.1.169 logged in with subscription, git, Docker, Python ≥3.10, ~120GB disk for eval); Setup (<code>git clone … &amp;&amp; cd &amp;&amp; git submodule update --init &amp;&amp; pip install -e .</code>); Sanity (<code>python -m fvk_bench doctor --canary</code>); Run one problem (the exact 4 commands with <code>--instances sympy__sympy-12489</code>); Run everything (<code>--all</code>, note: sequential, long); What gets recorded (results tree summary, where scores.md/INDEX.md live); Fairness &amp; limitations (copy the spec's "Repeatability of the numbers" + "Honest limitations" condensed); Contributing results from a new machine (commit <code>results/&lt;run_id&gt;/</code> only; run_manifest carries machine identity). Every command copy-pasteable.</li>
+<li>[ ] <strong>Step 2:</strong> <code>python -m pytest tests/fvk_bench -q</code> green; <code>git status</code> clean except intended.</li>
+<li>[ ] <strong>Step 3: Commit + push</strong> — <code>docs: START.md quickstart for the 3-arm FVK benchmark</code>; <code>git push origin main</code>.</li>
+</ul>
+<hr>
+<h3 id="task-12-live-validation-on-one-instance-publish-results">Task 12: Live validation on one instance + publish results</h3>
+<p>No new files (consumes the infra). Budget: baseline+fvk+control ≈ 1–3h wall clock; eval ≈ 10–30 min.</p>
+<ul>
+<li>[ ] <strong>Step 1:</strong> <code>python -m fvk_bench doctor --canary</code> → all checks OK; canary transcript clean. If canary flags attachments, STOP and fix flags before proceeding.</li>
+<li>[ ] <strong>Step 2:</strong> <code>python -m fvk_bench validate-gold --run-id &lt;RID&gt; --instances sympy__sympy-12489</code> → gold resolved 1/1. (First docker image pull happens here.)</li>
+<li>[ ] <strong>Step 3:</strong> <code>python -m fvk_bench run --run-id &lt;RID&gt; --instances sympy__sympy-12489</code> (RID = default timestamp-hostname; real Opus, 3 arms, sequential). Monitor: arm statuses in state.json; on arm failure, inspect <code>.fvk_bench/raw/&lt;arm&gt;.stdout.json</code> before any retry decision; retries only via <code>--retry-failed</code> and are recorded.</li>
+<li>[ ] <strong>Step 4:</strong> <code>python -m fvk_bench evaluate --run-id &lt;RID&gt;</code> then <code>report --run-id &lt;RID&gt;</code>. Verify scores.md shows all 3 arms with FTP/PTP and INDEX.md row.</li>
+<li>[ ] <strong>Step 5:</strong> Post-run audit: confirm each transcript audit passed (manifest), patches non-trivial, no contamination flags.</li>
+<li>[ ] <strong>Step 6: Commit + push results</strong> — <code>results: first live 3-arm run on sympy__sympy-12489 (&lt;RID&gt;)</code>; push.</li>
+</ul>
+<hr>
+<h2 id="self-review-done-at-write-time">Self-review (done at write time)</h2>
+<ul>
+<li><strong>Spec coverage:</strong> submodules T1; vendored data T3/T10; workspace+mirror T4; invocation contract+audit T5; prompts deliverable+checklist tests T6; arm choreography+scrub+hash guard T7; harvest/manifests T8; eval+gold+scores+INDEX+doctor+CLI T9; START.md T11; live validation+publish T12. Repeatability section → run_manifest fields (T8) + INDEX (T9). CLI-audit warnings → argv golden tests (T5) + canary (T9).</li>
+<li><strong>Placeholders:</strong> none — every step has exact content, command, or golden expectation.</li>
+<li><strong>Type consistency:</strong> <code>Instance</code> defined T3 used T4/T6/T7/T8; <code>ClaudeResult</code> T5 used T7; state.json schema defined T7 consumed T8/T9; patch filenames <code>solution_&lt;arm&gt;.patch</code> consistent across T7/T8/T9.</li>
+<li><strong>Known judgment calls recorded:</strong> harness <code>--report_dir</code> flag exists (agent-verified); if it proves absent at T9 implementation time, fall back to copying from the default <code>evaluation_results/</code> path — the test mocks subprocess so only <code>harvest_eval</code> needs adjusting.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "content.action.edit", "navigation.footer", "content.code.copy", "content.footnote.tooltips", "header.autohide", "announce.dismiss", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
