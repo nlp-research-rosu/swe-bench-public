@@ -60,20 +60,17 @@ For a concrete example, start with
 
 ## Reproduce
 
-Verify the published counts and severity breakdown directly from the checked-in
-artifacts:
+Three cases have standalone executable reproduction tests:
 
-```bash
-python scripts/verify_published_results.py
-```
+- [`pydata__xarray-4094`](verified500_analysis/pydata__xarray-4094/enhanced_tests/test_fvk_regression.py)
+- [`scikit-learn__scikit-learn-13496`](verified500_analysis/scikit-learn__scikit-learn-13496/enhanced_tests/test_fvk_regression.py)
+- [`sphinx-doc__sphinx-9367`](verified500_analysis/sphinx-doc__sphinx-9367/enhanced_tests/test_fvk_regression.py)
 
-This verifies the accounting behind 407, 413, 405, 86, 60, and 26. The 60
-qualitative judgments are supported individually by the linked case articles;
-they are not an official SWE-bench metric.
-
-To inspect or rerun the three added behavioral tests, follow
-[`verified500_analysis/ENHANCED_TESTS.md`](verified500_analysis/ENHANCED_TESTS.md).
-Rerunning them requires Docker and the standard SWE-bench evaluation images.
+The [enhanced-tests guide](verified500_analysis/ENHANCED_TESTS.md) gives the
+official-harness recipe and links to saved reports. Rerunning the tests requires
+Docker and the standard SWE-bench evaluation images. The other case articles
+preserve their analysis, patch links, and available inline reproduction
+evidence, but do not currently have standalone reproduction scripts.
 
 To run a new baseline/FVK experiment and evaluate it with the official harness,
 see [`START.md`](START.md). Model generation is nondeterministic, so a new run
