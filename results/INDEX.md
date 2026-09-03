@@ -1,75 +1,65 @@
-# fvk_bench results index
+# Verified500 results index
 
-| run_id | host | model | instances | baseline resolved | fvk resolved | control resolved | created_utc |
-|---|---|---|---|---|---|---|---|
-| 20260612T170620Z-XC-MINI-PRO-AHP | XC-MINI-PRO-AHP | claude-opus-4-8 | 1 | 1/1 | 1/1 | 1/1 | 2026-06-12T18:04:45.607943+00:00 |
-| batch1-XC-MINI-PRO-AHP | XC-MINI-PRO-AHP | claude-opus-4-8 | 9 | 5/9 | 5/9 | 5/9 | 2026-06-13T02:47:39.959492+00:00 |
-| batch2-XC-MINI-PRO-AHP-260613131822 | XC-MINI-PRO-AHP | claude-opus-4-8 | 9 | 9/9 | 9/9 | 9/9 | 2026-06-13T07:32:07.373486+00:00 |
-| batch3-XC-MINI-PRO-AHP-260613154559 | XC-MINI-PRO-AHP | claude-opus-4-8 | 9 | 8/9 | 8/9 | 7/9 | 2026-06-13T10:22:09.264154+00:00 |
-| batch4-XC-MINI-PRO-AHP-260613182909 | XC-MINI-PRO-AHP | claude-opus-4-8 | 9 | 6/8 | 6/8 | 6/8 | 2026-06-13T14:13:18.329247+00:00 |
-| batch5-XC-MINI-PRO-AHP-260614105258 | XC-MINI-PRO-AHP | claude-opus-4-8 | 9 | 5/9 | 5/9 | 5/9 | 2026-06-14T05:07:39.413618+00:00 |
-| codex-test-batch1-2-XC-MINI-PRO-AHP-20260615T1157Z | XC-MINI-PRO-AHP | gpt-5.5 | 2 | 0/2 | 0/2 | 0/2 | 2026-06-15T12:29:05.344351+00:00 |
-| fvk-improved-4cases-XC-MINI-PRO-AHP | XC-MINI-PRO-AHP | claude-opus-4-8 | 4 | 0/4 | 1/4 | 0/0 | 2026-06-15T06:30:19.856704+00:00 |
-| fvk-r3b-sympy13852-XC-MINI-PRO-AHP | XC-MINI-PRO-AHP | claude-opus-4-8 | 1 | 0/1 | 0/1 | 0/0 | 2026-06-15T07:49:53.851567+00:00 |
-| fvk-r3bc-sympy13852-XC-MINI-PRO-AHP | XC-MINI-PRO-AHP | claude-opus-4-8 | 1 | 0/1 | 0/1 | 0/0 | 2026-06-15T08:28:20.845564+00:00 |
-| multilingual001-codex-XC-MINI-PRO-AHP-260616231854 | XC-MINI-PRO-AHP | gpt-5.5 | 10 | 8/10 | 8/10 | — | 2026-06-16T18:07:34.719253+00:00 |
-| multilingual002-codex-XC-MINI-PRO-AHP-260616231854 | XC-MINI-PRO-AHP | gpt-5.5 | 10 | 7/10 | 7/10 | — | 2026-06-16T21:31:14.341296+00:00 |
-| multilingual003-codex-XC-MINI-PRO-AHP-260616231854 | XC-MINI-PRO-AHP | gpt-5.5 | 10 | 7/10 | 7/10 | — | 2026-06-16T22:37:54.762508+00:00 |
-| repro5x-XC-MINI-PRO-AHP-s1 | XC-MINI-PRO-AHP | claude-opus-4-8 | 6 | 0/6 | 0/0 | 0/0 | 2026-06-15T02:53:17.375243+00:00 |
-| repro5x-XC-MINI-PRO-AHP-s2 | XC-MINI-PRO-AHP | claude-opus-4-8 | 6 | 0/6 | 0/0 | 0/0 | 2026-06-15T02:51:00.546293+00:00 |
-| repro5x-XC-MINI-PRO-AHP-s3 | XC-MINI-PRO-AHP | claude-opus-4-8 | 6 | 0/6 | 0/0 | 0/0 | 2026-06-15T03:19:53.657646+00:00 |
-| repro5x-XC-MINI-PRO-AHP-s4 | XC-MINI-PRO-AHP | claude-opus-4-8 | 6 | 1/6 | 0/0 | 0/0 | 2026-06-15T02:52:46.107050+00:00 |
-| repro5x-XC-MINI-PRO-AHP-s5 | XC-MINI-PRO-AHP | claude-opus-4-8 | 6 | 0/6 | 0/0 | 0/0 | 2026-06-15T03:17:41.450925+00:00 |
-| sympy13852-fef0123-XC-MINI-PRO-AHP | XC-MINI-PRO-AHP | claude-opus-4-8 | 1 | 0/1 | 0/1 | 0/0 | 2026-06-15T11:37:13.642558+00:00 |
-| sympy13852-main-260615091942-XC-MINI-PRO-AHP | XC-MINI-PRO-AHP | claude-opus-4-8 | 1 | 0/1 | 0/1 | 0/0 | 2026-06-15T09:45:02.858975+00:00 |
-| verified001-codex-XC-MINI-PRO-AHP-20260615T131050Z | XC-MINI-PRO-AHP | gpt-5.5 | 10 | 7/10 | 8/10 | — | 2026-06-15T13:55:01.777893+00:00 |
-| verified002-codex-XC-MINI-PRO-AHP-20260615T143019Z | XC-MINI-PRO-AHP | gpt-5.5 | 10 | 8/10 | 8/10 | — | 2026-06-15T15:16:36.087299+00:00 |
-| verified003-codex-XC-MINI-PRO-AHP-20260615T162338Z | XC-MINI-PRO-AHP | gpt-5.5 | 10 | 9/10 | 9/10 | — | 2026-06-15T17:22:11.540195+00:00 |
-| verified004-codex-XC-MINI-PRO-AHP-20260615T173203Z | XC-MINI-PRO-AHP | gpt-5.5 | 10 | 9/10 | 9/10 | — | 2026-06-15T18:12:38.683686+00:00 |
-| verified005-codex-XC-MINI-PRO-AHP-20260615T181744Z | XC-MINI-PRO-AHP | gpt-5.5 | 10 | 9/10 | 9/10 | — | 2026-06-15T18:56:25.708390+00:00 |
-| verified006-codex-XC-MINI-PRO-AHP-20260615T190047Z | XC-MINI-PRO-AHP | gpt-5.5 | 10 | 8/10 | 8/10 | — | 2026-06-15T19:39:36.184067+00:00 |
-| verified007-codex-XC-MINI-PRO-AHP-20260615T194407Z | XC-MINI-PRO-AHP | gpt-5.5 | 10 | 8/10 | 9/10 | — | 2026-06-15T20:22:05.032242+00:00 |
-| verified008-codex-XC-MINI-PRO-AHP-20260615T202640Z | XC-MINI-PRO-AHP | gpt-5.5 | 10 | 9/10 | 9/10 | — | 2026-06-15T21:04:27.287962+00:00 |
-| verified009-codex-XC-MINI-PRO-AHP-20260615T210902Z | XC-MINI-PRO-AHP | gpt-5.5 | 10 | 7/10 | 8/10 | — | 2026-06-15T21:47:09.535615+00:00 |
-| verified010-codex-XC-MINI-PRO-AHP-20260615T215736Z | XC-MINI-PRO-AHP | gpt-5.5 | 10 | 9/10 | 9/10 | — | 2026-06-15T22:45:29.311377+00:00 |
-| verified011-codex-XC-MINI-PRO-AHP-20260615T225846Z | XC-MINI-PRO-AHP | gpt-5.5 | 10 | 9/10 | 9/10 | — | 2026-06-15T23:46:31.651433+00:00 |
-| verified012-codex-XC-MINI-PRO-AHP-20260615T235523Z | XC-MINI-PRO-AHP | gpt-5.5 | 10 | 7/10 | 7/10 | — | 2026-06-16T00:34:35.302514+00:00 |
-| verified013-codex-XC-MINI-PRO-AHP-20260616T004115Z | XC-MINI-PRO-AHP | gpt-5.5 | 10 | 9/10 | 9/10 | — | 2026-06-16T01:16:11.763294+00:00 |
-| verified014-codex-XC-MINI-PRO-AHP-20260616T024414Z | XC-MINI-PRO-AHP | gpt-5.5 | 10 | 9/10 | 9/10 | — | 2026-06-16T03:30:58.750297+00:00 |
-| verified015-codex-XC-MINI-PRO-AHP-20260616T034306Z | XC-MINI-PRO-AHP | gpt-5.5 | 10 | 7/10 | 8/10 | — | 2026-06-16T04:26:44.919595+00:00 |
-| verified016-codex-XC-MINI-PRO-AHP-20260616T043623Z | XC-MINI-PRO-AHP | gpt-5.5 | 10 | 8/10 | 8/10 | — | 2026-06-16T05:18:04.781133+00:00 |
-| verified017-codex-XC-MINI-PRO-AHP-20260616T052940Z | XC-MINI-PRO-AHP | gpt-5.5 | 10 | 10/10 | 10/10 | — | 2026-06-16T06:08:06.835676+00:00 |
-| verified018-codex-XC-MINI-PRO-AHP-20260616T062203Z | XC-MINI-PRO-AHP | gpt-5.5 | 10 | 8/10 | 8/10 | — | 2026-06-16T07:16:16.570492+00:00 |
-| verified019-codex-XC-MINI-PRO-AHP-20260616T072953Z | XC-MINI-PRO-AHP | gpt-5.5 | 10 | 10/10 | 10/10 | — | 2026-06-16T08:23:09.731066+00:00 |
-| verified020-codex-XC-MINI-PRO-AHP-20260616T083309Z | XC-MINI-PRO-AHP | gpt-5.5 | 10 | 9/10 | 10/10 | — | 2026-06-16T09:22:04.806158+00:00 |
-| verified021-codex-archlinux-20260616T035839Z | archlinux | gpt-5.5 | 10 | 8/10 | 8/10 | — | 2026-06-16T04:36:47.275043+00:00 |
-| verified022-codex-archlinux-20260616T044014Z | archlinux | gpt-5.5 | 10 | 10/10 | 10/10 | — | 2026-06-16T05:18:22.897580+00:00 |
-| verified023-codex-archlinux-20260616T052232Z | archlinux | gpt-5.5 | 10 | 9/10 | 9/10 | — | 2026-06-16T05:59:48.416058+00:00 |
-| verified024-codex-archlinux-20260616T060351Z | archlinux | gpt-5.5 | 10 | 9/10 | 9/10 | — | 2026-06-16T06:43:16.145030+00:00 |
-| verified025-codex-archlinux-20260616T064857Z | archlinux | gpt-5.5 | 10 | 9/10 | 9/10 | — | 2026-06-16T07:35:50.594647+00:00 |
-| verified026-codex-archlinux-20260616T074401Z | archlinux | gpt-5.5 | 10 | 8/10 | 8/10 | — | 2026-06-16T08:31:43.253106+00:00 |
-| verified027-codex-archlinux-20260616T084044Z | archlinux | gpt-5.5 | 10 | 9/10 | 9/10 | — | 2026-06-16T09:38:38.110573+00:00 |
-| verified028-codex-archlinux-20260616T095431Z | archlinux | gpt-5.5 | 10 | 8/10 | 8/10 | — | 2026-06-16T10:58:20.026062+00:00 |
-| verified029-codex-archlinux-20260616T111534Z | archlinux | gpt-5.5 | 10 | 8/10 | 8/10 | — | 2026-06-16T12:22:15.512825+00:00 |
-| verified030-codex-archlinux-20260616T123754Z | archlinux | gpt-5.5 | 10 | 5/10 | 5/10 | — | 2026-06-16T13:35:14.256992+00:00 |
-| verified031-codex-archlinux-20260616T140808Z | archlinux | gpt-5.5 | 10 | 10/10 | 10/10 | — | 2026-06-16T14:47:55.421524+00:00 |
-| verified032-codex-archlinux-20260616T145521Z | archlinux | gpt-5.5 | 10 | 7/10 | 7/10 | — | 2026-06-16T15:36:32.503186+00:00 |
-| verified033-codex-archlinux-20260616T154504Z | archlinux | gpt-5.5 | 10 | 5/10 | 5/10 | — | 2026-06-16T16:31:10.682898+00:00 |
-| verified034-codex-archlinux-20260616T163816Z | archlinux | gpt-5.5 | 10 | 7/10 | 8/10 | — | 2026-06-16T17:15:58.727104+00:00 |
-| verified035-codex-archlinux-20260616T172110Z | archlinux | gpt-5.5 | 10 | 8/10 | 9/10 | — | 2026-06-16T17:59:09.026808+00:00 |
-| verified036-codex-wsl-ubuntu-260615212520 | wsl-ubuntu | gpt-5.5 | 10 | 10/10 | 10/10 | — | 2026-06-16T03:02:44.210426+00:00 |
-| verified037-codex-wsl-ubuntu-260615221107 | wsl-ubuntu | gpt-5.5 | 10 | 10/10 | 10/10 | — | 2026-06-16T03:46:30.031039+00:00 |
-| verified038-codex-wsl-ubuntu-260615221107 | wsl-ubuntu | gpt-5.5 | 10 | 10/10 | 10/10 | — | 2026-06-16T04:31:58.941765+00:00 |
-| verified039-codex-wsl-ubuntu-260615221107 | wsl-ubuntu | gpt-5.5 | 10 | 7/10 | 7/10 | — | 2026-06-16T05:20:51.961678+00:00 |
-| verified040-codex-wsl-ubuntu-260615221107 | wsl-ubuntu | gpt-5.5 | 10 | 6/10 | 5/10 | — | 2026-06-16T06:08:48.384787+00:00 |
-| verified041-codex-wsl-ubuntu-260615221107 | wsl-ubuntu | gpt-5.5 | 10 | 8/10 | 8/10 | — | 2026-06-16T06:56:57.538295+00:00 |
-| verified042-codex-wsl-ubuntu-260615221107 | wsl-ubuntu | gpt-5.5 | 10 | 8/10 | 8/10 | — | 2026-06-16T07:46:56.128416+00:00 |
-| verified043-codex-wsl-ubuntu-260615221107 | wsl-ubuntu | gpt-5.5 | 10 | 10/10 | 9/10 | — | 2026-06-16T14:49:54.185001+00:00 |
-| verified044-codex-wsl-ubuntu-260615221107 | wsl-ubuntu | gpt-5.5 | 10 | 6/10 | 6/10 | — | 2026-06-16T15:34:36.919238+00:00 |
-| verified045-codex-wsl-ubuntu-260615221107 | wsl-ubuntu | gpt-5.5 | 10 | 7/10 | 7/10 | — | 2026-06-16T16:19:45.249240+00:00 |
-| verified046-codex-wsl-ubuntu-260615221107 | wsl-ubuntu | gpt-5.5 | 10 | 8/10 | 8/10 | — | 2026-06-16T17:02:39.361624+00:00 |
-| verified047-codex-MacBook-Pro-4-20260618T094256Z | MacBook-Pro-4.local | gpt-5.5 | 10 | 6/10 | 6/10 | — | 2026-06-18T10:30:54.166865+00:00 |
-| verified047-codex-wsl-ubuntu-260615221107 | wsl-ubuntu | gpt-5.5 | 10 | 6/10 | 6/10 | — | 2026-06-16T17:47:21.709108+00:00 |
-| verified048-codex-wsl-ubuntu-260615221107 | wsl-ubuntu | gpt-5.5 | 10 | 6/10 | 6/10 | — | 2026-06-16T18:28:37.134826+00:00 |
-| verified049-codex-wsl-ubuntu-260615221107 | wsl-ubuntu | gpt-5.5 | 10 | 7/10 | 7/10 | — | 2026-06-16T20:45:49.842394+00:00 |
-| verified050-codex-wsl-ubuntu-260615221107 | wsl-ubuntu | gpt-5.5 | 10 | 9/10 | 10/10 | — | 2026-06-16T22:44:06.972866+00:00 |
+This index contains only the 50 canonical runs for the 500-instance
+SWE-bench Verified experiment. Each run covers one 10-instance batch and
+contains the baseline and FVK arms.
+
+- Dataset: `princeton-nlp/SWE-bench_Verified`
+- Agent: Codex
+- Model: `gpt-5.5`
+- Reasoning effort: `xhigh`
+- Canonical run selection: [candidate matrix](../verified500_regression/candidate_matrix.json)
+
+| Batch | Run | Baseline resolved | FVK resolved |
+|---|---|---:|---:|
+| `verified001` | [verified001-codex-XC-MINI-PRO-AHP-20260615T131050Z](verified001-codex-XC-MINI-PRO-AHP-20260615T131050Z/) | 7/10 | 8/10 |
+| `verified002` | [verified002-codex-XC-MINI-PRO-AHP-20260615T143019Z](verified002-codex-XC-MINI-PRO-AHP-20260615T143019Z/) | 8/10 | 8/10 |
+| `verified003` | [verified003-codex-XC-MINI-PRO-AHP-20260615T162338Z](verified003-codex-XC-MINI-PRO-AHP-20260615T162338Z/) | 9/10 | 9/10 |
+| `verified004` | [verified004-codex-XC-MINI-PRO-AHP-20260615T173203Z](verified004-codex-XC-MINI-PRO-AHP-20260615T173203Z/) | 9/10 | 9/10 |
+| `verified005` | [verified005-codex-XC-MINI-PRO-AHP-20260615T181744Z](verified005-codex-XC-MINI-PRO-AHP-20260615T181744Z/) | 9/10 | 9/10 |
+| `verified006` | [verified006-codex-XC-MINI-PRO-AHP-20260615T190047Z](verified006-codex-XC-MINI-PRO-AHP-20260615T190047Z/) | 8/10 | 8/10 |
+| `verified007` | [verified007-codex-XC-MINI-PRO-AHP-20260615T194407Z](verified007-codex-XC-MINI-PRO-AHP-20260615T194407Z/) | 8/10 | 9/10 |
+| `verified008` | [verified008-codex-XC-MINI-PRO-AHP-20260615T202640Z](verified008-codex-XC-MINI-PRO-AHP-20260615T202640Z/) | 9/10 | 9/10 |
+| `verified009` | [verified009-codex-XC-MINI-PRO-AHP-20260615T210902Z](verified009-codex-XC-MINI-PRO-AHP-20260615T210902Z/) | 7/10 | 8/10 |
+| `verified010` | [verified010-codex-XC-MINI-PRO-AHP-20260615T215736Z](verified010-codex-XC-MINI-PRO-AHP-20260615T215736Z/) | 9/10 | 9/10 |
+| `verified011` | [verified011-codex-XC-MINI-PRO-AHP-20260615T225846Z](verified011-codex-XC-MINI-PRO-AHP-20260615T225846Z/) | 9/10 | 9/10 |
+| `verified012` | [verified012-codex-XC-MINI-PRO-AHP-20260615T235523Z](verified012-codex-XC-MINI-PRO-AHP-20260615T235523Z/) | 7/10 | 7/10 |
+| `verified013` | [verified013-codex-XC-MINI-PRO-AHP-20260616T004115Z](verified013-codex-XC-MINI-PRO-AHP-20260616T004115Z/) | 9/10 | 9/10 |
+| `verified014` | [verified014-codex-XC-MINI-PRO-AHP-20260616T024414Z](verified014-codex-XC-MINI-PRO-AHP-20260616T024414Z/) | 9/10 | 9/10 |
+| `verified015` | [verified015-codex-XC-MINI-PRO-AHP-20260616T034306Z](verified015-codex-XC-MINI-PRO-AHP-20260616T034306Z/) | 7/10 | 8/10 |
+| `verified016` | [verified016-codex-XC-MINI-PRO-AHP-20260616T043623Z](verified016-codex-XC-MINI-PRO-AHP-20260616T043623Z/) | 8/10 | 8/10 |
+| `verified017` | [verified017-codex-XC-MINI-PRO-AHP-20260616T052940Z](verified017-codex-XC-MINI-PRO-AHP-20260616T052940Z/) | 10/10 | 10/10 |
+| `verified018` | [verified018-codex-XC-MINI-PRO-AHP-20260616T062203Z](verified018-codex-XC-MINI-PRO-AHP-20260616T062203Z/) | 8/10 | 8/10 |
+| `verified019` | [verified019-codex-XC-MINI-PRO-AHP-20260616T072953Z](verified019-codex-XC-MINI-PRO-AHP-20260616T072953Z/) | 10/10 | 10/10 |
+| `verified020` | [verified020-codex-XC-MINI-PRO-AHP-20260616T083309Z](verified020-codex-XC-MINI-PRO-AHP-20260616T083309Z/) | 9/10 | 10/10 |
+| `verified021` | [verified021-codex-archlinux-20260616T035839Z](verified021-codex-archlinux-20260616T035839Z/) | 8/10 | 8/10 |
+| `verified022` | [verified022-codex-archlinux-20260616T044014Z](verified022-codex-archlinux-20260616T044014Z/) | 10/10 | 10/10 |
+| `verified023` | [verified023-codex-archlinux-20260616T052232Z](verified023-codex-archlinux-20260616T052232Z/) | 9/10 | 9/10 |
+| `verified024` | [verified024-codex-archlinux-20260616T060351Z](verified024-codex-archlinux-20260616T060351Z/) | 9/10 | 9/10 |
+| `verified025` | [verified025-codex-archlinux-20260616T064857Z](verified025-codex-archlinux-20260616T064857Z/) | 9/10 | 9/10 |
+| `verified026` | [verified026-codex-archlinux-20260616T074401Z](verified026-codex-archlinux-20260616T074401Z/) | 8/10 | 8/10 |
+| `verified027` | [verified027-codex-archlinux-20260616T084044Z](verified027-codex-archlinux-20260616T084044Z/) | 9/10 | 9/10 |
+| `verified028` | [verified028-codex-archlinux-20260616T095431Z](verified028-codex-archlinux-20260616T095431Z/) | 8/10 | 8/10 |
+| `verified029` | [verified029-codex-archlinux-20260616T111534Z](verified029-codex-archlinux-20260616T111534Z/) | 8/10 | 8/10 |
+| `verified030` | [verified030-codex-archlinux-20260616T123754Z](verified030-codex-archlinux-20260616T123754Z/) | 5/10 | 5/10 |
+| `verified031` | [verified031-codex-archlinux-20260616T140808Z](verified031-codex-archlinux-20260616T140808Z/) | 10/10 | 10/10 |
+| `verified032` | [verified032-codex-archlinux-20260616T145521Z](verified032-codex-archlinux-20260616T145521Z/) | 7/10 | 7/10 |
+| `verified033` | [verified033-codex-archlinux-20260616T154504Z](verified033-codex-archlinux-20260616T154504Z/) | 5/10 | 5/10 |
+| `verified034` | [verified034-codex-archlinux-20260616T163816Z](verified034-codex-archlinux-20260616T163816Z/) | 7/10 | 8/10 |
+| `verified035` | [verified035-codex-archlinux-20260616T172110Z](verified035-codex-archlinux-20260616T172110Z/) | 8/10 | 9/10 |
+| `verified036` | [verified036-codex-wsl-ubuntu-260615212520](verified036-codex-wsl-ubuntu-260615212520/) | 10/10 | 10/10 |
+| `verified037` | [verified037-codex-wsl-ubuntu-260615221107](verified037-codex-wsl-ubuntu-260615221107/) | 10/10 | 10/10 |
+| `verified038` | [verified038-codex-wsl-ubuntu-260615221107](verified038-codex-wsl-ubuntu-260615221107/) | 10/10 | 10/10 |
+| `verified039` | [verified039-codex-wsl-ubuntu-260615221107](verified039-codex-wsl-ubuntu-260615221107/) | 7/10 | 7/10 |
+| `verified040` | [verified040-codex-wsl-ubuntu-260615221107](verified040-codex-wsl-ubuntu-260615221107/) | 6/10 | 5/10 |
+| `verified041` | [verified041-codex-wsl-ubuntu-260615221107](verified041-codex-wsl-ubuntu-260615221107/) | 8/10 | 8/10 |
+| `verified042` | [verified042-codex-wsl-ubuntu-260615221107](verified042-codex-wsl-ubuntu-260615221107/) | 8/10 | 8/10 |
+| `verified043` | [verified043-codex-wsl-ubuntu-260615221107](verified043-codex-wsl-ubuntu-260615221107/) | 10/10 | 9/10 |
+| `verified044` | [verified044-codex-wsl-ubuntu-260615221107](verified044-codex-wsl-ubuntu-260615221107/) | 6/10 | 6/10 |
+| `verified045` | [verified045-codex-wsl-ubuntu-260615221107](verified045-codex-wsl-ubuntu-260615221107/) | 7/10 | 7/10 |
+| `verified046` | [verified046-codex-wsl-ubuntu-260615221107](verified046-codex-wsl-ubuntu-260615221107/) | 8/10 | 8/10 |
+| `verified047` | [verified047-codex-wsl-ubuntu-260615221107](verified047-codex-wsl-ubuntu-260615221107/) | 6/10 | 6/10 |
+| `verified048` | [verified048-codex-wsl-ubuntu-260615221107](verified048-codex-wsl-ubuntu-260615221107/) | 6/10 | 6/10 |
+| `verified049` | [verified049-codex-wsl-ubuntu-260615221107](verified049-codex-wsl-ubuntu-260615221107/) | 7/10 | 7/10 |
+| `verified050` | [verified050-codex-wsl-ubuntu-260615221107](verified050-codex-wsl-ubuntu-260615221107/) | 9/10 | 10/10 |
+| **Total** | **50 runs / 500 instances** | **407/500** | **413/500** |
