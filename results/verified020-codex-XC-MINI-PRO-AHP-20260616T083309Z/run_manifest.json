@@ -29,8 +29,7 @@
   "git": {
     "repo_sha": "970eccbab35454bd4d9bf524e11b8ecf412d1879",
     "submodules": {
-      "third_party/formal-verification-kit": "25a33f4e0002ede9074f86b12156d46b2fd7ec67",
-      "third_party/swebench-fvk-reproducibility": "983557904cca9cc54a15425f2ab0eb6524521155"
+      "third_party/formal-verification-kit": "25a33f4e0002ede9074f86b12156d46b2fd7ec67"
     }
   },
   "max_parallel": 3,

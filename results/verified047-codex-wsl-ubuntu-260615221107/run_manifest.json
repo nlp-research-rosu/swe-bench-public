@@ -30,8 +30,7 @@
     "repo_sha": "f2d6d95d0324807bca8de8946b5751d8441e0db7",
     "submodules": {
       "third_party/formal-verification-kit": "fef0123cd40a0205c03751ab42126c03b9a2c6ad",
-      "third_party/swe-bench-multilingual": "f08240bde99473837fbd4c87d7f5153efa01b32b",
-      "third_party/swebench-fvk-reproducibility": "983557904cca9cc54a15425f2ab0eb6524521155"
+      "third_party/swe-bench-multilingual": "f08240bde99473837fbd4c87d7f5153efa01b32b"
     }
   },
   "max_parallel": 3,
