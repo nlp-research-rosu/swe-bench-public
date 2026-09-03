@@ -1,18 +1,6 @@
-# Local Claude
+# Local agent state
 .claude/
 .agent/
-verified500_regression/results/*
-!verified500_regression/results/README.md
-!verified500_regression/results/*/
-verified500_regression/results/*/*
-!verified500_regression/results/*/run_manifest.json
-!verified500_regression/results/*/candidate_matrix.json
-!verified500_regression/results/*/score_sheet.csv
-!verified500_regression/results/*/score_sheet.json
-!verified500_regression/results/*/score_sheet.md
-!verified500_regression/results/*/arms/
-!verified500_regression/results/*/arms/*/
-!verified500_regression/results/*/arms/*/*.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -186,13 +174,3 @@ cython_debug/
 data/repos/copies
 notebooks/
 *logs/
-
-# Keep complete verified500 regression run artifacts when they are promoted.
-!verified500_regression/results/*/arms/
-!verified500_regression/results/*/arms/**
-!verified500_regression/results/*/contexts/
-!verified500_regression/results/*/contexts/**
-!verified500_regression/results/*/logs/
-!verified500_regression/results/*/logs/**
-!verified500_regression/results/*/oracle/
-!verified500_regression/results/*/oracle/**

@@ -8,7 +8,7 @@ contains the baseline and FVK arms.
 - Agent: Codex
 - Model: `gpt-5.5`
 - Reasoning effort: `xhigh`
-- Canonical run selection: [candidate matrix](../verified500_regression/candidate_matrix.json)
+- Canonical run selection: [candidate matrix](candidate_matrix.json)
 
 | Batch | Run | Baseline resolved | FVK resolved |
 |---|---|---:|---:|

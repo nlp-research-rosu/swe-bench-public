@@ -1,20 +1,38 @@
-# verified500_analysis
+# Supporting Verified500 analysis
 
-Evidence that **passing the tests is not the same as being correct** — and that the FVK pass improves code quality even on problems the baseline AI *already passed*.
+The primary publication-facing analysis is
+[the 60-case evidence set](../verified500_fvk_baseline_buggy/README.md).
+This directory preserves deeper supporting material for 21 selected cases.
 
-## Start here
-- 📄 **[REPORT.md](REPORT.md)** — the full write-up (TL;DR, the numbers, 3 flagship examples, methodology). **Read this first.**
-- 📊 **[SUMMARY_TABLE.md](SUMMARY_TABLE.md)** — all 21 analyzed instances at a glance.
-- 🧪 **[ENHANCED_TESTS.md](ENHANCED_TESTS.md)** — new regression tests for the 3 flagships, each verified RED-on-baseline / GREEN-on-FVK through the official Docker harness.
+## What the numbers mean
 
-## The 3 flagship examples
-1. [pydata__xarray-4094](pydata__xarray-4094/ANALYSIS.md) — silent data loss that the official human fix *also* has.
-2. [scikit-learn__scikit-learn-13496](scikit-learn__scikit-learn-13496/ANALYSIS.md) — passed every test, but silently broke backward compatibility for all existing callers.
-3. [sphinx-doc__sphinx-9367](sphinx-doc__sphinx-9367/ANALYSIS.md) — a bug the AI, the tests, *and* the human maintainers all missed.
+Across the 500 canonical instances:
 
-## What's in each instance folder
-- `ANALYSIS.md` — verdict, the concrete failing input, why the tests missed it, comparison to the real human fix.
-- `_materials/` — `baseline.patch`, `fvk.patch`, **`gold.patch`** (the real upstream human fix), the issue text, and the exact tests the grader ran.
+| Result | Count |
+|---|---:|
+| Baseline passed the official tests | 407 |
+| FVK passed the official tests | 413 |
+| Both passed | 405 |
+| Both passed and produced identical patches | 319 |
+| Both passed and produced different patches | 86 |
+| Different-patch cases judged substantively better after FVK review | 60 |
+| Different-patch cases excluded from that claim | 26 |
 
-## How instances were selected
-Across the SWE-bench Verified runs (`verified001`–`verified050`), we kept every instance where **baseline passed AND FVK passed** the official tests, then the subset where the two solutions **differ** (FVK changed the code): **86 of 411**. We verified a 21-case sample by executing the code. See [REPORT.md](REPORT.md) for the honest numbers and caveats.
+The 86 is a mechanical selection: both versions passed the benchmark and the
+FVK patch differed from the baseline patch. It does not, by itself, say the
+baseline was wrong. The 60 is the reviewed subset where the FVK change
+addresses a real correctness, completeness, boundary, or robustness issue that
+the official tests did not distinguish.
+
+## Contents
+
+- [REPORT.md](REPORT.md) explains the experiment and claim boundaries.
+- [SUMMARY_TABLE.md](SUMMARY_TABLE.md) indexes the 21 detailed supporting
+  analyses retained here.
+- [ENHANCED_TESTS.md](ENHANCED_TESTS.md) records three added tests that are
+  red on baseline and green on FVK.
+- Each instance directory contains an `ANALYSIS.md` and source materials such
+  as the baseline, FVK, and official human patches.
+
+The canonical run selection and all per-instance official verdicts are in
+[results/candidate_matrix.json](../results/candidate_matrix.json).
