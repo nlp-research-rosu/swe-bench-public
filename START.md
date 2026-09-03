@@ -17,10 +17,10 @@ agent is not given hidden test names or hidden test contents.
   their official scores.
 - [Candidate matrix](results/candidate_matrix.json) records the canonical-run
   selection and per-instance baseline/FVK verdicts.
-- [Primary 60-case analysis](verified500_fvk_baseline_buggy/README.md) is the
+- [Primary 60-case analysis](analysis/README.md) is the
   publication-facing evidence set.
-- [Supporting analysis](verified500_analysis/README.md) contains executed
-  reproductions and enhanced tests for selected cases.
+- [Supporting analysis](analysis/supporting/README.md) contains deeper evidence
+  for 15 retained cases, six negative controls, and three enhanced tests.
 
 The canonical aggregate is 407/500 baseline resolved and 413/500 FVK resolved.
 Both arms resolved 405 instances. Among those, 86 had different patches. A
@@ -54,29 +54,29 @@ export FVK_BENCH_WORKSPACE=/absolute/path/to/swe-fvk-runs
 Run the static checks:
 
 ~~~bash
-.venv/bin/python -m fvk_bench doctor
+.venv/bin/python -m fvkbench doctor
 ~~~
 
 Add `--canary` to launch one real Codex session and verify that its transcript
 does not contain leaked MCP/plugin tools or command execution:
 
 ~~~bash
-.venv/bin/python -m fvk_bench doctor --canary
+.venv/bin/python -m fvkbench doctor --canary
 ~~~
 
 ## Inspect the instance set
 
 ~~~bash
-.venv/bin/python -m fvk_bench list
-.venv/bin/python -m fvk_bench list --batch verified001
+.venv/bin/python -m fvkbench list
+.venv/bin/python -m fvkbench list --batch verified001
 ~~~
 
 The vendored public metadata lives at
-`fvk_bench/data/instances_verified500.json`. Refreshing it requires the
+`fvkbench/data/instances_verified500.json`. Refreshing it requires the
 Hugging Face `datasets` package:
 
 ~~~bash
-.venv/bin/python -m fvk_bench vendor-instances
+.venv/bin/python -m fvkbench vendor-instances
 ~~~
 
 ## Run one instance or batch
@@ -84,7 +84,7 @@ Hugging Face `datasets` package:
 Validate the official gold patch before spending model time:
 
 ~~~bash
-.venv/bin/python -m fvk_bench validate-gold \
+.venv/bin/python -m fvkbench validate-gold \
   --run-id reproduction \
   --instances astropy__astropy-12907
 ~~~
@@ -92,7 +92,7 @@ Validate the official gold patch before spending model time:
 Run both arms:
 
 ~~~bash
-.venv/bin/python -m fvk_bench run \
+.venv/bin/python -m fvkbench run \
   --run-id reproduction \
   --instances astropy__astropy-12907 \
   --arms baseline,fvk
@@ -101,7 +101,7 @@ Run both arms:
 Or run one canonical 10-instance batch:
 
 ~~~bash
-.venv/bin/python -m fvk_bench run \
+.venv/bin/python -m fvkbench run \
   --run-id verified001-local \
   --batch verified001 \
   --arms baseline,fvk \
@@ -114,11 +114,11 @@ only with `--retry-failed`.
 ## Evaluate and report
 
 ~~~bash
-.venv/bin/python -m fvk_bench evaluate \
+.venv/bin/python -m fvkbench evaluate \
   --run-id reproduction \
   --max-workers 4
 
-.venv/bin/python -m fvk_bench report --run-id reproduction
+.venv/bin/python -m fvkbench report --run-id reproduction
 ~~~
 
 The official evaluator writes per-arm reports under the run directory. The
