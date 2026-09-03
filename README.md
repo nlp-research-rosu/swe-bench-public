@@ -10,13 +10,13 @@ the benchmark's official tests.
 - The baseline resolved **407/500** instances; the FVK review resolved
   **413/500**.
 - Both versions passed on 405 instances. FVK produced a different patch for
-  [86 of those programs](verified500_analysis/REPORT.md).
+  [86 of those programs](analysis/README.md).
 - Case-by-case review found a substantive correctness, completeness, boundary,
-  or robustness improvement in [60 of the 86 rewrites](verified500_fvk_baseline_buggy/README.md).
+  or robustness improvement in [60 of the 86 rewrites](analysis/README.md).
 - In [five cases](#five-cases-beyond-the-merged-human-fix), the FVK patch was
   judged more correct than the merged human fix.
 - Three of the findings have
-  [executable regression tests](verified500_analysis/ENHANCED_TESTS.md) that
+  [executable regression tests](analysis/supporting/ENHANCED_TESTS.md) that
   fail on the baseline and pass on FVK.
 
 ## Experiment
@@ -48,25 +48,24 @@ did not distinguish.
 
 ## Read the analysis
 
-- [Analysis of the 86 rewritten programs](verified500_analysis/REPORT.md)
-- [The 60 substantive cases](verified500_fvk_baseline_buggy/README.md)
-- [Three executable red/green regression tests](verified500_analysis/ENHANCED_TESTS.md)
-- [Twenty-one deeper analyses and negative controls](verified500_analysis/README.md)
+- [The 60 substantive cases from the 86-rewrite review](analysis/README.md)
+- [Three executable red/green regression tests](analysis/supporting/ENHANCED_TESTS.md)
+- [Twenty-one deeper analyses: 15 retained cases and six negative controls](analysis/supporting/README.md)
 - [All 50 canonical runs and official scores](results/INDEX.md)
 - [Machine-readable candidate matrix](results/candidate_matrix.json)
 
 For a concrete example, start with
-[`pydata__xarray-4094`](verified500_fvk_baseline_buggy/pydata__xarray-4094.md).
+[`pydata__xarray-4094`](analysis/pydata__xarray-4094.md).
 
 ### Five cases beyond the merged human fix
 
 The five conservatively counted cases are
-[`django__django-13121`](verified500_fvk_baseline_buggy/django__django-13121.md),
-[`django__django-14170`](verified500_fvk_baseline_buggy/django__django-14170.md),
-[`pydata__xarray-4094`](verified500_fvk_baseline_buggy/pydata__xarray-4094.md),
-[`sphinx-doc__sphinx-9367`](verified500_fvk_baseline_buggy/sphinx-doc__sphinx-9367.md),
+[`django__django-13121`](analysis/django__django-13121.md),
+[`django__django-14170`](analysis/django__django-14170.md),
+[`pydata__xarray-4094`](analysis/pydata__xarray-4094.md),
+[`sphinx-doc__sphinx-9367`](analysis/sphinx-doc__sphinx-9367.md),
 and
-[`sympy__sympy-24066`](verified500_fvk_baseline_buggy/sympy__sympy-24066.md).
+[`sympy__sympy-24066`](analysis/sympy__sympy-24066.md).
 
 ## Reproduce the experiment
 
