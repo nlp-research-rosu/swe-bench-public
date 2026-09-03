@@ -17,7 +17,6 @@ and, where relevant, record which pieces were missing.
 
 import gzip
 import json
-import os
 import platform
 import shutil
 import socket
@@ -73,9 +72,8 @@ def harvest_instance(
     - ``.fvk_bench/prompts/<arm>.md`` → ``dst/prompts/<arm>.md``
     - ``.fvk_bench/solutions/solution_<arm>.patch`` → ``dst/solutions/``
     - ``.fvk_bench/artifacts/baseline/reports/baseline_notes.md``
-      → ``dst/reports/baseline_notes.md`` (same for fvk/control)
+      → ``dst/reports/baseline_notes.md`` (same for fvk)
     - ``.fvk_bench/artifacts/fvk/fvk/*`` → ``dst/fvk/*``
-    - ``.fvk_bench/artifacts/control/review/*`` → ``dst/review/*``
     - For each arm with a ``session_id``: transcript gzip-compressed to
       ``dst/transcripts/<arm>.jsonl.gz``; missing transcripts recorded in
       manifest as ``transcript_missing: [<arm>, ...]``
@@ -152,11 +150,10 @@ def harvest_instance(
         src = fvk_bench_dir / "solutions" / f"solution_{arm}.patch"
         _copy_if_exists(src, dst / "solutions" / f"solution_{arm}.patch")
 
-    # --- reports: baseline/fvk/control notes -------------------------------
+    # --- reports: baseline/fvk notes ---------------------------------------
     for arm, note_name in [
         ("baseline", "baseline_notes.md"),
         ("fvk", "fvk_notes.md"),
-        ("control", "control_notes.md"),
     ]:
         src = fvk_bench_dir / "artifacts" / arm / "reports" / note_name
         _copy_if_exists(src, dst / "reports" / note_name)
@@ -165,11 +162,6 @@ def harvest_instance(
     fvk_art_dir = fvk_bench_dir / "artifacts" / "fvk" / "fvk"
     if fvk_art_dir.is_dir():
         _copytree_contents(fvk_art_dir, dst / "fvk")
-
-    # --- control arm artifacts: .fvk_bench/artifacts/control/review/ → dst/review/ ---
-    control_art_dir = fvk_bench_dir / "artifacts" / "control" / "review"
-    if control_art_dir.is_dir():
-        _copytree_contents(control_art_dir, dst / "review")
 
     return dst
 
@@ -184,9 +176,8 @@ def write_run_manifest(
     Captured fields:
     - ``run_id``, ``created_utc``
     - ``host``: hostname, os, arch, python version
-    - ``claude_version``: from ``<claude-bin> --version`` (None on failure)
-    - ``invocation``: model, effort, max_turns, tools, permission_mode,
-      setting_sources
+    - ``codex_version``: from ``<codex-bin> --version`` (None on failure)
+    - ``invocation``: model, effort, sandbox, and max_turns
     - ``dataset``, ``template_hashes``, ``fvk_bench_version``
     - ``git``: repo_sha, submodules (path → sha dict)
     - any caller-supplied ``extra`` keys, merged into the manifest top level
@@ -211,12 +202,8 @@ def write_run_manifest(
     agent = extra.get("agent") or config.DEFAULT_AGENT
 
     # selected agent version
-    version_key = f"{agent}_version"
-    version_bin = (
-        extra.get("codex_bin")
-        if agent == "codex"
-        else extra.get("claude_bin") or os.environ.get("FVK_BENCH_CLAUDE_BIN", "claude")
-    )
+    version_key = "codex_version"
+    version_bin = extra.get("codex_bin") or "codex"
     agent_version: str | None = None
     try:
         proc = subprocess.run(
@@ -271,22 +258,12 @@ def write_run_manifest(
     except Exception:
         submodules = None
 
-    if agent == "codex":
-        invocation = {
-            "model": config.CODEX_MODEL,
-            "effort": config.CODEX_EFFORT,
-            "sandbox": config.CODEX_SANDBOX,
-            "max_turns": config.MAX_TURNS,
-        }
-    else:
-        invocation = {
-            "model": config.MODEL,
-            "effort": config.EFFORT,
-            "max_turns": config.MAX_TURNS,
-            "tools": config.TOOLS,
-            "permission_mode": config.PERMISSION_MODE,
-            "setting_sources": config.SETTING_SOURCES,
-        }
+    invocation = {
+        "model": config.CODEX_MODEL,
+        "effort": config.CODEX_EFFORT,
+        "sandbox": config.CODEX_SANDBOX,
+        "max_turns": config.MAX_TURNS,
+    }
 
     instance_set = extra.get("instance_set", config.DEFAULT_INSTANCE_SET)
     dataset_value = (

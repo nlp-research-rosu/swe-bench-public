@@ -1,4 +1,4 @@
-"""Prompt rendering and content-hashing for the three benchmark arms.
+"""Prompt rendering and content-hashing for the two benchmark arms.
 
 Templates live as ``<arm>.md`` files in :data:`fvk_bench.config.PROMPTS_DIR` and
 are part of the experiment specification: their sha256 hashes are recorded in

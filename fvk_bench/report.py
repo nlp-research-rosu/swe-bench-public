@@ -56,7 +56,7 @@ def _requested_arms(run_manifest: dict | None) -> tuple[str, ...]:
 
 
 def _aggregates(instances: dict, arms: tuple[str, ...]) -> dict:
-    """Per-arm resolved counts, directional flips, and the fvk/control delta.
+    """Per-arm resolved counts and directional baseline-to-FVK flips.
 
     Counts are over evaluated instances for that arm: those with an eval
     report, plus completed arms whose empty patch is scored unresolved by
@@ -96,12 +96,6 @@ def _aggregates(instances: dict, arms: tuple[str, ...]) -> dict:
     out = {"arms": arms_agg, "flips": {}}
     if "baseline" in arms and "fvk" in arms:
         out["flips"]["baseline_to_fvk"] = flips("baseline", "fvk")
-    if "baseline" in arms and "control" in arms:
-        out["flips"]["baseline_to_control"] = flips("baseline", "control")
-    if "fvk" in arms and "control" in arms:
-        out["fvk_vs_control_delta"] = (
-            arms_agg["fvk"]["resolved"] - arms_agg["control"]["resolved"]
-        )
     return out
 
 
@@ -243,10 +237,7 @@ def render_scores_md(scores: dict, run_manifest: dict | None) -> str:
             f"- {arm} resolved: {counts['resolved']}/{counts['evaluated']}"
             " (over evaluated instances; completed empty patches score unresolved)"
         )
-    for key, label in (
-        ("baseline_to_fvk", "baseline→fvk"),
-        ("baseline_to_control", "baseline→control"),
-    ):
+    for key, label in (("baseline_to_fvk", "baseline→fvk"),):
         fl = agg["flips"].get(key)
         if fl is None:
             continue
@@ -256,8 +247,6 @@ def render_scores_md(scores: dict, run_manifest: dict | None) -> str:
             f"- flips {label}: +{len(fl['up'])}/-{len(fl['down'])}"
             f" (up: {up}; down: {down})"
         )
-    if "fvk_vs_control_delta" in agg:
-        lines.append(f"- fvk vs control resolved delta: {agg['fvk_vs_control_delta']:+d}")
     return "\n".join(lines) + "\n"
 
 

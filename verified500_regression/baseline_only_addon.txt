@@ -1,2 +1,0 @@
-sphinx-doc__sphinx-8056
-sympy__sympy-12419

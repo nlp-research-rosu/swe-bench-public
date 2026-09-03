@@ -75,7 +75,7 @@ def test_build_argv_fork_parent_options_precede_resume_subcommand():
 
 def test_build_argv_overrides_bin_and_model():
     argv = codex_runner.build_argv(
-        PROMPT, "control", codex_bin="/opt/codex", model="gpt-x", effort="high"
+        PROMPT, "fvk", codex_bin="/opt/codex", model="gpt-x", effort="high"
     )
     assert argv[0] == "/opt/codex"
     assert argv[argv.index("-m") + 1] == "gpt-x"
@@ -198,12 +198,8 @@ def test_result_prefers_stdout_thread_id_over_newest_rollout(tmp_path, monkeypat
 # ---------------------------------------------------------------------------
 
 def test_get_runner_dispatch():
-    from fvk_bench.claude_runner import ClaudeRunner
-
-    assert isinstance(get_runner("claude"), ClaudeRunner)
-    assert get_runner("claude").name == "claude"
     assert isinstance(get_runner("codex"), codex_runner.CodexRunner)
     assert get_runner("codex").name == "codex"
     assert get_runner("codex", model="gpt-x")._model == "gpt-x"
     with pytest.raises(ValueError):
-        get_runner("gemini")
+        get_runner("claude")
