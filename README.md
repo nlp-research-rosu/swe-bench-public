@@ -1,193 +1,182 @@
-<p align="center">
-  <a href="http://swe-bench.github.io">
-    <img src="docs/assets/figures/swellama_banner.svg" style="height: 10em" alt="Kawi the SWE-Llama" />
-  </a>
-</p>
+# Formal-Methods Review of SWE-bench Verified
 
-<p align="center"><strong>[&nbsp;<a href="https://swebench.com/SWE-bench/">Read the Docs</a>&nbsp;]</strong></p>
+This repository contains the artifacts and runner for an experiment over all
+500 instances in SWE-bench Verified. The experiment asks a narrow question:
 
-<p align="center">
-  <a href="docs/other_languages/README_JP.md">日本語</a> |
-  <a href="docs/other_languages/README_CN.md">中文简体</a> |
-  <a href="docs/other_languages/README_TW.md">中文繁體</a>
-</p>
+> Does general knowledge of formal methods help an LLM find defects in code
+> that already passes the benchmark's official tests?
 
-<p align="center">
-    <a href="https://www.python.org/">
-        <img alt="Build" src="https://img.shields.io/badge/Python-3.8+-1f425f.svg?color=purple">
-    </a>
-    <a href="https://copyright.princeton.edu/policy">
-        <img alt="License" src="https://img.shields.io/badge/License-MIT-blue">
-    </a>
-    <a href="https://badge.fury.io/py/swebench">
-        <img src="https://badge.fury.io/py/swebench.svg">
-    </a>
-</p>
+For each instance, Codex first solved the public issue normally. We then
+resumed the frozen baseline session, supplied general guidance about formal
+methods, semantics, and verification through the Formal Verification Kit
+(FVK), and asked the model to review its own patch and rewrite it only when
+needed. The baseline and FVK patches were evaluated independently by the
+official SWE-bench harness.
 
----
+The model was not given hidden test names or contents, and the FVK arm did not
+call a proof tool.
 
-> **Benchmarking Claude Code with FVK?** See [START.md](START.md).
+> This is an experiment repository built on
+> [SWE-bench](https://github.com/SWE-bench/SWE-bench). For the benchmark itself,
+> its datasets, and general evaluation documentation, use the upstream project.
 
-Code and data for the following works:
-* [ICLR 2025] <a href="https://arxiv.org/abs/2410.03859">SWE-bench Multimodal: Do AI Systems Generalize to Visual Software Domains?</a>
-* [ICLR 2024 Oral] <a href="https://arxiv.org/abs/2310.06770">SWE-bench: Can Language Models Resolve Real-World GitHub Issues?</a>
+## Results at a glance
 
-## 📰 News
-* **[Jan. 13, 2025]**: We've integrated [SWE-bench Multimodal](https://swebench.com/multimodal) ([paper](https://arxiv.org/abs/2410.03859), [dataset](https://huggingface.co/datasets/SWE-bench/SWE-bench_Multimodal)) into this repository! Unlike SWE-bench, we've kept evaluation for the test split *private*. Submit to the leaderboard using [sb-cli](https://github.com/swe-bench/sb-cli/tree/main), our new cloud-based evaluation tool.
-* **[Jan. 11, 2025]**: Thanks to [Modal](https://modal.com/), you can now run evaluations entirely on the cloud! See [here](https://github.com/swe-bench/SWE-bench/blob/main/docs/assets/evaluation.md#%EF%B8%8F-evaluation-with-modal) for more details.
-* **[Aug. 13, 2024]**: Introducing *SWE-bench Verified*! Part 2 of our collaboration with [OpenAI Preparedness](https://openai.com/preparedness/). A subset of 500 problems that real software engineers have confirmed are solvable. Check out more in the [report](https://openai.com/index/introducing-swe-bench-verified/)!
-* **[Jun. 27, 2024]**: We have an exciting update for SWE-bench - with support from [OpenAI's Preparedness](https://openai.com/preparedness/) team: We're moving to a fully containerized evaluation harness using Docker for more reproducible evaluations! Read more in our [report](https://github.com/swe-bench/SWE-bench/blob/main/docs/20240627_docker/README.md).
-* **[Apr. 2, 2024]**: We have released [SWE-agent](https://github.com/SWE-agent/SWE-agent), which sets the state-of-the-art on the full SWE-bench test set! ([Tweet 🔗](https://twitter.com/jyangballin/status/1775114444370051582))
-* **[Jan. 16, 2024]**: SWE-bench has been accepted to ICLR 2024 as an oral presentation! ([OpenReview 🔗](https://openreview.net/forum?id=VTF8yNQM66))
+| Outcome | Count |
+|---|---:|
+| Baseline resolved by the official harness | 407/500 |
+| FVK resolved by the official harness | 413/500 |
+| Both resolved | 405/500 |
+| FVK only | 8 |
+| Baseline only | 2 |
+| Both resolved with identical patches | 319 |
+| Both resolved with different patches | 86 |
+| Different-patch cases judged substantively better after FVK review | 60 |
+| Different-patch cases excluded from that claim | 26 |
 
-## 👋 Overview
-SWE-bench is a benchmark for evaluating large language models on real world software issues collected from GitHub.
-Given a *codebase* and an *issue*, a language model is tasked with generating a *patch* that resolves the described problem.
+The 86 cases are a mechanical selection: both patches passed the official
+evaluation, but their contents differed. A changed patch is not automatically
+better. We reviewed all 86 cases individually and retained 60 where the FVK
+rewrite addressed a defensible correctness, completeness, boundary, or
+robustness issue that the official tests did not distinguish.
 
-<img src="docs/assets/figures/teaser.png">
+Five of the retained cases were conservatively judged more correct than the
+merged human fix. This is not a claim that the human fixes failed SWE-bench;
+it means the FVK patch covered a real behavior that neither the official tests
+nor the merged patch covered.
 
-To access SWE-bench, copy and run the following code:
-```python
-from datasets import load_dataset
-swebench = load_dataset('princeton-nlp/SWE-bench', split='test')
-```
+## Explore the evidence
 
-## 🚀 Set Up
-SWE-bench uses Docker for reproducible evaluations.
-Follow the instructions in the [Docker setup guide](https://docs.docker.com/engine/install/) to install Docker on your machine.
-If you're setting up on Linux, we recommend seeing the [post-installation steps](https://docs.docker.com/engine/install/linux-postinstall/) as well.
+| Start here | What it contains |
+|---|---|
+| [Primary 60-case analysis](verified500_fvk_baseline_buggy/README.md) | Publication-facing case articles, grouped by severity, with links to patches, prompts, findings, proof artifacts, and verification evidence. |
+| [Three executable regression tests](verified500_analysis/ENHANCED_TESTS.md) | New tests that fail on the baseline patch and pass on the FVK patch; two also fail on the merged human fix. |
+| [Supporting 21-case analysis](verified500_analysis/README.md) | Fifteen deeper positive cases and six negative controls showing why not every rewrite was counted. |
+| [Canonical results index](results/INDEX.md) | The 50 canonical 10-instance runs and their baseline/FVK official scores. |
+| [Candidate matrix](results/candidate_matrix.json) | Machine-readable canonical-run selection and per-instance official verdicts. |
+| [Experiment procedure](START.md) | Environment checks, instance selection, model runs, official evaluation, and report generation. |
 
-Finally, to build SWE-bench from source, follow these steps:
+A useful concrete starting point is
+[`pydata__xarray-4094`](verified500_fvk_baseline_buggy/pydata__xarray-4094.md).
+Its article links the baseline, FVK, and human patches to a regression test and
+the saved official-harness reports for all three variants.
+
+## Reproduce the published analysis
+
+There are three different levels of reproduction. They have different cost and
+different determinism.
+
+### 1. Verify the published accounting from saved artifacts
+
+This check uses only Python's standard library. It recomputes the 86 changed
+patches, verifies that all 60 retained articles belong to that population, and
+recounts the severity labels. It does not repeat the qualitative case review;
+the reasoning and evidence for those judgments live in the 60 case articles.
+
 ```bash
-git clone git@github.com:princeton-nlp/SWE-bench.git
-cd SWE-bench
-pip install -e .
-```
+python - <<'PY'
+import json
+from collections import Counter
+from pathlib import Path
 
-Test your installation by running:
-```bash
-python -m swebench.harness.run_evaluation \
-    --predictions_path gold \
-    --max_workers 1 \
-    --instance_ids sympy__sympy-20590 \
-    --run_id validate-gold
-```
-> [!NOTE]
-> If using a MacOS M-series or other ARM-based systems, add `--namespace ''` to the above script.
-> By default, the evaluation script pulls images (built for Linux) from [DockerHub](https://hub.docker.com/u/swebench).
-> Adding `--namespace ''` will cause evaluation images to be built locally instead.
-
-## 💽 Usage
-Evaluate patch predictions on SWE-bench Lite with the following command:
-```bash
-python -m swebench.harness.run_evaluation \
-    --dataset_name princeton-nlp/SWE-bench_Lite \
-    --predictions_path <path_to_predictions> \
-    --max_workers <num_workers> \
-    --run_id <run_id>
-    # use --predictions_path 'gold' to verify the gold patches
-    # use --run_id to name the evaluation run
-    # use --modal true to run on Modal
-```
-
-This command will generate docker build logs (`logs/build_images`) and evaluation logs (`logs/run_evaluation`) in the current directory.
-
-The final evaluation results will be stored in the `evaluation_results` directory.
-
-> [!WARNING]
-> SWE-bench evaluation can be resource intensive
-> We recommend running on an `x86_64` machine with at least 120GB of free storage, 16GB of RAM, and 8 CPU cores.
-> We recommend using fewer than `min(0.75 * os.cpu_count(), 24)` for `--max_workers`.
->
-> If running with Docker desktop, make sure to increase your virtual disk space to ~120 free GB. Set max_workers to be consistent with the above for the CPUs available to Docker.
->
-> Support for `arm64` machines is experimental.
-
-To see the full list of arguments for the evaluation harness, run:
-```bash
-python -m swebench.harness.run_evaluation --help
-```
-
-See the [evaluation tutorial](docs/guides/evaluation.md) for the full rundown on datasets you can evaluate.
-If you're looking for non-local, cloud based evaluations, check out...
-* [sb-cli](https://github.com/swe-bench/sb-cli), our tool for running evaluations automatically on AWS, or...
-* Running SWE-bench evaluation on [Modal](https://modal.com/). Details [here](docs/guides/evaluation.md#Cloud-Based-Evaluation)
-
-Additionally, you can also:
-* [Train](https://github.com/swe-bench/SWE-bench/tree/main/swebench/inference/make_datasets) your own models on our pre-processed datasets. (🆕 Check out [SWE-smith](https://swesmith.com/), a dedicated toolkit for creating SWE training data.)
-* Run [inference](docs/reference/inference.md) on existing models (both local and API models). The inference step is where you give the model a repo + issue and have it generate a fix.
-*  Run SWE-bench's [data collection procedure](https://github.com/swe-bench/SWE-bench/blob/main/swebench/collect/) ([tutorial](docs/guides/collection.md)) on your own repositories, to make new SWE-Bench tasks.
-    * ⚠️ We are temporarily pausing support for queries around creating SWE-bench instances. Please see the note in the tutorial.
-
-## ⬇️ Downloads
-| Datasets | Models | RAG |
-| - | - | - |
-| [💿 SWE-bench](https://huggingface.co/datasets/SWE-bench/SWE-bench) | [🦙 SWE-Llama 13b](https://huggingface.co/princeton-nlp/SWE-Llama-13b) | [🤗 "Oracle" Retrieval](https://huggingface.co/datasets/princeton-nlp/SWE-bench_oracle) |
-| [💿 SWE-bench Lite](https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite) | [🦙 SWE-Llama 13b (PEFT)](https://huggingface.co/princeton-nlp/SWE-Llama-13b-peft) | [🤗 BM25 Retrieval 13K](https://huggingface.co/datasets/princeton-nlp/SWE-bench_bm25_13K) |
-| [💿 SWE-bench Verified](https://huggingface.co/datasets/SWE-bench/SWE-bench_Verified) | [🦙 SWE-Llama 7b](https://huggingface.co/princeton-nlp/SWE-Llama-7b) | [🤗 BM25 Retrieval 27K](https://huggingface.co/datasets/princeton-nlp/SWE-bench_bm25_27K) |
-| [💿 SWE-bench Multimodal](https://huggingface.co/datasets/SWE-bench/SWE-bench_Multimodal) | [🦙 SWE-Llama 7b (PEFT)](https://huggingface.co/princeton-nlp/SWE-Llama-7b-peft) | [🤗 BM25 Retrieval 40K](https://huggingface.co/datasets/princeton-nlp/SWE-bench_bm25_40K) |
-| | | [🤗 BM25 Retrieval 50K (Llama tokens)](https://huggingface.co/datasets/princeton-nlp/SWE-bench_bm25_50k_llama) |
-
-## 💫 Contributions
-We would love to hear from the broader NLP, Machine Learning, and Software Engineering research communities, and we welcome any contributions, pull requests, or issues!
-To do so, please either file a new pull request or issue and fill in the corresponding templates accordingly. We'll be sure to follow up shortly!
-
-Contact person: [Carlos E. Jimenez](http://www.carlosejimenez.com/) and [John Yang](https://john-b-yang.github.io/) (Email: carlosej@princeton.edu, johnby@stanford.edu).
-
-## ✍️ Citation & license
-MIT license. Check `LICENSE.md`.
-
-If you find our work helpful, please use the following citations.
-
-For SWE-bench (Verified):
-```bibtex
-@inproceedings{
-    jimenez2024swebench,
-    title={{SWE}-bench: Can Language Models Resolve Real-world Github Issues?},
-    author={Carlos E Jimenez and John Yang and Alexander Wettig and Shunyu Yao and Kexin Pei and Ofir Press and Karthik R Narasimhan},
-    booktitle={The Twelfth International Conference on Learning Representations},
-    year={2024},
-    url={https://openreview.net/forum?id=VTF8yNQM66}
+matrix = json.loads(Path("results/candidate_matrix.json").read_text())
+both = [
+    row for row in matrix["candidates"]
+    if row["category"] == "both_resolved"
+]
+different = {
+    row["instance_id"]
+    for row in both
+    if Path(row["baseline_patch"]).read_bytes()
+    != Path(row["fvk_patch"]).read_bytes()
 }
-```
-
-For SWE-bench Multimodal
-```bibtex
-@inproceedings{
-    yang2024swebenchmultimodal,
-    title={{SWE}-bench Multimodal: Do AI Systems Generalize to Visual Software Domains?},
-    author={John Yang and Carlos E. Jimenez and Alex L. Zhang and Kilian Lieret and Joyce Yang and Xindi Wu and Ori Press and Niklas Muennighoff and Gabriel Synnaeve and Karthik R. Narasimhan and Diyi Yang and Sida I. Wang and Ofir Press},
-    booktitle={The Thirteenth International Conference on Learning Representations},
-    year={2025},
-    url={https://openreview.net/forum?id=riTiq3i21b}
+articles = {
+    path.stem
+    for path in Path("verified500_fvk_baseline_buggy").glob("*.md")
+    if path.name != "README.md"
 }
+severity = Counter()
+for instance_id in articles:
+    text = (
+        Path("verified500_fvk_baseline_buggy") / f"{instance_id}.md"
+    ).read_text()
+    for level in ("High", "Medium", "Low"):
+        if f"**Severity:** {level}" in text:
+            severity[level] += 1
+            break
+
+assert articles <= different
+print(matrix["summary"])
+print({"both_passed_different_patch": len(different)})
+print({"substantive": len(articles), "excluded": len(different - articles)})
+print({"severity": dict(severity)})
+PY
 ```
 
-For SWE-bench Multilingual
-```bibtex
-@misc{yang2025swesmith,
-    title={SWE-smith: Scaling Data for Software Engineering Agents},
-    author={John Yang and Kilian Lieret and Carlos E. Jimenez and Alexander Wettig and Kabir Khandpur and Yanzhe Zhang and Binyuan Hui and Ofir Press and Ludwig Schmidt and Diyi Yang},
-    year={2025},
-    eprint={2504.21798},
-    archivePrefix={arXiv},
-    primaryClass={cs.SE},
-    url={https://arxiv.org/abs/2504.21798},
-}
-```
+Expected key values are `407` baseline resolved, `413` FVK resolved, `405`
+both resolved, `86` different passing patches, `60` retained cases, and `26`
+excluded cases. The retained cases comprise 9 high-, 21 medium-, and 30
+low-severity findings.
 
-## Our Other Projects
+### 2. Inspect or rerun the added regression tests
 
-<div align="center">
-  <a href="https://github.com/SWE-bench/sb-cli"><img src="https://raw.githubusercontent.com/SWE-agent/swe-agent-media/refs/heads/main/media/logos_banners/sbcli_logo_text_below.svg" alt="sb-cli" height="120px"></a>
-   &nbsp;&nbsp;
-  <a href="https://github.com/SWE-bench/SWE-smith"><img src="https://raw.githubusercontent.com/SWE-agent/swe-agent-media/refs/heads/main/media/logos_banners/swesmith_logo_text_below.svg" alt="SWE-smith" height="120px"></a>
-   &nbsp;&nbsp;
-  <a href="https://github.com/SWE-agent/SWE-agent"><img src="https://raw.githubusercontent.com/SWE-agent/swe-agent-media/refs/heads/main/media/logos_banners/sweagent_logo_text_below.svg" alt="SWE-agent" height="120px"></a>
-   &nbsp;&nbsp;
-  <a href="https://github.com/codeclash-ai/codeclash"><img src="https://raw.githubusercontent.com/SWE-agent/swe-agent-media/refs/heads/main/media/logos_banners/codeclash_logo_text_below.svg" alt="CodeClash" height="120px"></a>
-  &nbsp;&nbsp;
-  <a href="https://github.com/SWE-agent/Mini-SWE-Agent"><img src="https://raw.githubusercontent.com/SWE-agent/swe-agent-media/refs/heads/main/media/logos_banners/mini_logo_text_below.svg" alt="Mini-SWE-Agent" height="120px"></a>
-  &nbsp;&nbsp;
-  <a href="https://github.com/SWE-agent/SWE-ReX"><img src="https://raw.githubusercontent.com/SWE-agent/swe-agent-media/refs/heads/main/media/logos_banners/swerex_logo_text_below.svg" alt="SWE-ReX" height="120px"></a>
-</div>
+The three strongest behavioral demonstrations are documented in
+[`verified500_analysis/ENHANCED_TESTS.md`](verified500_analysis/ENHANCED_TESTS.md).
+The test sources and official-harness `report.json` files are checked in under
+each instance's `enhanced_tests/` directory, so the red/green results can be
+inspected without Docker.
+
+Rerunning them requires Docker and the standard SWE-bench evaluation images.
+The enhanced-tests document explains how each one-row dataset and prediction
+file is constructed and gives the harness invocation. At present this is a
+documented recipe, not a single wrapper command.
+
+### 3. Rerun the model experiment and official evaluation
+
+See [`START.md`](START.md) for the runner workflow. A full run requires Python
+3.10+, Git, Docker, an authenticated Codex CLI, substantial disk space, and an
+FVK checkout. Model generation is nondeterministic: this reproduces the method,
+not necessarily byte-identical patches.
+
+The saved artifacts remain the source of truth for the published run. Each run
+records its model configuration, host, prompts, patch hashes, session metadata,
+FVK revision, and copied evaluator reports.
+
+## FVK version note
+
+The canonical manifests record two historical FVK revisions:
+
+- 47 of the 50 runs used
+  [`fef0123cd40a0205c03751ab42126c03b9a2c6ad`](https://github.com/grosu/formal-verification-kit/commit/fef0123cd40a0205c03751ab42126c03b9a2c6ad),
+  which is recoverable from the public
+  [Formal Verification Kit repository](https://github.com/grosu/formal-verification-kit).
+- `verified018`, `verified019`, and `verified020` used
+  `25a33f4e0002ede9074f86b12156d46b2fd7ec67`. That exact source revision is not
+  currently available from the public repository; the prompts, generated FVK
+  artifacts, patches, and evaluator outputs for those runs are preserved here.
+
+The current public FVK repository uses the original repository-style layout,
+while this benchmark runner expects a later packaged-skill installer layout.
+Consequently, artifact inspection and accounting are self-contained, but a
+fresh clean-room model rerun still requires reconstructing that historical
+installation step.
+
+## Claim boundaries
+
+- “Resolved” means resolved by the official SWE-bench harness.
+- “Different” means the two resolved patches are not byte-identical.
+- “Substantive improvement” is a post-hoc, case-by-case correctness judgment,
+  not an official SWE-bench metric.
+- The missed behaviors expose limits in the official test coverage; they do
+  not redefine what counts as passing SWE-bench.
+- FVK supplied knowledge and a review procedure. No external proof tool was
+  called during the experiment.
+- K and proof-shaped artifacts that were not machine-checked are described as
+  proof-structured reasoning, not completed formal proofs.
+
+## License and upstream attribution
+
+This repository retains the upstream SWE-bench implementation and its MIT
+license. See [`LICENSE`](LICENSE) and the
+[upstream SWE-bench repository](https://github.com/SWE-bench/SWE-bench) for the
+original benchmark project and citation information.
