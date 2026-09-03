@@ -1,3 +1,3 @@
 [submodule "third_party/formal-verification-kit"]
 	path = third_party/formal-verification-kit
-	url = git@github.com:fastxyz/formal-verification-kit.git
+	url = https://github.com/grosu/formal-verification-kit.git
