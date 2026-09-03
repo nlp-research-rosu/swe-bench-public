@@ -13,8 +13,8 @@ the benchmark's official tests.
   [86 of those programs](verified500_analysis/REPORT.md).
 - Case-by-case review found a substantive correctness, completeness, boundary,
   or robustness improvement in [60 of the 86 rewrites](verified500_fvk_baseline_buggy/README.md).
-- In five cases, the FVK patch was judged more correct than the merged human
-  fix.
+- In [five cases](#five-cases-beyond-the-merged-human-fix), the FVK patch was
+  judged more correct than the merged human fix.
 - Three of the findings have
   [executable regression tests](verified500_analysis/ENHANCED_TESTS.md) that
   fail on the baseline and pass on FVK.
@@ -58,7 +58,17 @@ did not distinguish.
 For a concrete example, start with
 [`pydata__xarray-4094`](verified500_fvk_baseline_buggy/pydata__xarray-4094.md).
 
-## Reproduce
+### Five cases beyond the merged human fix
+
+The five conservatively counted cases are
+[`django__django-13121`](verified500_fvk_baseline_buggy/django__django-13121.md),
+[`django__django-14170`](verified500_fvk_baseline_buggy/django__django-14170.md),
+[`pydata__xarray-4094`](verified500_fvk_baseline_buggy/pydata__xarray-4094.md),
+[`sphinx-doc__sphinx-9367`](verified500_fvk_baseline_buggy/sphinx-doc__sphinx-9367.md),
+and
+[`sympy__sympy-24066`](verified500_fvk_baseline_buggy/sympy__sympy-24066.md).
+
+## Reproduce the experiment
 
 Follow [`START.md`](START.md) for the complete reproduction workflow: set up
 the environment, run the preflight checks, reproduce one instance or a full
