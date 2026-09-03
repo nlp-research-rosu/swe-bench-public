@@ -60,22 +60,14 @@ For a concrete example, start with
 
 ## Reproduce
 
-Three cases have standalone executable reproduction tests:
+Follow [`START.md`](START.md) for the complete reproduction workflow: set up
+the environment, run the preflight checks, reproduce one instance or a full
+batch, evaluate both arms with the official SWE-bench harness, and generate the
+result report.
 
-- [`pydata__xarray-4094`](verified500_analysis/pydata__xarray-4094/enhanced_tests/test_fvk_regression.py)
-- [`scikit-learn__scikit-learn-13496`](verified500_analysis/scikit-learn__scikit-learn-13496/enhanced_tests/test_fvk_regression.py)
-- [`sphinx-doc__sphinx-9367`](verified500_analysis/sphinx-doc__sphinx-9367/enhanced_tests/test_fvk_regression.py)
-
-The [enhanced-tests guide](verified500_analysis/ENHANCED_TESTS.md) gives the
-official-harness recipe and links to saved reports. Rerunning the tests requires
-Docker and the standard SWE-bench evaluation images. The other case articles
-preserve their analysis, patch links, and available inline reproduction
-evidence, but do not currently have standalone reproduction scripts.
-
-To run a new baseline/FVK experiment and evaluate it with the official harness,
-see [`START.md`](START.md). Model generation is nondeterministic, so a new run
-reproduces the method rather than necessarily producing byte-identical patches.
-The saved artifacts are the source of truth for the published run.
+Model generation is nondeterministic, so a new run reproduces the method rather
+than necessarily producing byte-identical patches. The saved artifacts are the
+source of truth for the published run.
 
 ## Scope and attribution
 
