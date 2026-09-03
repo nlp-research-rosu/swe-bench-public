@@ -1,8 +1,9 @@
 # Verified500 FVK Baseline-Buggy Cases
 
-This directory is an article-oriented evidence set for verified500 instances
-where both the baseline arm and the FVK arm passed the official SWE-bench
-evaluation, but the FVK audit found a residual baseline-arm defect.
+This directory is the primary article-oriented evidence set for Verified500
+instances where both the baseline and FVK arms passed the official SWE-bench
+evaluation, but case review found a real issue in the baseline patch that the
+official tests did not distinguish.
 
 The claim is narrow: hidden tests are useful, but passing them is not the same
 thing as semantic correctness. These documents are the case-level evidence.
@@ -15,10 +16,10 @@ The source population is the 86 verified500 instances where:
 - FVK resolved the official evaluation;
 - the FVK patch differed from the baseline patch.
 
-Only cases with a defensible residual baseline code defect receive documents
-here. Cases where the FVK delta was a documentation update, refactor, proof
-simplification, comment, or otherwise behaviorally equivalent change — with no
-residual baseline code defect — are excluded.
+Only cases with a defensible correctness, completeness, boundary, or robustness
+improvement receive documents here. Cases where the FVK delta was a
+documentation update, refactor, proof simplification, comment, or otherwise
+behaviorally equivalent change are excluded.
 
 ## Severity Rubric
 
@@ -36,6 +37,12 @@ residual baseline code defect — are excluded.
 | Low | 30 |
 | **Total** | **60** |
 | Excluded | 26 |
+
+The 60 is a case-by-case classification, not an extrapolation from the older
+21-case supporting set. The canonical benchmark matrix is
+[results/candidate_matrix.json](../results/candidate_matrix.json); deeper
+executed reproductions for selected cases remain in
+[verified500_analysis](../verified500_analysis/README.md).
 
 ## Report Format
 

@@ -1,9 +1,3 @@
-[submodule "third_party/swebench-fvk-reproducibility"]
-	path = third_party/swebench-fvk-reproducibility
-	url = https://github.com/fastxyz/swebench-fvk-reproducibility.git
 [submodule "third_party/formal-verification-kit"]
 	path = third_party/formal-verification-kit
-	url = git@github.com:fastxyz/formal-verification-kit.git
-[submodule "third_party/swe-bench-multilingual"]
-	path = third_party/swe-bench-multilingual
-	url = git@github.com:fastxyz/SWE-bench_Multilingual.git
+	url = https://github.com/grosu/formal-verification-kit.git

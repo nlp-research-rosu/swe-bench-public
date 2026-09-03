@@ -28,7 +28,7 @@ from pathlib import Path
 
 from fvk_bench import (
     arms, batches, codex_runner, config, doctor, evaluate, harvest, instances,
-    regression, report, scaffold,
+    report, scaffold,
 )
 
 
@@ -134,18 +134,10 @@ def _arm_label(arm_state: dict) -> str:
 # ---------------------------------------------------------------------------
 
 def _cmd_list(args) -> int:
-    all_ids: list[str]
-    if args.instance_set == "fvk45":
-        try:
-            all_ids = instances.submodule_instance_ids()
-        except RuntimeError as exc:
-            print(f"error: {exc}")
-            return 1
-    else:
-        known = _load_instances_or_explain(args.instance_set)
-        if known is None:
-            return 1
-        all_ids = sorted(known)
+    known = _load_instances_or_explain(args.instance_set)
+    if known is None:
+        return 1
+    all_ids = sorted(known)
     ids = list(all_ids)
     if args.batch:
         try:
@@ -163,19 +155,11 @@ def _cmd_list(args) -> int:
     print(f"{len(ids)} instances across {len(groups)} repos")
 
     batch_of = {}
-    if args.instance_set == "fvk45":
-        batch_of = {
-            iid: name for name, batch_ids in batches.BATCHES.items() for iid in batch_ids
-        }
-    else:
-        ordered_ids = tuple(all_ids)
-        scheme = config.REGISTRY[args.instance_set].batch_scheme
-        for name in batches.batch_names_for_scheme(scheme):
-            try:
-                for iid in batches.batch_instances(name, instance_ids=ordered_ids):
-                    batch_of[iid] = name
-            except KeyError:
-                pass
+    ordered_ids = tuple(all_ids)
+    scheme = config.REGISTRY[args.instance_set].batch_scheme
+    for name in batches.batch_names_for_scheme(scheme):
+        for iid in batches.batch_instances(name, instance_ids=ordered_ids):
+            batch_of[iid] = name
     annotations: dict[str, str] = {}
     annotation_arms = config.ARMS
     if args.run_id:
@@ -219,8 +203,6 @@ def _cmd_doctor(args) -> int:
     hard_fail = False
     for name, verdict, detail in doctor.run_checks(
         eval_checks=not args.no_eval_checks,
-        agent=args.agent,
-        claude_bin=args.claude_bin,
         codex_bin=args.codex_bin,
     ):
         label = "OK" if verdict else ("WARN" if verdict is None else "FAIL")
@@ -228,15 +210,10 @@ def _cmd_doctor(args) -> int:
             hard_fail = True
         print(f"{label:<5}{name:<22}{detail}")
 
-    if args.canary or args.probe_model:
-        if args.agent == "codex":
-            model = config.CODEX_MODEL
-            print(f"\nrunning codex canary session (model {model})...")
-            res = doctor.run_codex_canary(model=model, codex_bin=args.codex_bin)
-        else:
-            model = config.MODEL if args.probe_model else config.CANARY_MODEL
-            print(f"\nrunning canary session (model {model})...")
-            res = doctor.run_canary(model=model, claude_bin=args.claude_bin)
+    if args.canary:
+        model = config.CODEX_MODEL
+        print(f"\nrunning codex canary session (model {model})...")
+        res = doctor.run_codex_canary(model=model, codex_bin=args.codex_bin)
         if res["clean"]:
             print(f"canary: clean (session {res['session_id']})")
         else:
@@ -341,7 +318,7 @@ def _cmd_run(args) -> int:
     # workspace files. Install it once up front from the pinned submodule so the
     # manifest's submodule sha records exactly which FVK version every fvk session
     # ran against. A failed install is fatal: the fvk arm cannot run without it.
-    if args.agent == "codex" and "fvk" in arm_list:
+    if "fvk" in arm_list:
         try:
             dest = codex_runner.install_fvk_skill()
         except (RuntimeError, OSError, subprocess.CalledProcessError) as exc:
@@ -367,8 +344,6 @@ def _cmd_run(args) -> int:
                 known[iid],
                 ws_root,
                 arms=arm_list,
-                agent=args.agent,
-                claude_bin=args.claude_bin,
                 codex_bin=args.codex_bin,
                 timeout=args.timeout,
                 retry_failed=args.retry_failed,
@@ -406,11 +381,10 @@ def _cmd_run(args) -> int:
         run_id, results_dir=results_dir,
         extra={
             "max_parallel": max_parallel,
-            "agent": args.agent,
+            "agent": "codex",
             "arms": list(arm_list),
             "instance_set": args.instance_set,
             "instances": ids,
-            "claude_bin": args.claude_bin,
             "codex_bin": args.codex_bin,
         },
     )
@@ -532,89 +506,6 @@ def _cmd_report(args) -> int:
 
 
 # ---------------------------------------------------------------------------
-# regression-full
-# ---------------------------------------------------------------------------
-
-def _cmd_regression_plan(args) -> int:
-    path = regression.write_plan(args.run_id)
-    matrix = regression.load_matrix()
-    summary = matrix.get("summary") or {}
-    print(f"candidate matrix: {path}")
-    print(
-        "summary: "
-        f"{summary.get('fvk_resolved')} fvk-resolved instance(s), "
-        f"{summary.get('main_generated_arm_runs')} generated arm run(s)"
-    )
-    for batch in matrix.get("batches") or []:
-        print(f"  {batch['name']}: {batch['count']} instance(s)")
-    return 0
-
-
-def _parse_regression_arms(spec: str | None) -> tuple[str, ...] | None:
-    if spec is None:
-        return None
-    requested = tuple(a.strip() for a in spec.split(",") if a.strip())
-    unknown = [a for a in requested if a not in ("baseline", "fvk")]
-    if unknown or not requested:
-        print(
-            f"error: unknown regression arms: {', '.join(unknown) or spec!r} "
-            "(choose from baseline,fvk)"
-        )
-        return ()
-    return requested
-
-
-def _cmd_regression_run(args) -> int:
-    arms = _parse_regression_arms(args.arms)
-    if arms == ():
-        return 1
-    instances_arg = args.instances or None
-    selected = regression.candidates_for(batch=args.batch, instances=instances_arg)
-    if not selected:
-        print(f"error: no regression candidates selected for batch {args.batch}")
-        return 1
-    arm_count = sum(
-        len([arm for arm in (arms or c.arms_to_run) if arm in c.arms_to_run])
-        for c in selected
-    )
-    print(
-        f"regression run {args.run_id}: {args.batch}, "
-        f"{len(selected)} instance(s), {arm_count} generated arm(s)"
-    )
-    result = regression.run_batch(
-        run_id=args.run_id,
-        batch=args.batch,
-        instances=instances_arg,
-        arms=arms,
-        max_workers=args.max_workers,
-        timeout=args.timeout,
-        directive_timeout=args.directive_timeout,
-        max_directives=args.max_directives,
-        skip_install=args.skip_install,
-        force=args.force,
-        cleanup_instance_images=args.cleanup_instance_images,
-    )
-    print(
-        f"completed: {result['instances']} instance(s), "
-        f"{result['arm_reports']} arm report(s)"
-    )
-    return 0
-
-
-def _cmd_regression_report(args) -> int:
-    json_path, md_path, csv_path = regression.write_report(args.run_id)
-    print(f"score sheet json: {json_path}")
-    print(f"score sheet md: {md_path}")
-    print(f"score sheet csv: {csv_path}")
-    text = md_path.read_text(encoding="utf-8")
-    marker = text.find("## Counts")
-    if marker != -1:
-        print()
-        print(text[marker:].split("## Arms", 1)[0].rstrip())
-    return 0
-
-
-# ---------------------------------------------------------------------------
 # parser
 # ---------------------------------------------------------------------------
 
@@ -629,7 +520,7 @@ def _add_instance_selection(sub: argparse.ArgumentParser) -> None:
     )
     group.add_argument(
         "--batch", metavar="NAME",
-        help=f"process one batch ({', '.join(sorted(batches.BATCHES))}, verified001..verified050, or multilingual001..multilingual030)",
+        help="process one batch (verified001..verified050)",
     )
 
 
@@ -645,7 +536,7 @@ def _add_instance_set(sub: argparse.ArgumentParser) -> None:
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="fvk_bench",
-        description="baseline/fvk/control benchmark over SWE-bench Verified",
+        description="Codex baseline/FVK benchmark over SWE-bench Verified",
     )
     sub = parser.add_subparsers(dest="command", required=True)
 
@@ -653,18 +544,13 @@ def build_parser() -> argparse.ArgumentParser:
     _add_instance_set(p)
     p.add_argument("--run-id", help="annotate each instance with its arm statuses from this run")
     p.add_argument("--batch", metavar="NAME",
-                   help=f"only list one batch ({', '.join(sorted(batches.BATCHES))}, verified001..verified050, or multilingual001..multilingual030)")
+                   help="only list one batch (verified001..verified050)")
     p.set_defaults(func=_cmd_list)
 
     p = sub.add_parser("doctor", help="preflight checks (and optional session canary)")
-    p.add_argument("--agent", choices=config.AGENTS, default=config.DEFAULT_AGENT,
-                   help=f"which agent CLI to preflight (default: {config.DEFAULT_AGENT})")
-    p.add_argument("--claude-bin", default="claude", help="claude binary to invoke")
     p.add_argument("--codex-bin", default="codex", help="codex binary to invoke")
     p.add_argument("--canary", action="store_true",
                    help="run a cheap real session and audit its transcript")
-    p.add_argument("--probe-model", action="store_true",
-                   help="run the canary with the pinned production model instead")
     p.add_argument("--no-eval-checks", action="store_true",
                    help="relax evaluation-only requirements (docker) to warnings")
     p.set_defaults(func=_cmd_doctor)
@@ -682,10 +568,7 @@ def build_parser() -> argparse.ArgumentParser:
                    help=f"comma-separated arms to run (default: {','.join(config.ARMS)})")
     p.add_argument("--retry-failed", action="store_true",
                    help="re-run arms previously marked failed")
-    p.add_argument("--agent", choices=config.AGENTS, default=config.DEFAULT_AGENT,
-                   help=f"which agent CLI drives the arms (default: {config.DEFAULT_AGENT})")
-    p.add_argument("--claude-bin", default="claude", help="claude binary to invoke")
-    p.add_argument("--codex-bin", default="codex", help="codex binary to invoke (when --agent codex)")
+    p.add_argument("--codex-bin", default="codex", help="codex binary to invoke")
     p.add_argument("--workspace-root", help="override the workspace root directory")
     p.add_argument("--timeout", type=int, default=config.ARM_TIMEOUT_SECONDS,
                    help="per-arm wall-clock timeout in seconds")
@@ -712,43 +595,6 @@ def build_parser() -> argparse.ArgumentParser:
     p = sub.add_parser("report", help="write scores.json/scores.md and refresh the index")
     p.add_argument("--run-id", required=True)
     p.set_defaults(func=_cmd_report)
-
-    p = sub.add_parser(
-        "regression-full",
-        help="run full developer-test regression checks for verified500 patches",
-    )
-    rsub = p.add_subparsers(dest="regression_command", required=True)
-
-    rp = rsub.add_parser("plan", help="copy the candidate matrix into a regression run")
-    rp.add_argument("--run-id", default="verified500-regression-v1")
-    rp.set_defaults(func=_cmd_regression_plan)
-
-    rp = rsub.add_parser("run", help="run one regression batch")
-    rp.add_argument("--run-id", default="verified500-regression-v1")
-    rp.add_argument("--batch", required=True, choices=[f"regression{i:03d}" for i in range(1, 5)])
-    rp.add_argument("--instances", nargs="+", default=[],
-                    help="optional subset of instance ids inside the selected batch")
-    rp.add_argument("--arms", default=None,
-                    help="optional comma-separated arm filter: baseline,fvk")
-    rp.add_argument("--max-workers", type=int, default=1,
-                    help="run up to N instances concurrently; default 1")
-    rp.add_argument("--timeout", type=int, default=7200,
-                    help="per-context timeout budget recorded in reports")
-    rp.add_argument("--directive-timeout", type=int, default=1800,
-                    help="timeout for each discovered test directive")
-    rp.add_argument("--max-directives", type=int, default=None,
-                    help="debug/smoke only: run at most N discovered directives")
-    rp.add_argument("--skip-install", action="store_true",
-                    help="debug/smoke only: skip per-context project install")
-    rp.add_argument("--force", action="store_true",
-                    help="rerun existing context and arm reports")
-    rp.add_argument("--cleanup-instance-images", action="store_true",
-                    help="remove each SWE-bench eval image after its instance finishes")
-    rp.set_defaults(func=_cmd_regression_run)
-
-    rp = rsub.add_parser("report", help="write score_sheet.json/md/csv")
-    rp.add_argument("--run-id", default="verified500-regression-v1")
-    rp.set_defaults(func=_cmd_regression_report)
 
     return parser
 

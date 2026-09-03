@@ -1,30 +1,23 @@
-"""3-arm orchestration core: state machine, git choreography, contamination guards.
+"""Two-arm orchestration: baseline solution followed by an FVK review.
 
-One workspace hosts all three arms in order **baseline → fvk → control**
-(forked sessions resume the frozen baseline transcript, so the cwd shape must
-stay identical). Between arms this module:
+One workspace hosts both arms in order **baseline → fvk**. The FVK session
+resumes the frozen baseline transcript. Between the arms this module:
 
 - extracts cumulative solution patches (``git add -A`` + ``git diff --cached
   --binary HEAD`` so brand-new files are captured),
 - resets ``repo/`` deterministically to *V1* (base commit + the baseline
   patch re-applied),
-- scrubs each arm's output so only that arm ever sees it, and
-- guards against cross-arm contamination with :func:`core_tree_hash`, a
+- scrubs stale FVK output before a retry, and
+- guards the baseline workspace with :func:`core_tree_hash`, a
   content hash of everything a session can observe **except** the
   orchestrator-private and arm-private areas (``.fvk_bench/``, ``fvk/``,
-  ``review/``, ``repo/.git/``).
+  ``repo/.git/``).
 
 State lives in ``<ws>/.fvk_bench/state.json`` and is re-saved (atomically)
 after every transition, so a crashed or interrupted run resumes exactly where
 it stopped: completed arms are skipped, failed arms are skipped unless
 ``retry_failed`` is set. There are never silent automatic retries — every
 attempt is counted.
-
-fvk-before-control is deliberate: if the scrub ever failed, FVK material could
-only leak *into* the control arm, which biases the experiment **against** the
-measured FVK advantage — the conservative failure direction. The control
-precondition (core hash equals the post-baseline hash) turns any such leak
-into an explicit ``failed(contaminated_workspace)`` instead of a silent bias.
 """
 
 import hashlib
@@ -41,13 +34,12 @@ from fvk_bench.prompting import render_prompt
 from fvk_bench.runner import AgentResult, AgentRunner, get_runner
 
 #: Top-level workspace entries excluded from :func:`core_tree_hash`.
-_HASH_EXCLUDED_TOP: tuple[str, ...] = (".fvk_bench", "fvk", "review")
+_HASH_EXCLUDED_TOP: tuple[str, ...] = (".fvk_bench", "fvk")
 
 #: Per-arm artifact paths (relative to the workspace) snapshotted after success.
 _ARM_ARTIFACTS: dict[str, tuple[str, ...]] = {
     "baseline": ("reports/baseline_notes.md",),
     "fvk": ("fvk", "reports/fvk_notes.md"),
-    "control": ("review", "reports/control_notes.md"),
 }
 
 _STATE_FILE = ".fvk_bench/state.json"
@@ -88,8 +80,8 @@ def _hash_excluded(parts: tuple[str, ...]) -> bool:
 def core_tree_hash(ws: Path) -> str:
     """Content hash of the workspace tree a session can observe.
 
-    sha256 over every file under ``ws`` excluding ``.fvk_bench/**``, ``fvk/**``,
-    ``review/**`` and ``repo/.git/**``. Deterministic:
+    sha256 over every file under ``ws`` excluding ``.fvk_bench/**``, ``fvk/**``
+    and ``repo/.git/**``. Deterministic:
     files are visited in sorted relative-path (posix) order and the hash is
     updated with ``relpath + NUL + content + NUL``. Symlinks contribute their
     readlink target string instead of file content (and are never followed);
@@ -184,31 +176,14 @@ def stage_fvk(ws: Path) -> None:
 def scrub_fvk(ws: Path) -> None:
     """Remove every fvk trace from the workspace (missing entries tolerated).
 
-    Deletes ``fvk/`` and ``reports/fvk_notes.md`` so the control arm can never
-    observe FVK output. Snapshot before scrubbing.
+    Deletes ``fvk/`` and ``reports/fvk_notes.md`` before an FVK retry. Snapshot
+    successful artifacts before scrubbing.
     """
     ws = Path(ws)
     target = ws / "fvk"
     if target.exists():
         shutil.rmtree(target)
     (ws / "reports" / "fvk_notes.md").unlink(missing_ok=True)
-
-
-def scrub_control(ws: Path) -> None:
-    """Remove every control trace from the workspace (missing entries tolerated).
-
-    Deletes ``review/`` and ``reports/control_notes.md``. Control's own
-    artifacts are snapshotted to ``.fvk_bench/artifacts/control/`` before this
-    ever matters, so nothing is lost; scrubbing enables order-independent
-    retries (a fvk arm retried after control already completed must stage a
-    genuinely post-baseline workspace — ``reports/`` is hash-included) and
-    prevents cross-arm reads of control's artifacts.
-    """
-    ws = Path(ws)
-    review = ws / "review"
-    if review.exists():
-        shutil.rmtree(review)
-    (ws / "reports" / "control_notes.md").unlink(missing_ok=True)
 
 
 def snapshot_artifacts(ws: Path, arm: str) -> None:
@@ -333,7 +308,6 @@ def run_instance(
     arms: tuple = config.ARMS,
     agent: str = config.DEFAULT_AGENT,
     runner: AgentRunner | None = None,
-    claude_bin: str = "claude",
     codex_bin: str = "codex",
     model: str | None = None,
     timeout: int = config.ARM_TIMEOUT_SECONDS,
@@ -346,17 +320,15 @@ def run_instance(
     saved after every transition, completed arms are never re-run, and failed
     arms re-run only when ``retry_failed`` is set (the retry resets them to
     pending; attempts accumulate). When the baseline arm is not completed the
-    review arms cannot exist (nothing to fork), so requested-and-pending fvk /
-    control arms are marked ``skipped(baseline_failed)``.
+    FVK review cannot exist (nothing to fork), so a requested-and-pending FVK
+    arm is marked ``skipped(baseline_failed)``.
     """
     unknown = [arm for arm in arms if arm not in config.ARMS]
     if unknown:
         raise ValueError(f"unknown arms {unknown}; expected a subset of {config.ARMS}")
 
     if runner is None:
-        runner = get_runner(
-            agent, claude_bin=claude_bin, codex_bin=codex_bin, model=model
-        )
+        runner = get_runner(agent, codex_bin=codex_bin, model=model)
 
     cache = (
         Path(cache_dir)
@@ -370,11 +342,11 @@ def run_instance(
     state["agent"] = runner.name  # recorded so harvest can pick the right runner
     save_state(ws, state)
 
-    # --- baseline: fresh session with a pre-generated, pre-recorded uuid4 ----
+    # --- baseline: fresh Codex session ---------------------------------------
     baseline = state["arms"]["baseline"]
     if "baseline" in arms and _eligible(baseline, retry_failed):
-        pre_id = runner.new_session_id()  # claude: chosen up front; codex: None
-        state["baseline_session_id"] = pre_id  # known even on crash (claude)
+        pre_id = runner.new_session_id()
+        state["baseline_session_id"] = pre_id
         baseline["session_id"] = pre_id
         baseline["started_at"] = _utc_now()
         save_state(ws, state)
@@ -385,7 +357,7 @@ def run_instance(
         )
         _record_result(baseline, result)
         if result.ok:
-            sid = result.session_id or pre_id  # authoritative post-run id
+            sid = result.session_id or pre_id
             state["baseline_session_id"] = sid
             baseline["session_id"] = sid
             extract_patch(ws, "baseline")
@@ -400,38 +372,27 @@ def run_instance(
         save_state(ws, state)
 
     # Without a completed baseline there is no frozen session to fork and no
-    # V1 to review: skip the review arms (only requested, still-pending ones).
+    # V1 to review: skip the FVK arm if it was requested and is still pending.
     if baseline["status"] != "completed":
-        for arm in ("fvk", "control"):
-            if arm in arms and state["arms"][arm]["status"] == "pending":
-                state["arms"][arm]["status"] = "skipped"
-                state["arms"][arm]["reason"] = "baseline_failed"
+        if "fvk" in arms and state["arms"]["fvk"]["status"] == "pending":
+            state["arms"]["fvk"]["status"] = "skipped"
+            state["arms"]["fvk"]["reason"] = "baseline_failed"
         save_state(ws, state)
         return state
 
     # --- fvk: forked resume with FVK materials staged, always scrubbed ------
     fvk = state["arms"]["fvk"]
     if "fvk" in arms and _eligible(fvk, retry_failed):
-        # Staging must reproduce the genuinely post-baseline tree, whatever
-        # ran before: scrub stale fvk leftovers (crashed earlier attempt) and
-        # control artifacts (a retried fvk arm may run *after* control
-        # completed — control's artifacts are snapshotted, so this loses
-        # nothing) before the hash precondition.
+        # Staging must reproduce the post-baseline tree after a crashed or
+        # failed earlier FVK attempt.
         scrub_fvk(ws)
-        scrub_control(ws)
         stage_fvk(ws)
         if core_tree_hash(ws) != state["core_hash_post_baseline"]:
             # The staging reset itself failed to reproduce the post-baseline
-            # tree: something is deeply wrong with the workspace, so neither
-            # review arm can be trusted. Scrub (so no FVK material lingers in
-            # the workspace) and abort the instance.
+            # tree: the review cannot be trusted. Scrub and abort the instance.
             scrub_fvk(ws)
             fvk["status"] = "failed"
             fvk["reason"] = "staging_hash_mismatch"
-            control = state["arms"]["control"]
-            if control["status"] != "completed":
-                control["status"] = "failed"
-                control["reason"] = "staging_hash_mismatch"
             save_state(ws, state)
             return state
 
@@ -455,44 +416,6 @@ def run_instance(
         finally:
             scrub_fvk(ws)
         _apply_audit(ws, runner, fvk, result.session_id)
-        save_state(ws, state)
-
-    # --- control: second independent fork, gated on a pristine core tree ----
-    control = state["arms"]["control"]
-    if "control" in arms and _eligible(control, retry_failed):
-        scrub_fvk(ws)
-        # Also remove control's OWN stale leftovers (review/, hash-included
-        # reports/control_notes.md) from a previously failed control attempt;
-        # the fresh empty review/ is recreated below, after the hash check.
-        scrub_control(ws)
-        reset_repo_to_v1(ws)
-        if core_tree_hash(ws) != state["core_hash_post_baseline"]:
-            # Something outside repo/ drifted since baseline (e.g. a stray fvk
-            # write the scrub doesn't cover). Never launch a control session
-            # in a contaminated workspace.
-            control["status"] = "failed"
-            control["reason"] = "contaminated_workspace"
-            save_state(ws, state)
-            return state
-
-        (ws / "review").mkdir(exist_ok=True)
-        control["started_at"] = _utc_now()
-        save_state(ws, state)
-        result = runner.run_fork(
-            ws, "control", render_prompt("control", inst),
-            state["baseline_session_id"], timeout=timeout,
-        )
-        _record_result(control, result)
-        control["session_id"] = result.session_id
-        if result.ok:
-            extract_patch(ws, "control")
-            snapshot_artifacts(ws, "control")
-            control["status"] = "completed"
-            control["reason"] = None
-        else:
-            control["status"] = "failed"
-            control["reason"] = result.error or "agent_error"
-        _apply_audit(ws, runner, control, result.session_id)
         save_state(ws, state)
 
     return state

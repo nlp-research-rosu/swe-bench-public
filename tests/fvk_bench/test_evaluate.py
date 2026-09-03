@@ -9,8 +9,6 @@ from the real harness source (``swebench/harness/grading.py::get_eval_report``).
 
 import json
 import sys
-from pathlib import Path
-
 import pytest
 
 import fvk_bench.evaluate as evaluate

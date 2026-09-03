@@ -1,12 +1,11 @@
-"""Codex (``codex exec``) backend for the 3-arm benchmark — the second agent.
+"""Codex (``codex exec``) backend for the Verified500 two-arm benchmark.
 
 Implements :class:`fvk_bench.runner.AgentRunner`. Mirrors
-:mod:`fvk_bench.claude_runner`'s process robustness (scrubbed env,
-process-group timeout kill, always-persisted raw stdout/stderr) but speaks
-Codex's surface:
+It provides process-group timeout handling, persisted raw output, transcript
+discovery, and the two invocation forms used by the experiment:
 
 - fresh (baseline):  ``codex exec <prompt> ...``
-- fork (fvk/control): ``codex exec resume <baseline_id> <prompt> ...``
+- fork (fvk): ``codex exec resume <baseline_id> <prompt> ...``
 
 Pinned fairness constants live in :mod:`fvk_bench.config` (``CODEX_*``): model
 ``gpt-5.5``, reasoning effort ``xhigh``, sandbox ``workspace-write``. The fix
@@ -21,7 +20,7 @@ Two Codex facts this module cannot assume and that the first run on the real
 machine must confirm (see the inline notes):
 1. whether ``codex exec resume`` appends to the baseline rollout in place or
    spawns a fresh rollout — :meth:`CodexRunner.run_fork` is written to keep
-   baseline purity either way (snapshot once, restore before each later fork);
+   baseline purity either way;
 2. which flags ``codex exec resume`` accepts (``--json``/``-o``/``--sandbox``
    may need ``-c`` config overrides instead). :func:`build_argv` centralises the
    option list so a probe-driven adjustment is one edit.
@@ -41,12 +40,11 @@ from collections import Counter
 from pathlib import Path
 
 from fvk_bench import config
-from fvk_bench.claude_runner import ClaudeResult as AgentResult
+from fvk_bench.runner import AgentResult
 
 
 def _coerce_text(data: str | bytes | None) -> str:
-    """Normalize partial pipe output to ``str`` (duplicated from claude_runner,
-    matching the house style of not importing a sibling module's private)."""
+    """Normalize partial pipe output to ``str``."""
     if data is None:
         return ""
     if isinstance(data, bytes):
@@ -159,9 +157,8 @@ def _run_process(
 ) -> tuple[str, str, int | None, bool, float]:
     """Run ``argv`` in ``ws`` with the scrubbed env; persist raw output always.
 
-    Mirrors :func:`fvk_bench.claude_runner.run_arm_session`'s process handling:
-    own process group so a timeout SIGKILLs the whole tree, bounded drain, and a
-    finally-guard orphan kill. Returns
+    Uses its own process group so a timeout SIGKILLs the whole tree, drains
+    bounded output, and kills orphaned children in a finally guard. Returns
     ``(stdout, stderr, returncode, timed_out, duration_seconds)``.
     """
     raw_dir = ws / ".fvk_bench" / "raw"
@@ -435,7 +432,7 @@ class CodexRunner:
         )
 
     def _snapshot_or_restore_baseline(self, ws: Path, baseline_session_id: str) -> None:
-        """Keep the baseline rollout pristine across both fork arms.
+        """Restore the frozen baseline rollout before an FVK review.
 
         First fork: snapshot the baseline rollout. Later forks: restore it from
         the snapshot, undoing any in-place append a prior resume may have made.
